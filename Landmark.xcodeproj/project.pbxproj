@@ -15,6 +15,8 @@
 		380F065B1545799D00C9CF7C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380F065A1545799D00C9CF7C /* BaseViewController.m */; };
 		380F066E1545840D00C9CF7C /* LoginView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380F066D1545840D00C9CF7C /* LoginView_iPhone.xib */; };
 		380F06721545842E00C9CF7C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380F06711545842E00C9CF7C /* LoginViewController.m */; };
+		386935221545B0EC00EDF001 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386935211545B0EC00EDF001 /* MainViewController.m */; };
+		386935241545B10700EDF001 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386935231545B10700EDF001 /* MainWindow_iPhone.xib */; };
 		386C596615454C1A000B592A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386C596515454C1A000B592A /* UIKit.framework */; };
 		386C596815454C1A000B592A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386C596715454C1A000B592A /* Foundation.framework */; };
 		386C596A15454C1A000B592A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386C596915454C1A000B592A /* CoreGraphics.framework */; };
@@ -77,6 +79,9 @@
 		380F06701545842E00C9CF7C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		380F06711545842E00C9CF7C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		380F0673154584E700C9CF7C /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = Vendor/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
+		386935201545B0EC00EDF001 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		386935211545B0EC00EDF001 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		386935231545B10700EDF001 /* MainWindow_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow_iPhone.xib; sourceTree = "<group>"; };
 		386C596115454C1A000B592A /* Landmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		386C596515454C1A000B592A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		386C596715454C1A000B592A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -127,6 +132,7 @@
 		380F06441545678B00C9CF7C /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				386935231545B10700EDF001 /* MainWindow_iPhone.xib */,
 				386C597A15454C1A000B592A /* SplashView_iPhone.xib */,
 				380F066D1545840D00C9CF7C /* LoginView_iPhone.xib */,
 			);
@@ -227,6 +233,8 @@
 				386C597815454C1A000B592A /* SplashViewController.m */,
 				380F06701545842E00C9CF7C /* LoginViewController.h */,
 				380F06711545842E00C9CF7C /* LoginViewController.m */,
+				386935201545B0EC00EDF001 /* MainViewController.h */,
+				386935211545B0EC00EDF001 /* MainViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -350,6 +358,7 @@
 				380F06531545768000C9CF7C /* Default.png in Resources */,
 				380F06541545768000C9CF7C /* Default@2x.png in Resources */,
 				380F066E1545840D00C9CF7C /* LoginView_iPhone.xib in Resources */,
+				386935241545B10700EDF001 /* MainWindow_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +375,7 @@
 				380F06421545673A00C9CF7C /* NavigationManager.m in Sources */,
 				380F065B1545799D00C9CF7C /* BaseViewController.m in Sources */,
 				380F06721545842E00C9CF7C /* LoginViewController.m in Sources */,
+				386935221545B0EC00EDF001 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

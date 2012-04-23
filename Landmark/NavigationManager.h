@@ -9,19 +9,22 @@
 #import <Foundation/Foundation.h>
 
 @class SplashViewController;
+@class LoginViewController;
 
 @interface NavigationManager : NSObject
 {
     @private
     UIWindow *_window;
     
-    SplashViewController *_splashViewController;
-    
     UIViewController *_currentViewController;
+    
+    SplashViewController *_splashViewController;
+    LoginViewController *_loginViewContgroller;
 }
 
 - (id)initWithWindow:(UIWindow *)window;
 
 - (void)displaySplash;
+- (void)displayLogin;
 
 @end

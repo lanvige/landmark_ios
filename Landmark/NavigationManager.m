@@ -7,7 +7,9 @@
 //
 
 #import "NavigationManager.h"
+
 #import "SplashViewController.h"
+#import "LoginViewController.h"
 
 @implementation NavigationManager
 
@@ -37,6 +39,24 @@
     
     // Add splash view to window
     [_window addSubview:_splashViewController.view];
+}
+
+
+- (void)displayLogin
+{
+    _loginViewContgroller = [[LoginViewController alloc] init];
+    _loginViewContgroller.view.frame = [[UIScreen mainScreen] applicationFrame];
+    
+    // Remove other view & controller
+    if(_currentViewController)
+    {
+        [_currentViewController.view removeFromSuperview];
+    }
+    
+    _currentViewController = _loginViewContgroller;
+    
+    // Add splash view to window
+    [_window addSubview:_loginViewContgroller.view];
 }
 
 @end

@@ -7,10 +7,10 @@
 //
 
 #import "NavigationManager.h"
-
 #import "SplashViewController.h"
 
 @implementation NavigationManager
+
 
 - (id)initWithWindow:(UIWindow *)window
 {

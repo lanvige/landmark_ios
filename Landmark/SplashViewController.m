@@ -14,6 +14,15 @@
 
 @implementation SplashViewController
 
+@synthesize loginLabel;
+
+
+- (id)init
+{
+	self = [super initWithNibName:@"SplashView_iPhone" bundle:nil];	
+	return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

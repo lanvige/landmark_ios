@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BaseViewController.m
 //  Landmark
 //
 //  Created by Lanvige Jiang on 4/23/12.
@@ -8,8 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface SplashViewController : BaseViewController
-
-@property (nonatomic, retain) IBOutlet UILabel *loginLabel;
+@implementation BaseViewController
 
 @end

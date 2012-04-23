@@ -17,9 +17,10 @@
     NavigationManager *_navigationManager;
 }
 
+// Global window
 @property (strong, nonatomic) UIWindow *window;
 
-
+// Shared navigation manager
 + (NavigationManager *)sharedNavigationManager;
 
 @end

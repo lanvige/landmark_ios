@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		380F06421545673A00C9CF7C /* NavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 380F06411545673A00C9CF7C /* NavigationManager.m */; };
+		380F064F1545711D00C9CF7C /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 380F064D1545711D00C9CF7C /* icon-72.png */; };
+		380F06501545711D00C9CF7C /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 380F064E1545711D00C9CF7C /* icon.png */; };
+		380F06531545768000C9CF7C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 380F06511545768000C9CF7C /* Default.png */; };
+		380F06541545768000C9CF7C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 380F06521545768000C9CF7C /* Default@2x.png */; };
+		380F065B1545799D00C9CF7C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380F065A1545799D00C9CF7C /* BaseViewController.m */; };
 		386C596615454C1A000B592A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386C596515454C1A000B592A /* UIKit.framework */; };
 		386C596815454C1A000B592A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386C596715454C1A000B592A /* Foundation.framework */; };
 		386C596A15454C1A000B592A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386C596915454C1A000B592A /* CoreGraphics.framework */; };
@@ -22,6 +27,12 @@
 /* Begin PBXFileReference section */
 		380F06401545673A00C9CF7C /* NavigationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationManager.h; sourceTree = "<group>"; };
 		380F06411545673A00C9CF7C /* NavigationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationManager.m; sourceTree = "<group>"; };
+		380F064D1545711D00C9CF7C /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
+		380F064E1545711D00C9CF7C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		380F06511545768000C9CF7C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		380F06521545768000C9CF7C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		380F06591545799D00C9CF7C /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		380F065A1545799D00C9CF7C /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		386C596115454C1A000B592A /* Landmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		386C596515454C1A000B592A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		386C596715454C1A000B592A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -77,9 +88,29 @@
 			name = iPhone;
 			sourceTree = "<group>";
 		};
+		380F064B1545711D00C9CF7C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				380F064C1545711D00C9CF7C /* Images */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		380F064C1545711D00C9CF7C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				380F06511545768000C9CF7C /* Default.png */,
+				380F06521545768000C9CF7C /* Default@2x.png */,
+				380F064D1545711D00C9CF7C /* icon-72.png */,
+				380F064E1545711D00C9CF7C /* icon.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		386C595615454C1A000B592A = {
 			isa = PBXGroup;
 			children = (
+				380F064B1545711D00C9CF7C /* Assets */,
 				386C596B15454C1A000B592A /* Landmark */,
 				386C596415454C1A000B592A /* Frameworks */,
 				386C596215454C1A000B592A /* Products */,
@@ -111,7 +142,6 @@
 				386C598815455369000B592A /* Models */,
 				386C598715455362000B592A /* Views */,
 				386C598615455320000B592A /* ViewControllers */,
-				386C598515455308000B592A /* Assets */,
 				386C597415454C1A000B592A /* AppDelegate.h */,
 				386C597515454C1A000B592A /* AppDelegate.m */,
 				386C596C15454C1A000B592A /* Supporting Files */,
@@ -130,16 +160,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		386C598515455308000B592A /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Assets;
-			sourceTree = "<group>";
-		};
 		386C598615455320000B592A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				380F06591545799D00C9CF7C /* BaseViewController.h */,
+				380F065A1545799D00C9CF7C /* BaseViewController.m */,
 				386C597715454C1A000B592A /* SplashViewController.h */,
 				386C597815454C1A000B592A /* SplashViewController.m */,
 			);
@@ -216,6 +241,10 @@
 				386C597015454C1A000B592A /* InfoPlist.strings in Resources */,
 				386C597C15454C1A000B592A /* SplashView_iPhone.xib in Resources */,
 				386C597F15454C1A000B592A /* SplashView_iPad.xib in Resources */,
+				380F064F1545711D00C9CF7C /* icon-72.png in Resources */,
+				380F06501545711D00C9CF7C /* icon.png in Resources */,
+				380F06531545768000C9CF7C /* Default.png in Resources */,
+				380F06541545768000C9CF7C /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +259,7 @@
 				386C597615454C1A000B592A /* AppDelegate.m in Sources */,
 				386C597915454C1A000B592A /* SplashViewController.m in Sources */,
 				380F06421545673A00C9CF7C /* NavigationManager.m in Sources */,
+				380F065B1545799D00C9CF7C /* BaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

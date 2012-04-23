@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "SplashViewController.h"
+@class SplashViewController;
 
 @interface NavigationManager : NSObject
 {

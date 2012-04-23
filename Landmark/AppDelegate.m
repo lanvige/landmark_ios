@@ -14,6 +14,7 @@
 
 @synthesize window = _window;
 
+// Shared navigation manager(Singleton)
 + (NavigationManager *)sharedNavigationManager
 {
     AppDelegate *appDelegate = (AppDelegate *)([UIApplication sharedApplication].delegate);
@@ -22,9 +23,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    _navigationManager = [[NavigationManager alloc] initWithWindow:self.window];
+    // Init the window as global.
+    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    _navigationManager = [[NavigationManager alloc] initWithWindow:_window];
+    [_navigationManager displaySplash];
 
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

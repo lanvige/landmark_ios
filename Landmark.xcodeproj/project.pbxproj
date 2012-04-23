@@ -23,13 +23,13 @@
 		386C596515454C1A000B592A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		386C596715454C1A000B592A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		386C596915454C1A000B592A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		386C596D15454C1A000B592A /* Landmark-Info.plist */ = {isa = PBXFileReference; path = "Landmark-Info.plist"; sourceTree = "<group>"; };
+		386C596D15454C1A000B592A /* Landmark-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Landmark-Info.plist"; sourceTree = "<group>"; };
 		386C596F15454C1A000B592A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		386C597115454C1A000B592A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		386C597315454C1A000B592A /* Landmark-Prefix.pch */ = {isa = PBXFileReference; path = "Landmark-Prefix.pch"; sourceTree = "<group>"; };
-		386C597415454C1A000B592A /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		386C597315454C1A000B592A /* Landmark-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Landmark-Prefix.pch"; sourceTree = "<group>"; };
+		386C597415454C1A000B592A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		386C597515454C1A000B592A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		386C597715454C1A000B592A /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		386C597715454C1A000B592A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		386C597815454C1A000B592A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		386C597B15454C1A000B592A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		386C597E15454C1A000B592A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };

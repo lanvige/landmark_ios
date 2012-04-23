@@ -8,12 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@class ViewController;
+@class NavigationManager;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@interface AppDelegate : NSObject <UIApplicationDelegate>
+{
+    @private
+    NavigationManager *_navigationManager;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) ViewController *viewController;
+
++ (NavigationManager *)sharedNavigationManager;
 
 @end

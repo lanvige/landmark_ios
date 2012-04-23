@@ -6,13 +6,13 @@
 //  Copyright (c) 2012 LANVIGE. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "SplashViewController.h"
 
-@interface ViewController ()
+@interface SplashViewController ()
 
 @end
 
-@implementation ViewController
+@implementation SplashViewController
 
 - (void)viewDidLoad
 {

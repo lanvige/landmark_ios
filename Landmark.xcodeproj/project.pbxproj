@@ -7,18 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		380F06421545673A00C9CF7C /* NavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 380F06411545673A00C9CF7C /* NavigationManager.m */; };
 		386C596615454C1A000B592A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386C596515454C1A000B592A /* UIKit.framework */; };
 		386C596815454C1A000B592A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386C596715454C1A000B592A /* Foundation.framework */; };
 		386C596A15454C1A000B592A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386C596915454C1A000B592A /* CoreGraphics.framework */; };
 		386C597015454C1A000B592A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 386C596E15454C1A000B592A /* InfoPlist.strings */; };
 		386C597215454C1A000B592A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 386C597115454C1A000B592A /* main.m */; };
 		386C597615454C1A000B592A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 386C597515454C1A000B592A /* AppDelegate.m */; };
-		386C597915454C1A000B592A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386C597815454C1A000B592A /* ViewController.m */; };
-		386C597C15454C1A000B592A /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386C597A15454C1A000B592A /* ViewController_iPhone.xib */; };
-		386C597F15454C1A000B592A /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386C597D15454C1A000B592A /* ViewController_iPad.xib */; };
+		386C597915454C1A000B592A /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386C597815454C1A000B592A /* SplashViewController.m */; };
+		386C597C15454C1A000B592A /* SplashView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386C597A15454C1A000B592A /* SplashView_iPhone.xib */; };
+		386C597F15454C1A000B592A /* SplashView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386C597D15454C1A000B592A /* SplashView_iPad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		380F06401545673A00C9CF7C /* NavigationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationManager.h; sourceTree = "<group>"; };
+		380F06411545673A00C9CF7C /* NavigationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationManager.m; sourceTree = "<group>"; };
 		386C596115454C1A000B592A /* Landmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		386C596515454C1A000B592A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		386C596715454C1A000B592A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -29,10 +32,10 @@
 		386C597315454C1A000B592A /* Landmark-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Landmark-Prefix.pch"; sourceTree = "<group>"; };
 		386C597415454C1A000B592A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		386C597515454C1A000B592A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		386C597715454C1A000B592A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		386C597815454C1A000B592A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		386C597B15454C1A000B592A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		386C597E15454C1A000B592A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		386C597715454C1A000B592A /* SplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		386C597815454C1A000B592A /* SplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		386C597B15454C1A000B592A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SplashView_iPhone.xib; sourceTree = "<group>"; };
+		386C597E15454C1A000B592A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SplashView_iPad.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +52,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		380F063F154566CC00C9CF7C /* ViewManager */ = {
+			isa = PBXGroup;
+			children = (
+				380F06401545673A00C9CF7C /* NavigationManager.h */,
+				380F06411545673A00C9CF7C /* NavigationManager.m */,
+			);
+			name = ViewManager;
+			sourceTree = "<group>";
+		};
+		380F06431545677F00C9CF7C /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				386C597D15454C1A000B592A /* SplashView_iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		380F06441545678B00C9CF7C /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				386C597A15454C1A000B592A /* SplashView_iPhone.xib */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
 		386C595615454C1A000B592A = {
 			isa = PBXGroup;
 			children = (
@@ -79,12 +107,13 @@
 		386C596B15454C1A000B592A /* Landmark */ = {
 			isa = PBXGroup;
 			children = (
+				380F063F154566CC00C9CF7C /* ViewManager */,
+				386C598815455369000B592A /* Models */,
+				386C598715455362000B592A /* Views */,
+				386C598615455320000B592A /* ViewControllers */,
+				386C598515455308000B592A /* Assets */,
 				386C597415454C1A000B592A /* AppDelegate.h */,
 				386C597515454C1A000B592A /* AppDelegate.m */,
-				386C597715454C1A000B592A /* ViewController.h */,
-				386C597815454C1A000B592A /* ViewController.m */,
-				386C597A15454C1A000B592A /* ViewController_iPhone.xib */,
-				386C597D15454C1A000B592A /* ViewController_iPad.xib */,
 				386C596C15454C1A000B592A /* Supporting Files */,
 			);
 			path = Landmark;
@@ -99,6 +128,38 @@
 				386C597315454C1A000B592A /* Landmark-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		386C598515455308000B592A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		386C598615455320000B592A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				386C597715454C1A000B592A /* SplashViewController.h */,
+				386C597815454C1A000B592A /* SplashViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		386C598715455362000B592A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				380F06441545678B00C9CF7C /* iPhone */,
+				380F06431545677F00C9CF7C /* iPad */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		386C598815455369000B592A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,8 +214,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				386C597015454C1A000B592A /* InfoPlist.strings in Resources */,
-				386C597C15454C1A000B592A /* ViewController_iPhone.xib in Resources */,
-				386C597F15454C1A000B592A /* ViewController_iPad.xib in Resources */,
+				386C597C15454C1A000B592A /* SplashView_iPhone.xib in Resources */,
+				386C597F15454C1A000B592A /* SplashView_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +228,8 @@
 			files = (
 				386C597215454C1A000B592A /* main.m in Sources */,
 				386C597615454C1A000B592A /* AppDelegate.m in Sources */,
-				386C597915454C1A000B592A /* ViewController.m in Sources */,
+				386C597915454C1A000B592A /* SplashViewController.m in Sources */,
+				380F06421545673A00C9CF7C /* NavigationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,20 +244,20 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		386C597A15454C1A000B592A /* ViewController_iPhone.xib */ = {
+		386C597A15454C1A000B592A /* SplashView_iPhone.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				386C597B15454C1A000B592A /* en */,
 			);
-			name = ViewController_iPhone.xib;
+			name = SplashView_iPhone.xib;
 			sourceTree = "<group>";
 		};
-		386C597D15454C1A000B592A /* ViewController_iPad.xib */ = {
+		386C597D15454C1A000B592A /* SplashView_iPad.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				386C597E15454C1A000B592A /* en */,
 			);
-			name = ViewController_iPad.xib;
+			name = SplashView_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -289,6 +351,7 @@
 				386C598415454C1A000B592A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

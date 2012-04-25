@@ -55,8 +55,15 @@
     homeViewController = [[HomeViewController alloc] init];
     settingsViewController = [[SettingsViewController alloc] init];
     
+    // Init a new nav controller as container to include setting view.
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
+    
+    navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    navigationController.navigationItem.title = @"Sayonara Chat";
+    navigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Setting" image:[UIImage imageNamed:@"icon_root.png"] tag:0];
+    
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:homeViewController, settingsViewController, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:homeViewController, navigationController, nil];
 
     // Remove other view & controller
     if(_currentViewController)

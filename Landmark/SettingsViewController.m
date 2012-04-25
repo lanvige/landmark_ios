@@ -18,8 +18,9 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Settings", @"Settings");
-        self.tabBarItem.image = [UIImage imageNamed:@"setting"];
+        // TODO:: Should set the title here or nav controller?
+        //self.title = NSLocalizedString(@"Settings", @"Settings");
+        //self.tabBarItem.image = [UIImage imageNamed:@"setting"];
     }
     return self;
 }

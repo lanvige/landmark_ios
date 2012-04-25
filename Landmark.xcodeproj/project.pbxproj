@@ -37,6 +37,8 @@
 		3894D0F41547FBE900707389 /* SettingsView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D0F31547FBE900707389 /* SettingsView_iPhone.xib */; };
 		3894D0F71547FC0000707389 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3894D0F61547FC0000707389 /* SettingsViewController.m */; };
 		3894D0F91548002F00707389 /* HomeView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D0F81548002F00707389 /* HomeView_iPhone.xib */; };
+		38DB056C154854F80092CDCD /* AboutView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DB056B154854F80092CDCD /* AboutView_iPhone.xib */; };
+		38DB056F154855140092CDCD /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DB056E154855140092CDCD /* AboutViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +131,9 @@
 		3894D0F51547FC0000707389 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		3894D0F61547FC0000707389 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		3894D0F81548002F00707389 /* HomeView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeView_iPhone.xib; sourceTree = "<group>"; };
+		38DB056B154854F80092CDCD /* AboutView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView_iPhone.xib; sourceTree = "<group>"; };
+		38DB056D154855140092CDCD /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		38DB056E154855140092CDCD /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,10 +178,11 @@
 		380F06441545678B00C9CF7C /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
-				386C597A15454C1A000B592A /* SplashView_iPhone.xib */,
+				38DB056B154854F80092CDCD /* AboutView_iPhone.xib */,
+				3894D0F81548002F00707389 /* HomeView_iPhone.xib */,
 				380F066D1545840D00C9CF7C /* LoginView_iPhone.xib */,
 				3894D0F31547FBE900707389 /* SettingsView_iPhone.xib */,
-				3894D0F81548002F00707389 /* HomeView_iPhone.xib */,
+				386C597A15454C1A000B592A /* SplashView_iPhone.xib */,
 			);
 			name = iPhone;
 			sourceTree = "<group>";
@@ -235,11 +241,11 @@
 		386C595615454C1A000B592A = {
 			isa = PBXGroup;
 			children = (
+				386C596415454C1A000B592A /* Frameworks */,
+				386C596B15454C1A000B592A /* Landmark */,
+				386C596215454C1A000B592A /* Products */,
 				3822BF5D1546854900FB996A /* README.md */,
 				3822BF3115467D3400FB996A /* Resources */,
-				386C596B15454C1A000B592A /* Landmark */,
-				386C596415454C1A000B592A /* Frameworks */,
-				386C596215454C1A000B592A /* Products */,
 				3822BF3015467D1F00FB996A /* Vendor */,
 			);
 			sourceTree = "<group>";
@@ -297,16 +303,18 @@
 		386C598615455320000B592A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				38DB056D154855140092CDCD /* AboutViewController.h */,
+				38DB056E154855140092CDCD /* AboutViewController.m */,
 				380F06591545799D00C9CF7C /* BaseViewController.h */,
 				380F065A1545799D00C9CF7C /* BaseViewController.m */,
-				386C597715454C1A000B592A /* SplashViewController.h */,
-				386C597815454C1A000B592A /* SplashViewController.m */,
-				380F06701545842E00C9CF7C /* LoginViewController.h */,
-				380F06711545842E00C9CF7C /* LoginViewController.m */,
 				386935201545B0EC00EDF001 /* HomeViewController.h */,
 				386935211545B0EC00EDF001 /* HomeViewController.m */,
+				380F06701545842E00C9CF7C /* LoginViewController.h */,
+				380F06711545842E00C9CF7C /* LoginViewController.m */,
 				3894D0F51547FC0000707389 /* SettingsViewController.h */,
 				3894D0F61547FC0000707389 /* SettingsViewController.m */,
+				386C597715454C1A000B592A /* SplashViewController.h */,
+				386C597815454C1A000B592A /* SplashViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -443,6 +451,7 @@
 				3894D0AE1547E17500707389 /* icon.png in Resources */,
 				3894D0F41547FBE900707389 /* SettingsView_iPhone.xib in Resources */,
 				3894D0F91548002F00707389 /* HomeView_iPhone.xib in Resources */,
+				38DB056C154854F80092CDCD /* AboutView_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +470,7 @@
 				380F06721545842E00C9CF7C /* LoginViewController.m in Sources */,
 				386935221545B0EC00EDF001 /* HomeViewController.m in Sources */,
 				3894D0F71547FC0000707389 /* SettingsViewController.m in Sources */,
+				38DB056F154855140092CDCD /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

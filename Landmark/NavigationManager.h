@@ -10,6 +10,9 @@
 
 @class SplashViewController;
 @class LoginViewController;
+@class HomeViewController;
+@class SettingsViewController;
+@class AboutViewController;
 
 @interface NavigationManager : NSObject
 {
@@ -20,7 +23,10 @@
     
     SplashViewController *_splashViewController;
     LoginViewController *_loginViewContgroller;
-    
+    HomeViewController *_homeViewController;
+    SettingsViewController *_settingsViewController;
+    UINavigationController *_navigationController;
+    AboutViewController *_aboutViewController;
 }
 
 @property (strong, nonatomic) UITabBarController *tabBarController;

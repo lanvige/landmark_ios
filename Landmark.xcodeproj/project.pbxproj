@@ -13,8 +13,6 @@
 		380F06721545842E00C9CF7C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380F06711545842E00C9CF7C /* LoginViewController.m */; };
 		3822BF3715467D3400FB996A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3822BF3315467D3400FB996A /* Default.png */; };
 		3822BF3815467D3400FB996A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3822BF3415467D3400FB996A /* Default@2x.png */; };
-		3822BF3915467D3400FB996A /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3822BF3515467D3400FB996A /* icon-72.png */; };
-		3822BF3A15467D3400FB996A /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3822BF3615467D3400FB996A /* icon.png */; };
 		3822BF5E1546854900FB996A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3822BF5D1546854900FB996A /* README.md */; };
 		3822BF90154692D900FB996A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822BF8F154692D900FB996A /* QuartzCore.framework */; };
 		3822BF921546959F00FB996A /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822BF4715467D4B00FB996A /* libRestKit.a */; };
@@ -24,8 +22,7 @@
 		3822BF9A154695CD00FB996A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822BF99154695CD00FB996A /* Security.framework */; };
 		3822BF9C154695DA00FB996A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822BF9B154695DA00FB996A /* SystemConfiguration.framework */; };
 		3822BF9E154695E900FB996A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822BF9D154695E900FB996A /* libxml2.dylib */; };
-		386935221545B0EC00EDF001 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386935211545B0EC00EDF001 /* MainViewController.m */; };
-		386935241545B10700EDF001 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386935231545B10700EDF001 /* MainWindow_iPhone.xib */; };
+		386935221545B0EC00EDF001 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386935211545B0EC00EDF001 /* HomeViewController.m */; };
 		386C596615454C1A000B592A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386C596515454C1A000B592A /* UIKit.framework */; };
 		386C596815454C1A000B592A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386C596715454C1A000B592A /* Foundation.framework */; };
 		386C596A15454C1A000B592A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386C596915454C1A000B592A /* CoreGraphics.framework */; };
@@ -35,6 +32,11 @@
 		386C597915454C1A000B592A /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386C597815454C1A000B592A /* SplashViewController.m */; };
 		386C597C15454C1A000B592A /* SplashView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386C597A15454C1A000B592A /* SplashView_iPhone.xib */; };
 		386C597F15454C1A000B592A /* SplashView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386C597D15454C1A000B592A /* SplashView_iPad.xib */; };
+		3894D0AD1547E17500707389 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3894D0AB1547E17500707389 /* icon-72.png */; };
+		3894D0AE1547E17500707389 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3894D0AC1547E17500707389 /* icon.png */; };
+		3894D0F41547FBE900707389 /* SettingsView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D0F31547FBE900707389 /* SettingsView_iPhone.xib */; };
+		3894D0F71547FC0000707389 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3894D0F61547FC0000707389 /* SettingsViewController.m */; };
+		3894D0F91548002F00707389 /* HomeView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D0F81548002F00707389 /* HomeView_iPhone.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,8 +94,6 @@
 		380F06711545842E00C9CF7C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		3822BF3315467D3400FB996A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		3822BF3415467D3400FB996A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		3822BF3515467D3400FB996A /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
-		3822BF3615467D3400FB996A /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		3822BF3B15467D4A00FB996A /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = Vendor/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		3822BF5D1546854900FB996A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		3822BF8F154692D900FB996A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -107,9 +107,8 @@
 		3822BFA11546961500FB996A /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		3822BFA21546961500FB996A /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		3822BFA31546961500FB996A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		386935201545B0EC00EDF001 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		386935211545B0EC00EDF001 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		386935231545B10700EDF001 /* MainWindow_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow_iPhone.xib; sourceTree = "<group>"; };
+		386935201545B0EC00EDF001 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		386935211545B0EC00EDF001 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		386C596115454C1A000B592A /* Landmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		386C596515454C1A000B592A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		386C596715454C1A000B592A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -124,6 +123,12 @@
 		386C597815454C1A000B592A /* SplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		386C597B15454C1A000B592A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SplashView_iPhone.xib; sourceTree = "<group>"; };
 		386C597E15454C1A000B592A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SplashView_iPad.xib; sourceTree = "<group>"; };
+		3894D0AB1547E17500707389 /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72.png"; path = "Icons/icon-72.png"; sourceTree = "<group>"; };
+		3894D0AC1547E17500707389 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Icons/icon.png; sourceTree = "<group>"; };
+		3894D0F31547FBE900707389 /* SettingsView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsView_iPhone.xib; sourceTree = "<group>"; };
+		3894D0F51547FC0000707389 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		3894D0F61547FC0000707389 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		3894D0F81548002F00707389 /* HomeView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeView_iPhone.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,9 +173,10 @@
 		380F06441545678B00C9CF7C /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
-				386935231545B10700EDF001 /* MainWindow_iPhone.xib */,
 				386C597A15454C1A000B592A /* SplashView_iPhone.xib */,
 				380F066D1545840D00C9CF7C /* LoginView_iPhone.xib */,
+				3894D0F31547FBE900707389 /* SettingsView_iPhone.xib */,
+				3894D0F81548002F00707389 /* HomeView_iPhone.xib */,
 			);
 			name = iPhone;
 			sourceTree = "<group>";
@@ -187,6 +193,7 @@
 		3822BF3115467D3400FB996A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3894D0AA1547E13D00707389 /* Icons */,
 				3822BF3215467D3400FB996A /* Images */,
 			);
 			path = Resources;
@@ -197,8 +204,6 @@
 			children = (
 				3822BF3315467D3400FB996A /* Default.png */,
 				3822BF3415467D3400FB996A /* Default@2x.png */,
-				3822BF3515467D3400FB996A /* icon-72.png */,
-				3822BF3615467D3400FB996A /* icon.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -298,8 +303,10 @@
 				386C597815454C1A000B592A /* SplashViewController.m */,
 				380F06701545842E00C9CF7C /* LoginViewController.h */,
 				380F06711545842E00C9CF7C /* LoginViewController.m */,
-				386935201545B0EC00EDF001 /* MainViewController.h */,
-				386935211545B0EC00EDF001 /* MainViewController.m */,
+				386935201545B0EC00EDF001 /* HomeViewController.h */,
+				386935211545B0EC00EDF001 /* HomeViewController.m */,
+				3894D0F51547FC0000707389 /* SettingsViewController.h */,
+				3894D0F61547FC0000707389 /* SettingsViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -318,6 +325,15 @@
 			children = (
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		3894D0AA1547E13D00707389 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				3894D0AB1547E17500707389 /* icon-72.png */,
+				3894D0AC1547E17500707389 /* icon.png */,
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,12 +436,13 @@
 				386C597C15454C1A000B592A /* SplashView_iPhone.xib in Resources */,
 				386C597F15454C1A000B592A /* SplashView_iPad.xib in Resources */,
 				380F066E1545840D00C9CF7C /* LoginView_iPhone.xib in Resources */,
-				386935241545B10700EDF001 /* MainWindow_iPhone.xib in Resources */,
 				3822BF3715467D3400FB996A /* Default.png in Resources */,
 				3822BF3815467D3400FB996A /* Default@2x.png in Resources */,
-				3822BF3915467D3400FB996A /* icon-72.png in Resources */,
-				3822BF3A15467D3400FB996A /* icon.png in Resources */,
 				3822BF5E1546854900FB996A /* README.md in Resources */,
+				3894D0AD1547E17500707389 /* icon-72.png in Resources */,
+				3894D0AE1547E17500707389 /* icon.png in Resources */,
+				3894D0F41547FBE900707389 /* SettingsView_iPhone.xib in Resources */,
+				3894D0F91548002F00707389 /* HomeView_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +459,8 @@
 				380F06421545673A00C9CF7C /* NavigationManager.m in Sources */,
 				380F065B1545799D00C9CF7C /* BaseViewController.m in Sources */,
 				380F06721545842E00C9CF7C /* LoginViewController.m in Sources */,
-				386935221545B0EC00EDF001 /* MainViewController.m in Sources */,
+				386935221545B0EC00EDF001 /* HomeViewController.m in Sources */,
+				3894D0F71547FC0000707389 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

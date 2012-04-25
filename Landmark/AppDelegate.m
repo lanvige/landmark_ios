@@ -27,7 +27,7 @@
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     _navigationManager = [[NavigationManager alloc] initWithWindow:_window];
-    [_navigationManager displaySplash];
+    [_navigationManager displayHome];
 
     [self.window makeKeyAndVisible];
     

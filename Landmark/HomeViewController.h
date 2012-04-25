@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 LANVIGE. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface MainViewController : UIViewController
+@interface HomeViewController : BaseViewController
 
 @end

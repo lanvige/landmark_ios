@@ -20,11 +20,14 @@
     
     SplashViewController *_splashViewController;
     LoginViewController *_loginViewContgroller;
+    
 }
+
+@property (strong, nonatomic) UITabBarController *tabBarController;
 
 - (id)initWithWindow:(UIWindow *)window;
 
 - (void)displaySplash;
-- (void)displayLogin;
+- (void)displayHome;
 
 @end

@@ -10,10 +10,14 @@
 
 #import "SplashViewController.h"
 #import "LoginViewController.h"
+#import "HomeViewController.h"
+#import "SettingsViewController.h"
 
 @implementation NavigationManager
 
+@synthesize tabBarController = _tabBarController;
 
+// Set the _window as global window from appdelgate.
 - (id)initWithWindow:(UIWindow *)window
 {
     if(self = [super init])
@@ -23,6 +27,7 @@
     
     return self;
 }
+
 
 - (void)displaySplash
 {
@@ -42,21 +47,25 @@
 }
 
 
-- (void)displayLogin
+- (void)displayHome
 {
-    _loginViewContgroller = [[LoginViewController alloc] init];
-    _loginViewContgroller.view.frame = [[UIScreen mainScreen] applicationFrame];
+    // Init the view controller for tab bar.
+    UIViewController *homeViewController, *settingsViewController;
     
+    homeViewController = [[HomeViewController alloc] init];
+    settingsViewController = [[SettingsViewController alloc] init];
+    
+    self.tabBarController = [[UITabBarController alloc] init];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:homeViewController, settingsViewController, nil];
+
     // Remove other view & controller
     if(_currentViewController)
     {
         [_currentViewController.view removeFromSuperview];
     }
     
-    _currentViewController = _loginViewContgroller;
-    
-    // Add splash view to window
-    [_window addSubview:_loginViewContgroller.view];
+    _currentViewController = self.tabBarController;
+    [_window addSubview:self.tabBarController.view];
 }
 
 @end

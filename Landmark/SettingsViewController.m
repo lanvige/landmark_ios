@@ -1,42 +1,39 @@
 //
-//  ViewController.m
+//  SettingsViewController.m
 //  Landmark
 //
-//  Created by Lanvige Jiang on 4/23/12.
+//  Created by Lanvige Jiang on 4/25/12.
 //  Copyright (c) 2012 LANVIGE. All rights reserved.
 //
 
-#import "SplashViewController.h"
+#import "SettingsViewController.h"
 
-@interface SplashViewController ()
 
-@end
+@implementation SettingsViewController
 
-@implementation SplashViewController
-
-@synthesize loginLabel;
-
+#pragma mark -
+#pragma mark Implementation
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        //
+        self.title = NSLocalizedString(@"Settings", @"Settings");
+        self.tabBarItem.image = [UIImage imageNamed:@"setting"];
     }
     return self;
 }
 
 - (id)init
 {
-	self = [self initWithNibName:@"SplashView_iPhone" bundle:nil];	
+	self = [self initWithNibName:@"SettingsView_iPhone" bundle:nil];	
 	return self;
 }
-
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	// Do any additional setup after loading the view.
 }
 
 - (void)viewDidUnload
@@ -47,11 +44,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        return YES;
-    }
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 @end

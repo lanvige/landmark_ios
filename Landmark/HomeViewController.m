@@ -6,22 +6,34 @@
 //  Copyright (c) 2012 LANVIGE. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "HomeViewController.h"
 
-@interface MainViewController ()
-
+@interface HomeViewController ()
 @end
 
-@implementation MainViewController
+@implementation HomeViewController
+
+#pragma mark -
+#pragma mark Implementation
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.title = NSLocalizedString(@"Home", @"Home");
+        self.tabBarItem.image = [UIImage imageNamed:@"home"];
+        
+        self.wantsFullScreenLayout = YES;
     }
     return self;
 }
+
+- (id)init
+{
+	self = [self initWithNibName:@"HomeView_iPhone" bundle:nil];	
+	return self;
+}
+
 
 - (void)viewDidLoad
 {

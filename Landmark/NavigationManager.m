@@ -17,6 +17,8 @@
 @implementation NavigationManager
 
 @synthesize tabBarController = _tabBarController;
+@synthesize homeNavigationController;
+@synthesize settingsNavigationController;
 
 // Set the _window as global window from appdelgate.
 - (id)initWithWindow:(UIWindow *)window
@@ -47,16 +49,17 @@
 }
 
 
-- (void)displayHome
+- (void)displayRootView
 {    
     _homeViewController = [[HomeViewController alloc] init];
     _settingsViewController = [[SettingsViewController alloc] init];
     
     // Init a new nav controller as container to include setting view.
-    _navigationController = [[UINavigationController alloc] initWithRootViewController:_settingsViewController];
+    self.homeNavigationController = [[UINavigationController alloc] initWithRootViewController:_homeViewController];
+    self.settingsNavigationController = [[UINavigationController alloc] initWithRootViewController:_settingsViewController];
     
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:_homeViewController, _navigationController, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:homeNavigationController, settingsNavigationController, nil];
     
     // Remove other view & controller
     if(_currentViewController)

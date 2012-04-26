@@ -25,15 +25,18 @@
     LoginViewController *_loginViewContgroller;
     HomeViewController *_homeViewController;
     SettingsViewController *_settingsViewController;
-    UINavigationController *_navigationController;
+    UINavigationController *homeNavigationController;
+    UINavigationController *settingsNavigationController;
     AboutViewController *_aboutViewController;
 }
 
 @property (strong, nonatomic) UITabBarController *tabBarController;
+@property (strong, nonatomic) UINavigationController *homeNavigationController;
+@property (strong, nonatomic) UINavigationController *settingsNavigationController;
 
 - (id)initWithWindow:(UIWindow *)window;
 
 - (void)displaySplash;
-- (void)displayHome;
+- (void)displayRootView;
 
 @end

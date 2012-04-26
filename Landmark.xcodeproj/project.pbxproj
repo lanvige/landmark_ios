@@ -42,6 +42,8 @@
 		3894D1451549218900707389 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3894D1421549218900707389 /* Localizable.strings */; };
 		3894D14B1549219100707389 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3894D1471549219100707389 /* InfoPlist.strings */; };
 		3894D14C1549219100707389 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3894D1491549219100707389 /* Localizable.strings */; };
+		3894D17315495B5400707389 /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3894D17215495B5300707389 /* NewViewController.m */; };
+		3894D17515495B7100707389 /* NewView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D17415495B7100707389 /* NewView_iPhone.xib */; };
 		38DB056C154854F80092CDCD /* AboutView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DB056B154854F80092CDCD /* AboutView_iPhone.xib */; };
 		38DB056F154855140092CDCD /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DB056E154855140092CDCD /* AboutViewController.m */; };
 /* End PBXBuildFile section */
@@ -143,6 +145,9 @@
 		3894D1431549218900707389 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		3894D1481549219100707389 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = InfoPlist.strings; sourceTree = "<group>"; };
 		3894D14A1549219100707389 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = Localizable.strings; sourceTree = "<group>"; };
+		3894D17115495B5300707389 /* NewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
+		3894D17215495B5300707389 /* NewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
+		3894D17415495B7100707389 /* NewView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewView_iPhone.xib; sourceTree = "<group>"; };
 		38DB056B154854F80092CDCD /* AboutView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView_iPhone.xib; sourceTree = "<group>"; };
 		38DB056D154855140092CDCD /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		38DB056E154855140092CDCD /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
@@ -195,6 +200,7 @@
 				380F066D1545840D00C9CF7C /* LoginView_iPhone.xib */,
 				3894D0F31547FBE900707389 /* SettingsView_iPhone.xib */,
 				386C597A15454C1A000B592A /* SplashView_iPhone.xib */,
+				3894D17415495B7100707389 /* NewView_iPhone.xib */,
 			);
 			name = iPhone;
 			sourceTree = "<group>";
@@ -326,6 +332,8 @@
 				386935211545B0EC00EDF001 /* HomeViewController.m */,
 				380F06701545842E00C9CF7C /* LoginViewController.h */,
 				380F06711545842E00C9CF7C /* LoginViewController.m */,
+				3894D17115495B5300707389 /* NewViewController.h */,
+				3894D17215495B5300707389 /* NewViewController.m */,
 				3894D0F51547FC0000707389 /* SettingsViewController.h */,
 				3894D0F61547FC0000707389 /* SettingsViewController.m */,
 				386C597715454C1A000B592A /* SplashViewController.h */,
@@ -500,6 +508,7 @@
 				3894D1451549218900707389 /* Localizable.strings in Resources */,
 				3894D14B1549219100707389 /* InfoPlist.strings in Resources */,
 				3894D14C1549219100707389 /* Localizable.strings in Resources */,
+				3894D17515495B7100707389 /* NewView_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +529,7 @@
 				3894D0F71547FC0000707389 /* SettingsViewController.m in Sources */,
 				38DB056F154855140092CDCD /* AboutViewController.m in Sources */,
 				3894D11E1549150900707389 /* Location.m in Sources */,
+				3894D17315495B5400707389 /* NewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

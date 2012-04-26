@@ -8,13 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UIViewController
+@class NewViewController;
+
+@interface HomeViewController : UIViewController<UITextFieldDelegate>
 { 
+    IBOutlet UITextField *txt;
     NSDictionary *tableContents;
     NSArray *sortedKeys;
+    
+    //NewViewController *newViewController;
 }
 
-@property (nonatomic,retain) NSDictionary *tableContents;
-@property (nonatomic,retain) NSArray *sortedKeys;
+@property (nonatomic, retain) UITextField *txt;
+@property (nonatomic, retain) NSDictionary *tableContents;
+@property (nonatomic, retain) NSArray *sortedKeys;
+
+@property (nonatomic, retain) NewViewController *newViewController;
 
 @end

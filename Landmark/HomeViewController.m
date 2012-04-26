@@ -7,14 +7,17 @@
 //
 
 #import "HomeViewController.h"
+#import "NewViewController.h"
 
 @implementation HomeViewController
 
 #pragma mark -
 #pragma mark Synthesize
 
+@synthesize txt;
 @synthesize tableContents;
 @synthesize sortedKeys;
+@synthesize newViewController;
 
 #pragma mark -
 #pragma mark Implementation
@@ -22,7 +25,8 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+    if (self)
+    {
         self.title = NSLocalizedString(@"home", @"home");
         self.tabBarItem.image = [UIImage imageNamed:@"home"];
         
@@ -41,7 +45,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    // Change the bar in first page.
+    self.navigationController.navigationBar.hidden = TRUE;
+    
+    // for text box
+    txt.delegate = self;
+    
     // Build data for table.
     NSArray *arrItems = [[NSArray alloc]initWithObjects:@"Create a new Location", @"Tell your frends", @"Look arounds here", nil];
     NSDictionary *dictItems = [[NSDictionary alloc] initWithObjectsAndKeys:arrItems, @"", nil];
@@ -89,8 +99,8 @@
 	
 	UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:SimpleTableIdentifier];
 	
-	if(cell == nil) {
-		
+	if(cell == nil) 
+    {	
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimpleTableIdentifier];
 	}
 	
@@ -109,12 +119,38 @@
 	NSString *message = [[NSString alloc] initWithFormat:rowValue];
 	UIAlertView *alert = [[UIAlertView alloc] 
 						  initWithTitle:@"You selected" 
-						  message:message delegate:nil 
+						  message:message 
+                          delegate:nil 
 						  cancelButtonTitle:@"OK" 
 						  otherButtonTitles:nil];
-	[alert show];
+	//[alert show];
+    
+    self.newViewController = [[NewViewController alloc] init];
+    
+    [self.navigationController pushViewController:self.newViewController animated:false];
 	
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark -
+#pragma mark textbox keyboard hidden
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (BOOL)textFieldShouldClear:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    textField.text = @"";
+    return NO;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [txt resignFirstResponder];
 }
 
 @end

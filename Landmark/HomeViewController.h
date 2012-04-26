@@ -6,8 +6,15 @@
 //  Copyright (c) 2012 LANVIGE. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface HomeViewController : BaseViewController
+@interface HomeViewController : UIViewController
+{ 
+    NSDictionary *tableContents;
+    NSArray *sortedKeys;
+}
+
+@property (nonatomic,retain) NSDictionary *tableContents;
+@property (nonatomic,retain) NSArray *sortedKeys;
 
 @end

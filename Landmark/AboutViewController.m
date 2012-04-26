@@ -13,6 +13,9 @@
 
 @synthesize delegate = _delegate;
 
+@synthesize tableContents;
+@synthesize sortedKeys;
+
 #pragma mark -
 #pragma mark Implementation
 
@@ -34,7 +37,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
     
     // Add a done button at left of navigation.
@@ -43,6 +46,11 @@
                                                                 target:self action:@selector(doneActionPressed:)];
     self.navigationItem.leftBarButtonItem = itemDone;
     self.navigationItem.title = NSLocalizedString(@"about", @"");
+    
+    NSArray *arrTemp1 = [[NSArray alloc]initWithObjects:@"Andrew", @"Aubrey", @"Alice", nil];
+    NSDictionary *temp = [[NSDictionary alloc] initWithObjectsAndKeys:arrTemp1, @"", nil];
+    self.tableContents = temp;
+    self.sortedKeys =[[self.tableContents allKeys] sortedArrayUsingSelector:@selector(compare:)];
 }
 
 - (void)viewDidUnload
@@ -64,6 +72,60 @@
     //[self dismissModalViewControllerAnimated:TRUE];
     
     [self.navigationController dismissModalViewControllerAnimated:YES];
+}
+
+
+#pragma mark -
+#pragma mark Table Methods
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return [self.sortedKeys count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+	return [self.sortedKeys objectAtIndex:section];
+}
+
+- (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section 
+{
+	NSArray *listData =[self.tableContents objectForKey:[self.sortedKeys objectAtIndex:section]];
+	return [listData count];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
+{
+	static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
+	
+	NSArray *listData = [self.tableContents objectForKey:[self.sortedKeys objectAtIndex:[indexPath section]]];
+	
+	UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:SimpleTableIdentifier];
+	
+	if(cell == nil) 
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimpleTableIdentifier];
+	}
+	
+	NSUInteger row = [indexPath row];
+	cell.textLabel.text = [listData objectAtIndex:row];
+	
+	return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
+{
+	NSArray *listData =[self.tableContents objectForKey:[self.sortedKeys objectAtIndex:[indexPath section]]];
+	NSUInteger row = [indexPath row];
+	NSString *rowValue = [listData objectAtIndex:row];
+	
+	NSString *message = [[NSString alloc] initWithFormat:rowValue];
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You selected" 
+                                                    message:message delegate:nil 
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+	[alert show];
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "HomeViewController.h"
-#import "NewViewController.h"
+#import "LandViewController.h"
 
 @implementation HomeViewController
 
@@ -17,7 +17,7 @@
 @synthesize txt;
 @synthesize tableContents;
 @synthesize sortedKeys;
-@synthesize newViewController;
+@synthesize landViewController;
 
 #pragma mark -
 #pragma mark Implementation
@@ -43,11 +43,8 @@
 
 
 - (void)viewDidLoad
-{
+{    
     [super viewDidLoad];
-    
-    // Change the bar in first page.
-    self.navigationController.navigationBar.hidden = TRUE;
     
     // for text box
     txt.delegate = self;
@@ -69,6 +66,22 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark -
+#pragma mark hide Navigation Bar only on first page
+#pragma http://stackoverflow.com/questions/845583/iphone-hide-navigation-bar-only-on-first-page
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+}
+
+- (void) viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [super viewWillDisappear:animated];
 }
 
 
@@ -125,9 +138,9 @@
 						  otherButtonTitles:nil];
 	//[alert show];
     
-    self.newViewController = [[NewViewController alloc] init];
+    self.landViewController = [[LandViewController alloc] init];
     
-    [self.navigationController pushViewController:self.newViewController animated:false];
+    [self.navigationController pushViewController:self.landViewController animated:false];
 	
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

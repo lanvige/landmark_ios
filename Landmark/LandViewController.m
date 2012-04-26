@@ -6,13 +6,10 @@
 //  Copyright (c) 2012 LANVIGE. All rights reserved.
 //
 
-#import "NewViewController.h"
+#import "LandViewController.h"
 
-@interface NewViewController ()
 
-@end
-
-@implementation NewViewController
+@implementation LandViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,12 +22,15 @@
 
 - (id)init
 {
-	self = [self initWithNibName:@"NewView_iPhone" bundle:nil];	
+	self = [self initWithNibName:@"LandView_iPhone" bundle:nil];	
 	return self;
 }
 
 - (void)viewDidLoad
 {
+    // Change the bar in first page.
+    self.navigationController.navigationBar.hidden = FALSE;
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }

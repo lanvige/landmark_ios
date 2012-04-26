@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class NewViewController;
+@class LandViewController;
 
 @interface HomeViewController : UIViewController<UITextFieldDelegate>
 { 
@@ -23,6 +23,6 @@
 @property (nonatomic, retain) NSDictionary *tableContents;
 @property (nonatomic, retain) NSArray *sortedKeys;
 
-@property (nonatomic, retain) NewViewController *newViewController;
+@property (nonatomic, retain) LandViewController *landViewController;
 
 @end

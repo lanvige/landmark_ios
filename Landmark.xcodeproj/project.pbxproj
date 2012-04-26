@@ -37,6 +37,7 @@
 		3894D0F41547FBE900707389 /* SettingsView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D0F31547FBE900707389 /* SettingsView_iPhone.xib */; };
 		3894D0F71547FC0000707389 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3894D0F61547FC0000707389 /* SettingsViewController.m */; };
 		3894D0F91548002F00707389 /* HomeView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D0F81548002F00707389 /* HomeView_iPhone.xib */; };
+		3894D11E1549150900707389 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 3894D11D1549150900707389 /* Location.m */; };
 		38DB056C154854F80092CDCD /* AboutView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DB056B154854F80092CDCD /* AboutView_iPhone.xib */; };
 		38DB056F154855140092CDCD /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DB056E154855140092CDCD /* AboutViewController.m */; };
 /* End PBXBuildFile section */
@@ -131,6 +132,9 @@
 		3894D0F51547FC0000707389 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		3894D0F61547FC0000707389 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		3894D0F81548002F00707389 /* HomeView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeView_iPhone.xib; sourceTree = "<group>"; };
+		3894D11B154901E300707389 /* ModalViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModalViewControllerDelegate.h; sourceTree = "<group>"; };
+		3894D11C1549150900707389 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		3894D11D1549150900707389 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		38DB056B154854F80092CDCD /* AboutView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView_iPhone.xib; sourceTree = "<group>"; };
 		38DB056D154855140092CDCD /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		38DB056E154855140092CDCD /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
@@ -278,6 +282,7 @@
 		386C596B15454C1A000B592A /* Landmark */ = {
 			isa = PBXGroup;
 			children = (
+				3894D11A154901BC00707389 /* Protocals */,
 				380F063F154566CC00C9CF7C /* ViewManager */,
 				386C598815455369000B592A /* Models */,
 				386C598715455362000B592A /* Views */,
@@ -331,6 +336,8 @@
 		386C598815455369000B592A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3894D11C1549150900707389 /* Location.h */,
+				3894D11D1549150900707389 /* Location.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -342,6 +349,14 @@
 				3894D0AC1547E17500707389 /* icon.png */,
 			);
 			name = Icons;
+			sourceTree = "<group>";
+		};
+		3894D11A154901BC00707389 /* Protocals */ = {
+			isa = PBXGroup;
+			children = (
+				3894D11B154901E300707389 /* ModalViewControllerDelegate.h */,
+			);
+			name = Protocals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,6 +486,7 @@
 				386935221545B0EC00EDF001 /* HomeViewController.m in Sources */,
 				3894D0F71547FC0000707389 /* SettingsViewController.m in Sources */,
 				38DB056F154855140092CDCD /* AboutViewController.m in Sources */,
+				3894D11E1549150900707389 /* Location.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

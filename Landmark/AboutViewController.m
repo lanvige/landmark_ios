@@ -8,7 +8,13 @@
 
 #import "AboutViewController.h"
 
+
 @implementation AboutViewController
+
+@synthesize delegate = _delegate;
+
+#pragma mark -
+#pragma mark Implementation
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,7 +34,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    
+    // Add a done button at left of navigation.
+    UIBarButtonItem *itemDone = [[UIBarButtonItem alloc] initWithTitle:@"Done"
+                                                                 style:UIBarButtonItemStyleBordered 
+                                                                target:self action:@selector(doneActionPressed:)];
+    self.navigationItem.leftBarButtonItem = itemDone;
+    self.navigationItem.title = @"About";
 }
 
 - (void)viewDidUnload
@@ -40,6 +54,16 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+// Show the about page.
+- (void)doneActionPressed: (id)sender
+{
+    // Call the delegate to dismiss the modal view
+    //[delegate didDismissModalView];
+    //[self dismissModalViewControllerAnimated:TRUE];
+    
+    [self.navigationController dismissModalViewControllerAnimated:YES];
 }
 
 @end

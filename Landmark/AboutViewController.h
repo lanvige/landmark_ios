@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ModalViewControllerDelegate.h"
 
-@interface AboutViewController : UIViewController
+@interface AboutViewController : UIViewController 
+{
+    id<ModalViewControllerDelegate> delegate;
+}
+
+@property (nonatomic, assign) id<ModalViewControllerDelegate> delegate;
 
 @end

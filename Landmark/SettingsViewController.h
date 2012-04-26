@@ -8,6 +8,12 @@
 
 #import "BaseViewController.h"
 
+@class AboutViewController;
+
 @interface SettingsViewController : BaseViewController
+
+@property (nonatomic, retain) AboutViewController *aboutViewController;
+@property (nonatomic, retain) IBOutlet UINavigationController *aboutNavigationController;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *aboutButton;
 
 @end

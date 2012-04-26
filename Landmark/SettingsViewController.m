@@ -26,7 +26,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Set the title and image for Tab bar.
-        self.title = NSLocalizedString(@"Settings", @"Settings");
+        self.title = NSLocalizedString(@"settings", @"");
         self.tabBarItem.image = [UIImage imageNamed:@"setting"];
     }
     return self;
@@ -44,10 +44,10 @@
     
     // Change the bar's style.
     self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
-    self.navigationItem.title = NSLocalizedString(@"Settings", @"Settings");
+    self.navigationItem.title = NSLocalizedString(@"settings", @"");
     
     // Add a about button on the right of bar.
-    self.aboutButton = [[UIBarButtonItem alloc]initWithTitle:NSLocalizedString(@"About", @"About")
+    self.aboutButton = [[UIBarButtonItem alloc]initWithTitle:NSLocalizedString(@"about", @"")
                                                        style:UIBarButtonItemStyleBordered
                                                       target:self
                                                       action:@selector(aboutAction:)];

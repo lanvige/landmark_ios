@@ -38,11 +38,11 @@
     self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
     
     // Add a done button at left of navigation.
-    UIBarButtonItem *itemDone = [[UIBarButtonItem alloc] initWithTitle:@"Done"
+    UIBarButtonItem *itemDone = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"done", @"")
                                                                  style:UIBarButtonItemStyleBordered 
                                                                 target:self action:@selector(doneActionPressed:)];
     self.navigationItem.leftBarButtonItem = itemDone;
-    self.navigationItem.title = @"About";
+    self.navigationItem.title = NSLocalizedString(@"about", @"");
 }
 
 - (void)viewDidUnload

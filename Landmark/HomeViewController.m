@@ -20,7 +20,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Home", @"Home");
+        self.title = NSLocalizedString(@"home", @"home");
         self.tabBarItem.image = [UIImage imageNamed:@"home"];
         
         self.wantsFullScreenLayout = YES;

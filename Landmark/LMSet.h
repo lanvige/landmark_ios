@@ -1,13 +1,13 @@
 //
-//  Location.h
+//  LMSet.h
 //  Landmark
 //
-//  Created by Lanvige Jiang on 4/26/12.
+//  Created by Lanvige Jiang on 4/27/12.
 //  Copyright (c) 2012 LANVIGE. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface Location : NSObject
+@interface LMSet : NSObject
 
 @end

@@ -22,6 +22,8 @@
 		3822BF9A154695CD00FB996A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822BF99154695CD00FB996A /* Security.framework */; };
 		3822BF9C154695DA00FB996A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822BF9B154695DA00FB996A /* SystemConfiguration.framework */; };
 		3822BF9E154695E900FB996A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822BF9D154695E900FB996A /* libxml2.dylib */; };
+		385E61F0154A850E00964706 /* LMPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E61EF154A850E00964706 /* LMPlace.m */; };
+		385E61F3154A853100964706 /* LMSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E61F2154A853100964706 /* LMSet.m */; };
 		386935221545B0EC00EDF001 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386935211545B0EC00EDF001 /* HomeViewController.m */; };
 		386C596615454C1A000B592A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386C596515454C1A000B592A /* UIKit.framework */; };
 		386C596815454C1A000B592A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386C596715454C1A000B592A /* Foundation.framework */; };
@@ -37,7 +39,7 @@
 		3894D0F41547FBE900707389 /* SettingsView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D0F31547FBE900707389 /* SettingsView_iPhone.xib */; };
 		3894D0F71547FC0000707389 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3894D0F61547FC0000707389 /* SettingsViewController.m */; };
 		3894D0F91548002F00707389 /* HomeView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D0F81548002F00707389 /* HomeView_iPhone.xib */; };
-		3894D11E1549150900707389 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 3894D11D1549150900707389 /* Location.m */; };
+		3894D11E1549150900707389 /* LMLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3894D11D1549150900707389 /* LMLocation.m */; };
 		3894D1441549218900707389 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3894D1401549218900707389 /* InfoPlist.strings */; };
 		3894D1451549218900707389 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3894D1421549218900707389 /* Localizable.strings */; };
 		3894D14B1549219100707389 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3894D1471549219100707389 /* InfoPlist.strings */; };
@@ -116,6 +118,10 @@
 		3822BFA11546961500FB996A /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		3822BFA21546961500FB996A /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		3822BFA31546961500FB996A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		385E61EE154A850E00964706 /* LMPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMPlace.h; sourceTree = "<group>"; };
+		385E61EF154A850E00964706 /* LMPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMPlace.m; sourceTree = "<group>"; };
+		385E61F1154A853100964706 /* LMSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSet.h; sourceTree = "<group>"; };
+		385E61F2154A853100964706 /* LMSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSet.m; sourceTree = "<group>"; };
 		386935201545B0EC00EDF001 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		386935211545B0EC00EDF001 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		386C596115454C1A000B592A /* Landmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,8 +145,8 @@
 		3894D0F61547FC0000707389 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		3894D0F81548002F00707389 /* HomeView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeView_iPhone.xib; sourceTree = "<group>"; };
 		3894D11B154901E300707389 /* ModalViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModalViewControllerDelegate.h; sourceTree = "<group>"; };
-		3894D11C1549150900707389 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
-		3894D11D1549150900707389 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		3894D11C1549150900707389 /* LMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMLocation.h; sourceTree = "<group>"; };
+		3894D11D1549150900707389 /* LMLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMLocation.m; sourceTree = "<group>"; };
 		3894D1411549218900707389 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		3894D1431549218900707389 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		3894D1481549219100707389 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = InfoPlist.strings; sourceTree = "<group>"; };
@@ -298,13 +304,13 @@
 		386C596B15454C1A000B592A /* Landmark */ = {
 			isa = PBXGroup;
 			children = (
-				3894D11A154901BC00707389 /* Protocals */,
+				386C597415454C1A000B592A /* AppDelegate.h */,
+				386C597515454C1A000B592A /* AppDelegate.m */,
 				380F063F154566CC00C9CF7C /* ViewManager */,
+				3894D11A154901BC00707389 /* Protocals */,
 				386C598815455369000B592A /* Models */,
 				386C598715455362000B592A /* Views */,
 				386C598615455320000B592A /* ViewControllers */,
-				386C597415454C1A000B592A /* AppDelegate.h */,
-				386C597515454C1A000B592A /* AppDelegate.m */,
 				386C596C15454C1A000B592A /* Supporting Files */,
 			);
 			path = Landmark;
@@ -354,8 +360,12 @@
 		386C598815455369000B592A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3894D11C1549150900707389 /* Location.h */,
-				3894D11D1549150900707389 /* Location.m */,
+				3894D11C1549150900707389 /* LMLocation.h */,
+				3894D11D1549150900707389 /* LMLocation.m */,
+				385E61EE154A850E00964706 /* LMPlace.h */,
+				385E61EF154A850E00964706 /* LMPlace.m */,
+				385E61F1154A853100964706 /* LMSet.h */,
+				385E61F2154A853100964706 /* LMSet.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -528,8 +538,10 @@
 				386935221545B0EC00EDF001 /* HomeViewController.m in Sources */,
 				3894D0F71547FC0000707389 /* SettingsViewController.m in Sources */,
 				38DB056F154855140092CDCD /* AboutViewController.m in Sources */,
-				3894D11E1549150900707389 /* Location.m in Sources */,
+				3894D11E1549150900707389 /* LMLocation.m in Sources */,
 				3894D17315495B5400707389 /* LandViewController.m in Sources */,
+				385E61F0154A850E00964706 /* LMPlace.m in Sources */,
+				385E61F3154A853100964706 /* LMSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

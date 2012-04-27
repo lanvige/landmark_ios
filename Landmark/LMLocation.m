@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 LANVIGE. All rights reserved.
 //
 
-#import "Location.h"
+#import "LMLocation.h"
 
-@implementation Location
+@implementation LMLocation
 
 @end

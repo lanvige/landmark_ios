@@ -12,6 +12,7 @@
 #import "LoginViewController.h"
 #import "HomeViewController.h"
 #import "HistoryViewController.h"
+#import "ContactsViewController.h"
 #import "SettingsViewController.h"
 #import "AboutViewController.h"
 
@@ -24,10 +25,12 @@
 @synthesize tabBarController;
 @synthesize homeNavigationController;
 @synthesize historyNavigationController;
+@synthesize contactsNavigationController;
 @synthesize settingsNavigationController;
 
 @synthesize homeViewController;
 @synthesize historyViewController;
+@synthesize contactsViewController;
 @synthesize settingsViewController;
 
 // Set the _window as global window from appdelgate.
@@ -63,15 +66,17 @@
 {    
     self.homeViewController = [[HomeViewController alloc] initWithNibName:@"HomeView_iPhone" bundle:nil];
     self.historyViewController = [[HistoryViewController alloc] initWithNibName:@"HistoryView_iPhone" bundle:nil];
+    self.contactsViewController = [[ContactsViewController alloc] initWithNibName:@"ContactsView_iPhone" bundle:nil];
     self.settingsViewController = [[SettingsViewController alloc] initWithNibName:@"SettingsView_iPhone" bundle:nil];
     
     // Init a new nav controller as container to include setting view.
     self.homeNavigationController = [[UINavigationController alloc] initWithRootViewController:self.homeViewController];
     self.historyNavigationController = [[UINavigationController alloc] initWithRootViewController:self.historyViewController];
+    self.contactsNavigationController = [[UINavigationController alloc] initWithRootViewController:self.contactsViewController];
     self.settingsNavigationController = [[UINavigationController alloc] initWithRootViewController:self.settingsViewController];
     
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:homeNavigationController, historyNavigationController, settingsNavigationController, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:homeNavigationController, historyNavigationController, contactsNavigationController, settingsNavigationController, nil];
     
     // Remove other view & controller
     if(self.currentViewController)

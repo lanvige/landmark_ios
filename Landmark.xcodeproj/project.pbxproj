@@ -38,10 +38,10 @@
 		386C597215454C1A000B592A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 386C597115454C1A000B592A /* main.m */; };
 		386C597615454C1A000B592A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 386C597515454C1A000B592A /* AppDelegate.m */; };
 		386C597915454C1A000B592A /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386C597815454C1A000B592A /* SplashViewController.m */; };
-		386C597C15454C1A000B592A /* SplashView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386C597A15454C1A000B592A /* SplashView_iPhone.xib */; };
-		386C597F15454C1A000B592A /* SplashView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386C597D15454C1A000B592A /* SplashView_iPad.xib */; };
 		387C69FF154C3BE3005768B9 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C69FE154C3BE3005768B9 /* ContactsViewController.m */; };
 		387C6A02154C3BFE005768B9 /* ContactsView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387C6A01154C3BFE005768B9 /* ContactsView_iPhone.xib */; };
+		387C6A04154C3FC0005768B9 /* SplashView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387C6A03154C3FC0005768B9 /* SplashView_iPhone.xib */; };
+		387C6A06154C3FD0005768B9 /* SplashView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387C6A05154C3FD0005768B9 /* SplashView_iPad.xib */; };
 		3894D0AD1547E17500707389 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3894D0AB1547E17500707389 /* icon-72.png */; };
 		3894D0AE1547E17500707389 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3894D0AC1547E17500707389 /* icon.png */; };
 		3894D0F41547FBE900707389 /* SettingsView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D0F31547FBE900707389 /* SettingsView_iPhone.xib */; };
@@ -152,11 +152,11 @@
 		386C597515454C1A000B592A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		386C597715454C1A000B592A /* SplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
 		386C597815454C1A000B592A /* SplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
-		386C597B15454C1A000B592A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SplashView_iPhone.xib; sourceTree = "<group>"; };
-		386C597E15454C1A000B592A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SplashView_iPad.xib; sourceTree = "<group>"; };
 		387C69FD154C3BE3005768B9 /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
 		387C69FE154C3BE3005768B9 /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
 		387C6A01154C3BFE005768B9 /* ContactsView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsView_iPhone.xib; sourceTree = "<group>"; };
+		387C6A03154C3FC0005768B9 /* SplashView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashView_iPhone.xib; sourceTree = "<group>"; };
+		387C6A05154C3FD0005768B9 /* SplashView_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashView_iPad.xib; sourceTree = "<group>"; };
 		3894D0AB1547E17500707389 /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72.png"; path = "Icons/icon-72.png"; sourceTree = "<group>"; };
 		3894D0AC1547E17500707389 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Icons/icon.png; sourceTree = "<group>"; };
 		3894D0F31547FBE900707389 /* SettingsView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsView_iPhone.xib; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 		380F06431545677F00C9CF7C /* iPad */ = {
 			isa = PBXGroup;
 			children = (
-				386C597D15454C1A000B592A /* SplashView_iPad.xib */,
+				387C6A05154C3FD0005768B9 /* SplashView_iPad.xib */,
 			);
 			name = iPad;
 			sourceTree = "<group>";
@@ -222,13 +222,13 @@
 		380F06441545678B00C9CF7C /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				387C6A03154C3FC0005768B9 /* SplashView_iPhone.xib */,
 				387C6A00154C3BEC005768B9 /* Contacts */,
 				385E6205154BDA7900964706 /* Space */,
 				38DB056B154854F80092CDCD /* AboutView_iPhone.xib */,
 				3894D0F81548002F00707389 /* HomeView_iPhone.xib */,
 				380F066D1545840D00C9CF7C /* LoginView_iPhone.xib */,
 				3894D0F31547FBE900707389 /* SettingsView_iPhone.xib */,
-				386C597A15454C1A000B592A /* SplashView_iPhone.xib */,
 				385E6208154BDAC200964706 /* HistoryView_iPhone.xib */,
 			);
 			name = iPhone;
@@ -575,8 +575,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				386C597015454C1A000B592A /* InfoPlist.strings in Resources */,
-				386C597C15454C1A000B592A /* SplashView_iPhone.xib in Resources */,
-				386C597F15454C1A000B592A /* SplashView_iPad.xib in Resources */,
 				380F066E1545840D00C9CF7C /* LoginView_iPhone.xib in Resources */,
 				3822BF3715467D3400FB996A /* Default.png in Resources */,
 				3822BF3815467D3400FB996A /* Default@2x.png in Resources */,
@@ -594,6 +592,8 @@
 				385E6207154BDA9700964706 /* LocationView_iPhone.xib in Resources */,
 				385E6209154BDAC200964706 /* HistoryView_iPhone.xib in Resources */,
 				387C6A02154C3BFE005768B9 /* ContactsView_iPhone.xib in Resources */,
+				387C6A04154C3FC0005768B9 /* SplashView_iPhone.xib in Resources */,
+				387C6A06154C3FD0005768B9 /* SplashView_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,22 +640,6 @@
 				386C596F15454C1A000B592A /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		386C597A15454C1A000B592A /* SplashView_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				386C597B15454C1A000B592A /* en */,
-			);
-			name = SplashView_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		386C597D15454C1A000B592A /* SplashView_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				386C597E15454C1A000B592A /* en */,
-			);
-			name = SplashView_iPad.xib;
 			sourceTree = "<group>";
 		};
 		3894D1401549218900707389 /* InfoPlist.strings */ = {

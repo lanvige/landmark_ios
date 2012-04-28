@@ -14,6 +14,9 @@
 @synthesize nameTextFiled;
 @synthesize locationTextFiled;
 
+@synthesize tableContents;
+@synthesize sortedKeys;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,7 +30,24 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];    
+    [super viewDidLoad];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    self.navigationItem.title = NSLocalizedString(@"Add Landmark", @"");
+    
+    [self buildViewTable];
+}
+
+- (void)buildViewTable
+{
+    // Build data for table.
+    NSArray *nameArrItem = [[NSArray alloc]initWithObjects:@"Name", nil];
+    
+    // Build data for table.
+    NSArray *locationArrItem = [[NSArray alloc]initWithObjects:@"Location", @"Current", nil];
+    
+    NSDictionary *dictItems = [[NSDictionary alloc] initWithObjectsAndKeys:nameArrItem, @"", locationArrItem, @"", nil];
+    self.tableContents = dictItems;
+    self.sortedKeys =[[self.tableContents allKeys] sortedArrayUsingSelector:@selector(compare:)];
 }
 
 - (void)viewDidUnload
@@ -39,6 +59,65 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+
+
+#pragma mark -
+#pragma mark Table Methods
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return [self.sortedKeys count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+	return [self.sortedKeys objectAtIndex:section];
+}
+
+- (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section 
+{
+	NSArray *listData =[self.tableContents objectForKey:[self.sortedKeys objectAtIndex:section]];
+	return [listData count];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
+{
+	static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
+	
+	NSArray *listData =[self.tableContents objectForKey:[self.sortedKeys objectAtIndex:[indexPath section]]];
+	
+	UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:SimpleTableIdentifier];
+	
+	if(cell == nil) 
+    {	
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimpleTableIdentifier];
+        cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
+	}
+	
+	NSUInteger row = [indexPath row];
+	cell.textLabel.text = [listData objectAtIndex:row];
+	
+	return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
+{
+	//NSArray *listData =[self.tableContents objectForKey:[self.sortedKeys objectAtIndex:[indexPath section]]];
+	NSUInteger row = [indexPath row];
+	//NSString *rowValue = [listData objectAtIndex:row];
+	//NSString *message = [[NSString alloc] initWithFormat:rowValue];
+	//[alert show];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    //NSLog([NSString stringWithFormat:@"%d", row]);
+    switch (row) 
+    {
+        case 0:
+        {
+        }
+    }
 }
 
 

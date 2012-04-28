@@ -7,13 +7,21 @@
 //
 
 #import "LocationViewController.h"
-
+#import "AboutViewController.h"
 
 @implementation LocationViewController
 
 @synthesize locationManager;
 @synthesize currentLocation;
 @synthesize mapView;
+
+
+-(IBAction)xx:(id) sender{
+    
+    AboutViewController *aboutViewController = [[AboutViewController alloc] initWithNibName:@"AboutView_iPhone" bundle:nil];
+    
+    [self.navigationController pushViewController:aboutViewController animated:TRUE];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

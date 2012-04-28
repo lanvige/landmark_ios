@@ -134,12 +134,14 @@
     switch (row) 
     {
         case 0:
-            if (self.createSpaceViewController == nil) 
-            {
-                self.createSpaceViewController = [[CreateSpaceViewController alloc] initWithNibName:@"CreateSpaceView_iPhone" bundle:nil];
-            }
-            [self.navigationController pushViewController:self.createSpaceViewController animated:TRUE];
+        {
+            //if (self.createSpaceViewController == nil) 
+//            {
+                CreateSpaceViewController *vc = [[CreateSpaceViewController alloc] initWithNibName:@"CreateSpaceView_iPhone" bundle:nil];
+//            }
+            [self.navigationController pushViewController:vc animated:TRUE];
             break;
+        }
         case 1:
             if (self.locationViewController == nil)
             {

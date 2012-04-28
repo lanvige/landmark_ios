@@ -7,12 +7,20 @@
 //
 
 #import "CreateSpaceViewController.h"
+#import "LocationViewController.h"
 
 @interface CreateSpaceViewController ()
 
 @end
 
 @implementation CreateSpaceViewController
+
+-(IBAction)xx:(id) sender{
+
+   LocationViewController *locationViewController = [[LocationViewController alloc] initWithNibName:@"LocationView_iPhone" bundle:nil];
+
+    [self.navigationController pushViewController:locationViewController animated:TRUE];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

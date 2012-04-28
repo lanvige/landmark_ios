@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LocationViewController.h"
 
 @interface CreateSpaceViewController : UIViewController
+
+- (IBAction)xx :(id)sender;
 
 @end

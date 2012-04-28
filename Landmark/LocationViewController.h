@@ -20,4 +20,6 @@
 @property(nonatomic, retain) CLLocation *currentLocation;
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
 
+-(IBAction)xx:(id) sender;
+
 @end

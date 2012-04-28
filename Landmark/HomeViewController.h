@@ -26,6 +26,6 @@
 @property (nonatomic, strong) NSArray *sortedKeys;
 
 @property (nonatomic, strong) LocationViewController *locationViewController;
-@property (nonatomic, retain) CreateSpaceViewController *createSpaceViewController;
+@property (nonatomic, assign) CreateSpaceViewController *createSpaceViewController;
 
 @end

@@ -14,18 +14,13 @@
 
 @interface HomeViewController : UIViewController<UITextFieldDelegate>
 { 
-    IBOutlet UITextField *txt;
+    IBOutlet UITextField *codeTextFiled;
     NSDictionary *tableContents;
     NSArray *sortedKeys;
-    
-    //NewViewController *newViewController;
 }
 
-@property (nonatomic, strong) UITextField *txt;
+@property (nonatomic, strong) UITextField *codeTextFiled;
 @property (nonatomic, strong) NSDictionary *tableContents;
 @property (nonatomic, strong) NSArray *sortedKeys;
-
-@property (nonatomic, strong) LocationViewController *locationViewController;
-@property (nonatomic, assign) CreateSpaceViewController *createSpaceViewController;
 
 @end

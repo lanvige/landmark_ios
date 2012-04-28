@@ -16,12 +16,9 @@
 #pragma mark -
 #pragma mark Synthesize
 
-@synthesize txt;
+@synthesize codeTextFiled;
 @synthesize tableContents;
 @synthesize sortedKeys;
-
-@synthesize createSpaceViewController;
-@synthesize locationViewController;
 
 #pragma mark -
 #pragma mark Implementation
@@ -43,9 +40,6 @@
 - (void)viewDidLoad
 {    
     [super viewDidLoad];
-    
-    // for text box
-    txt.delegate = self;
     
     // Build data for table.
     NSArray *arrItems = [[NSArray alloc]initWithObjects:@"Create a new Location", @"Tell your frends", @"Look arounds here", nil];
@@ -113,6 +107,7 @@
 	if(cell == nil) 
     {	
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimpleTableIdentifier];
+        cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
 	}
 	
 	NSUInteger row = [indexPath row];
@@ -135,23 +130,19 @@
     {
         case 0:
         {
-            //if (self.createSpaceViewController == nil) 
-//            {
-                CreateSpaceViewController *vc = [[CreateSpaceViewController alloc] initWithNibName:@"CreateSpaceView_iPhone" bundle:nil];
-//            }
-            [self.navigationController pushViewController:vc animated:TRUE];
+            CreateSpaceViewController *createSpaceViewController = [[CreateSpaceViewController alloc] initWithNibName:@"CreateSpaceView_iPhone" bundle:nil];
+            [self.navigationController pushViewController:createSpaceViewController animated:TRUE];
             break;
         }
         case 1:
-            if (self.locationViewController == nil)
-            {
-                self.locationViewController = [[LocationViewController alloc] initWithNibName:@"LocationView_iPhone" bundle:nil];
-            }
-            [self.navigationController pushViewController:self.locationViewController animated:TRUE];
+        {
+            CreateSpaceViewController *createSpaceViewController = [[CreateSpaceViewController alloc] initWithNibName:@"CreateSpaceView_iPhone" bundle:nil];
+            [self.navigationController pushViewController:createSpaceViewController animated:TRUE];
             break;
+        }
         case 2:
-            self.createSpaceViewController = [[CreateSpaceViewController alloc] initWithNibName:@"CreateSpaceView_iPhone" bundle:nil];
-            [self.navigationController pushViewController:self.createSpaceViewController animated:false];
+            //self.createSpaceViewController = [[CreateSpaceViewController alloc] initWithNibName:@"CreateSpaceView_iPhone" bundle:nil];
+            //[self.navigationController pushViewController:self.createSpaceViewController animated:false];
             break;
     }
 }
@@ -174,7 +165,7 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [txt resignFirstResponder];
+    [codeTextFiled resignFirstResponder];
 }
 
 @end

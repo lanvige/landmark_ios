@@ -14,12 +14,15 @@
     CLLocationManager *locationManager;
     CLLocation *currentLocation;
     IBOutlet MKMapView *mapView;
+    UISegmentedControl *segmentedControl;
 }
 
-@property(nonatomic, retain) CLLocationManager *locationManager;
-@property(nonatomic, retain) CLLocation *currentLocation;
-@property (nonatomic, retain) IBOutlet MKMapView *mapView;
+@property (nonatomic, strong) UISegmentedControl *segmentedControl;
+@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, strong) CLLocation *currentLocation;
+@property (nonatomic, strong) IBOutlet MKMapView *mapView;
 
--(IBAction)xx:(id) sender;
+- (IBAction)segmentedChanged:(id)sender;
+- (IBAction)xx:(id)sender;
 
 @end

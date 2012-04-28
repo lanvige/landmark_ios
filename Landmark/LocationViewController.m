@@ -11,6 +11,7 @@
 
 @implementation LocationViewController
 
+@synthesize segmentedControl;
 @synthesize locationManager;
 @synthesize currentLocation;
 @synthesize mapView;
@@ -19,7 +20,6 @@
 -(IBAction)xx:(id) sender{
     
     AboutViewController *aboutViewController = [[AboutViewController alloc] initWithNibName:@"AboutView_iPhone" bundle:nil];
-    
     [self.navigationController pushViewController:aboutViewController animated:TRUE];
 }
 
@@ -34,38 +34,16 @@
 }
 
 - (void)viewDidLoad
-{
-    // Change the bar in first page.
-    self.navigationController.navigationBar.hidden = FALSE;
-    
+{    
     [super viewDidLoad];
     
-    // init the location manager.
-    self.locationManager = [[CLLocationManager alloc] init];
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    // Set a movement threshold for new events.
-    locationManager.distanceFilter = 500;
-    [locationManager startUpdatingLocation];
+    // Change the bar in first page.
+    self.navigationController.navigationBar.hidden = FALSE;
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
     
-    
-    // Init the map
-    MKCoordinateRegion coordinateRegion;
-    coordinateRegion.center = [[locationManager location] coordinate];
-    
-    MKCoordinateSpan coordinateSpan;
-    coordinateSpan.latitudeDelta = .05;
-    coordinateSpan.longitudeDelta = .02;
-    
-    coordinateRegion.span = coordinateSpan;
-    
-    self.mapView.showsUserLocation = YES;
-    [self.mapView setMapType:MKMapTypeStandard];
-    [self.mapView setZoomEnabled:YES];
-    [self.mapView setScrollEnabled:YES];
-    
-
-    [self.mapView setRegion:coordinateRegion animated:YES]; 
+    [self addSegmentedControlOnNavigation];
+    [self addDoneButtonOnNavigation];
+    [self initLocationAndMapInfo];
 }
 
 - (void)viewDidUnload
@@ -88,10 +66,89 @@
     [mapView setRegion:region animated:YES];
 }
 
+
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {  
     self.currentLocation = newLocation;  
     //do something else  
 }  
+
+// Add a button on navigation to close the current view.
+- (void)addDoneButtonOnNavigation
+{
+    // Add a done button at left of navigation.
+    UIBarButtonItem *itemDone = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"done", @"")
+                                                                 style:UIBarButtonItemStyleBordered 
+                                                                target:self
+                                                                action:@selector(doneActionPressed:)];
+    self.navigationItem.leftBarButtonItem = itemDone;
+    self.navigationItem.title = NSLocalizedString(@"about", @"");
+}
+
+// Close the map view.
+- (void)doneActionPressed: (id)sender
+{
+    [self.navigationController dismissModalViewControllerAnimated:YES];
+}
+
+- (void)initLocationAndMapInfo
+{
+    // init the location manager.
+    self.locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    // Set a movement threshold for new events.
+    locationManager.distanceFilter = 500;
+    [locationManager startUpdatingLocation];
+    
+    
+    // Init the map
+    MKCoordinateRegion coordinateRegion;
+    coordinateRegion.center = [[locationManager location] coordinate];
+    
+    MKCoordinateSpan coordinateSpan;
+    coordinateSpan.latitudeDelta = .02;
+    coordinateSpan.longitudeDelta = .02;
+    
+    coordinateRegion.span = coordinateSpan;
+    
+    self.mapView.showsUserLocation = YES;
+    [self.mapView setMapType:MKMapTypeStandard];
+    [self.mapView setZoomEnabled:YES];
+    [self.mapView setScrollEnabled:YES];
+    
+    
+    [self.mapView setRegion:coordinateRegion animated:YES]; 
+}
+
+// Add segmented control in navigation bar.
+- (void)addSegmentedControlOnNavigation
+{
+    self.segmentedControl = [[UISegmentedControl alloc] 
+                             initWithItems:[NSArray arrayWithObjects:NSLocalizedString(@"standard", @""),                                                  NSLocalizedString(@"satellite", @""), nil]];
+    
+    [segmentedControl setSelectedSegmentIndex:0];
+    [segmentedControl setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+    [segmentedControl setSegmentedControlStyle:UISegmentedControlStyleBar];
+    segmentedControl.frame = CGRectMake(0, 0, 120, 30);
+    [segmentedControl addTarget:self
+                         action:@selector(segmentedChanged:)
+               forControlEvents:UIControlEventValueChanged];
+    [segmentedControl addTarget:self action:@selector(segmentedChanged:) forControlEvents:UIControlEventValueChanged];
+    self.navigationItem.titleView = segmentedControl;
+}
+
+- (IBAction)segmentedChanged:(id)sender
+{
+    if (self.segmentedControl.selectedSegmentIndex == 0) 
+    {
+        //write here your action when first item selected
+        NSLog(@"1");
+    } 
+    else
+    {
+        NSLog(@"2");
+    }
+}
 
 @end

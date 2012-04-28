@@ -33,14 +33,15 @@
 {
     [super viewDidLoad];
     
-    //self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
     
-    // Add a done button at left of navigation.
-    //UIBarButtonItem *itemDone = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"done", @"")
-    //                                                             style:UIBarButtonItemStyleBordered 
-//                                                                target:self action:@selector(doneActionPressed:)];
-//    self.navigationItem.leftBarButtonItem = itemDone;
-//    self.navigationItem.title = NSLocalizedString(@"about", @"");
+    //Add a done button at left of navigation.
+    UIBarButtonItem *itemDone = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"done", @"")
+                                                                 style:UIBarButtonItemStyleBordered 
+                                                                target:self 
+                                                                action:@selector(doneActionPressed:)];
+    self.navigationItem.leftBarButtonItem = itemDone;
+    self.navigationItem.title = NSLocalizedString(@"about", @"");
     
     NSArray *arrTemp1 = [[NSArray alloc]initWithObjects:@"Andrew", @"Aubrey", @"Alice", nil];
     NSDictionary *temp = [[NSDictionary alloc] initWithObjectsAndKeys:arrTemp1, @"", nil];

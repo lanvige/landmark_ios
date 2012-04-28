@@ -10,7 +10,19 @@
 #import "LocationViewController.h"
 
 @interface CreateSpaceViewController : UIViewController
+{
+    IBOutlet UITextField *nameTextFiled;
+    IBOutlet UITextField *locationTextFiled;
+}
 
-- (IBAction)xx :(id)sender;
+@property (nonatomic, strong) UITextField *nameTextFiled;
+@property (nonatomic, strong) UITextField *locationTextFiled;
+
+- (IBAction)textFiledReturnEditing:(id)sender;
+- (IBAction)backgroundTap:(id)sender;
+
+- (IBAction)xx:(id)sender;
+- (IBAction)openMap :(id)sender;
+- (IBAction)finishButton:(id)sender;
 
 @end

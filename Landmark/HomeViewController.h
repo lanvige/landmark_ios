@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @class LandViewController;
+@class CreateSpaceViewController;
+@class LocationViewController;
 
 @interface HomeViewController : UIViewController<UITextFieldDelegate>
 { 
@@ -19,10 +21,11 @@
     //NewViewController *newViewController;
 }
 
-@property (nonatomic, retain) UITextField *txt;
-@property (nonatomic, retain) NSDictionary *tableContents;
-@property (nonatomic, retain) NSArray *sortedKeys;
+@property (nonatomic, strong) UITextField *txt;
+@property (nonatomic, strong) NSDictionary *tableContents;
+@property (nonatomic, strong) NSArray *sortedKeys;
 
-@property (nonatomic, retain) LandViewController *landViewController;
+@property (nonatomic, strong) LocationViewController *locationViewController;
+@property (nonatomic, retain) CreateSpaceViewController *createSpaceViewController;
 
 @end

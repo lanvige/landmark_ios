@@ -11,6 +11,7 @@
 @class SplashViewController;
 @class LoginViewController;
 @class HomeViewController;
+@class HistoryViewController;
 @class SettingsViewController;
 @class AboutViewController;
 
@@ -18,21 +19,20 @@
 {
     @private
     UIWindow *_window;
-    
-    UIViewController *_currentViewController;
-    
-    SplashViewController *_splashViewController;
-    LoginViewController *_loginViewContgroller;
-    HomeViewController *_homeViewController;
-    SettingsViewController *_settingsViewController;
-    UINavigationController *homeNavigationController;
-    UINavigationController *settingsNavigationController;
-    AboutViewController *_aboutViewController;
 }
+
+@property (strong, nonatomic) UIViewController *currentViewController;
+@property (strong, nonatomic) SplashViewController *splashViewController;
+@property (strong, nonatomic) LoginViewController *loginViewContgroller;
 
 @property (strong, nonatomic) UITabBarController *tabBarController;
 @property (strong, nonatomic) UINavigationController *homeNavigationController;
+@property (strong, nonatomic) UINavigationController *historyNavigationController;
 @property (strong, nonatomic) UINavigationController *settingsNavigationController;
+
+@property (strong, nonatomic) HomeViewController *homeViewController;
+@property (strong, nonatomic) HistoryViewController *historyViewController;
+@property (strong, nonatomic) SettingsViewController *settingsViewController;
 
 - (id)initWithWindow:(UIWindow *)window;
 

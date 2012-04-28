@@ -24,6 +24,12 @@
 		3822BF9E154695E900FB996A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822BF9D154695E900FB996A /* libxml2.dylib */; };
 		385E61F0154A850E00964706 /* LMPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E61EF154A850E00964706 /* LMPlace.m */; };
 		385E61F3154A853100964706 /* LMSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E61F2154A853100964706 /* LMSet.m */; };
+		385E61F7154A8ABE00964706 /* CreateSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E61F6154A8ABE00964706 /* CreateSpaceViewController.m */; };
+		385E6207154BDA9700964706 /* LocationView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385E6206154BDA9700964706 /* LocationView_iPhone.xib */; };
+		385E6209154BDAC200964706 /* HistoryView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385E6208154BDAC200964706 /* HistoryView_iPhone.xib */; };
+		385E620C154BDADC00964706 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E620B154BDADC00964706 /* HistoryViewController.m */; };
+		385E620F154BE5E000964706 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385E620E154BE5E000964706 /* MapKit.framework */; };
+		385E6211154BEAB600964706 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385E6210154BEAB600964706 /* CoreLocation.framework */; };
 		386935221545B0EC00EDF001 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386935211545B0EC00EDF001 /* HomeViewController.m */; };
 		386C596615454C1A000B592A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386C596515454C1A000B592A /* UIKit.framework */; };
 		386C596815454C1A000B592A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386C596715454C1A000B592A /* Foundation.framework */; };
@@ -44,8 +50,8 @@
 		3894D1451549218900707389 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3894D1421549218900707389 /* Localizable.strings */; };
 		3894D14B1549219100707389 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3894D1471549219100707389 /* InfoPlist.strings */; };
 		3894D14C1549219100707389 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3894D1491549219100707389 /* Localizable.strings */; };
-		3894D17315495B5400707389 /* LandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3894D17215495B5300707389 /* LandViewController.m */; };
-		3894D17515495B7100707389 /* LandView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D17415495B7100707389 /* LandView_iPhone.xib */; };
+		3894D17315495B5400707389 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3894D17215495B5300707389 /* LocationViewController.m */; };
+		3894D17515495B7100707389 /* CreateSpaceView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D17415495B7100707389 /* CreateSpaceView_iPhone.xib */; };
 		38DB056C154854F80092CDCD /* AboutView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DB056B154854F80092CDCD /* AboutView_iPhone.xib */; };
 		38DB056F154855140092CDCD /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DB056E154855140092CDCD /* AboutViewController.m */; };
 /* End PBXBuildFile section */
@@ -122,6 +128,14 @@
 		385E61EF154A850E00964706 /* LMPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMPlace.m; sourceTree = "<group>"; };
 		385E61F1154A853100964706 /* LMSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSet.h; sourceTree = "<group>"; };
 		385E61F2154A853100964706 /* LMSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSet.m; sourceTree = "<group>"; };
+		385E61F5154A8ABE00964706 /* CreateSpaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateSpaceViewController.h; sourceTree = "<group>"; };
+		385E61F6154A8ABE00964706 /* CreateSpaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateSpaceViewController.m; sourceTree = "<group>"; };
+		385E6206154BDA9700964706 /* LocationView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationView_iPhone.xib; sourceTree = "<group>"; };
+		385E6208154BDAC200964706 /* HistoryView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryView_iPhone.xib; sourceTree = "<group>"; };
+		385E620A154BDADC00964706 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		385E620B154BDADC00964706 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		385E620E154BE5E000964706 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		385E6210154BEAB600964706 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		386935201545B0EC00EDF001 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		386935211545B0EC00EDF001 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		386C596115454C1A000B592A /* Landmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,9 +165,9 @@
 		3894D1431549218900707389 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		3894D1481549219100707389 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = InfoPlist.strings; sourceTree = "<group>"; };
 		3894D14A1549219100707389 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = Localizable.strings; sourceTree = "<group>"; };
-		3894D17115495B5300707389 /* LandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandViewController.h; sourceTree = "<group>"; };
-		3894D17215495B5300707389 /* LandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandViewController.m; sourceTree = "<group>"; };
-		3894D17415495B7100707389 /* LandView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LandView_iPhone.xib; sourceTree = "<group>"; };
+		3894D17115495B5300707389 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		3894D17215495B5300707389 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		3894D17415495B7100707389 /* CreateSpaceView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateSpaceView_iPhone.xib; sourceTree = "<group>"; };
 		38DB056B154854F80092CDCD /* AboutView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView_iPhone.xib; sourceTree = "<group>"; };
 		38DB056D154855140092CDCD /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		38DB056E154855140092CDCD /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
@@ -164,6 +178,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				385E6211154BEAB600964706 /* CoreLocation.framework in Frameworks */,
+				385E620F154BE5E000964706 /* MapKit.framework in Frameworks */,
 				3822BF9E154695E900FB996A /* libxml2.dylib in Frameworks */,
 				3822BF9C154695DA00FB996A /* SystemConfiguration.framework in Frameworks */,
 				3822BF9A154695CD00FB996A /* Security.framework in Frameworks */,
@@ -201,12 +217,13 @@
 		380F06441545678B00C9CF7C /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				385E6205154BDA7900964706 /* Space */,
 				38DB056B154854F80092CDCD /* AboutView_iPhone.xib */,
 				3894D0F81548002F00707389 /* HomeView_iPhone.xib */,
 				380F066D1545840D00C9CF7C /* LoginView_iPhone.xib */,
 				3894D0F31547FBE900707389 /* SettingsView_iPhone.xib */,
 				386C597A15454C1A000B592A /* SplashView_iPhone.xib */,
-				3894D17415495B7100707389 /* LandView_iPhone.xib */,
+				385E6208154BDAC200964706 /* HistoryView_iPhone.xib */,
 			);
 			name = iPhone;
 			sourceTree = "<group>";
@@ -264,6 +281,39 @@
 			path = Vendor/JSONKit;
 			sourceTree = "<group>";
 		};
+		385E61F4154A8A9500964706 /* Space Set */ = {
+			isa = PBXGroup;
+			children = (
+				3894D17115495B5300707389 /* LocationViewController.h */,
+				3894D17215495B5300707389 /* LocationViewController.m */,
+				385E61F5154A8ABE00964706 /* CreateSpaceViewController.h */,
+				385E61F6154A8ABE00964706 /* CreateSpaceViewController.m */,
+			);
+			name = "Space Set";
+			sourceTree = "<group>";
+		};
+		385E6205154BDA7900964706 /* Space */ = {
+			isa = PBXGroup;
+			children = (
+				3894D17415495B7100707389 /* CreateSpaceView_iPhone.xib */,
+				385E6206154BDA9700964706 /* LocationView_iPhone.xib */,
+			);
+			name = Space;
+			sourceTree = "<group>";
+		};
+		385E620D154BDFC500964706 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				380F06701545842E00C9CF7C /* LoginViewController.h */,
+				380F06711545842E00C9CF7C /* LoginViewController.m */,
+				38DB056D154855140092CDCD /* AboutViewController.h */,
+				38DB056E154855140092CDCD /* AboutViewController.m */,
+				3894D0F51547FC0000707389 /* SettingsViewController.h */,
+				3894D0F61547FC0000707389 /* SettingsViewController.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		386C595615454C1A000B592A = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +337,8 @@
 		386C596415454C1A000B592A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				385E6210154BEAB600964706 /* CoreLocation.framework */,
+				385E620E154BE5E000964706 /* MapKit.framework */,
 				3822BF9D154695E900FB996A /* libxml2.dylib */,
 				3822BF9B154695DA00FB996A /* SystemConfiguration.framework */,
 				3822BF99154695CD00FB996A /* Security.framework */,
@@ -330,20 +382,16 @@
 		386C598615455320000B592A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				38DB056D154855140092CDCD /* AboutViewController.h */,
-				38DB056E154855140092CDCD /* AboutViewController.m */,
+				385E620D154BDFC500964706 /* Settings */,
+				385E61F4154A8A9500964706 /* Space Set */,
 				380F06591545799D00C9CF7C /* BaseViewController.h */,
 				380F065A1545799D00C9CF7C /* BaseViewController.m */,
 				386935201545B0EC00EDF001 /* HomeViewController.h */,
 				386935211545B0EC00EDF001 /* HomeViewController.m */,
-				380F06701545842E00C9CF7C /* LoginViewController.h */,
-				380F06711545842E00C9CF7C /* LoginViewController.m */,
-				3894D17115495B5300707389 /* LandViewController.h */,
-				3894D17215495B5300707389 /* LandViewController.m */,
-				3894D0F51547FC0000707389 /* SettingsViewController.h */,
-				3894D0F61547FC0000707389 /* SettingsViewController.m */,
 				386C597715454C1A000B592A /* SplashViewController.h */,
 				386C597815454C1A000B592A /* SplashViewController.m */,
+				385E620A154BDADC00964706 /* HistoryViewController.h */,
+				385E620B154BDADC00964706 /* HistoryViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -518,7 +566,9 @@
 				3894D1451549218900707389 /* Localizable.strings in Resources */,
 				3894D14B1549219100707389 /* InfoPlist.strings in Resources */,
 				3894D14C1549219100707389 /* Localizable.strings in Resources */,
-				3894D17515495B7100707389 /* LandView_iPhone.xib in Resources */,
+				3894D17515495B7100707389 /* CreateSpaceView_iPhone.xib in Resources */,
+				385E6207154BDA9700964706 /* LocationView_iPhone.xib in Resources */,
+				385E6209154BDAC200964706 /* HistoryView_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,9 +589,11 @@
 				3894D0F71547FC0000707389 /* SettingsViewController.m in Sources */,
 				38DB056F154855140092CDCD /* AboutViewController.m in Sources */,
 				3894D11E1549150900707389 /* LMLocation.m in Sources */,
-				3894D17315495B5400707389 /* LandViewController.m in Sources */,
+				3894D17315495B5400707389 /* LocationViewController.m in Sources */,
 				385E61F0154A850E00964706 /* LMPlace.m in Sources */,
 				385E61F3154A853100964706 /* LMSet.m in Sources */,
+				385E61F7154A8ABE00964706 /* CreateSpaceViewController.m in Sources */,
+				385E620C154BDADC00964706 /* HistoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,13 +14,6 @@
 
 @synthesize window = _window;
 
-// Shared navigation manager(Singleton)
-+ (NavigationManager *)sharedNavigationManager
-{
-    AppDelegate *appDelegate = (AppDelegate *)([UIApplication sharedApplication].delegate);
-    return appDelegate -> _navigationManager;
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Init the window as global.

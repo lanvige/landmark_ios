@@ -22,16 +22,11 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+    if (self) 
+    {
         // Custom initialization
     }
     return self;
-}
-
-- (id)init
-{
-	self = [self initWithNibName:@"AboutView_iPhone" bundle:nil];	
-	return self;
 }
 
 - (void)viewDidLoad

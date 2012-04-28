@@ -7,7 +7,9 @@
 //
 
 #import "HomeViewController.h"
-#import "LandViewController.h"
+
+#import "CreateSpaceViewController.h"
+#import "LocationViewController.h"
 
 @implementation HomeViewController
 
@@ -17,7 +19,9 @@
 @synthesize txt;
 @synthesize tableContents;
 @synthesize sortedKeys;
-@synthesize landViewController;
+
+@synthesize createSpaceViewController;
+@synthesize locationViewController;
 
 #pragma mark -
 #pragma mark Implementation
@@ -33,12 +37,6 @@
         self.wantsFullScreenLayout = YES;
     }
     return self;
-}
-
-- (id)init
-{
-	self = [self initWithNibName:@"HomeView_iPhone" bundle:nil];	
-	return self;
 }
 
 
@@ -125,24 +123,35 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
 {
-	NSArray *listData =[self.tableContents objectForKey:[self.sortedKeys objectAtIndex:[indexPath section]]];
+	//NSArray *listData =[self.tableContents objectForKey:[self.sortedKeys objectAtIndex:[indexPath section]]];
 	NSUInteger row = [indexPath row];
-	NSString *rowValue = [listData objectAtIndex:row];
-	
-	NSString *message = [[NSString alloc] initWithFormat:rowValue];
-	UIAlertView *alert = [[UIAlertView alloc] 
-						  initWithTitle:@"You selected" 
-						  message:message 
-                          delegate:nil 
-						  cancelButtonTitle:@"OK" 
-						  otherButtonTitles:nil];
+	//NSString *rowValue = [listData objectAtIndex:row];
+	//NSString *message = [[NSString alloc] initWithFormat:rowValue];
 	//[alert show];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    self.landViewController = [[LandViewController alloc] init];
-    
-    [self.navigationController pushViewController:self.landViewController animated:false];
-	
-	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+    //NSLog([NSString stringWithFormat:@"%d", row]);
+    switch (row) 
+    {
+        case 0:
+            if (self.createSpaceViewController == nil) 
+            {
+                self.createSpaceViewController = [[CreateSpaceViewController alloc] initWithNibName:@"CreateSpaceView_iPhone" bundle:nil];
+            }
+            [self.navigationController pushViewController:self.createSpaceViewController animated:TRUE];
+            break;
+        case 1:
+            if (self.locationViewController == nil)
+            {
+                self.locationViewController = [[LocationViewController alloc] initWithNibName:@"LocationView_iPhone" bundle:nil];
+            }
+            [self.navigationController pushViewController:self.locationViewController animated:TRUE];
+            break;
+        case 2:
+            self.createSpaceViewController = [[CreateSpaceViewController alloc] initWithNibName:@"CreateSpaceView_iPhone" bundle:nil];
+            [self.navigationController pushViewController:self.createSpaceViewController animated:false];
+            break;
+    }
 }
 
 #pragma mark -

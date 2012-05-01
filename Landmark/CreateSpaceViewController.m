@@ -11,11 +11,20 @@
 
 @implementation CreateSpaceViewController
 
+#pragma mark -
+#pragma mark Synthesized Properties
+
 @synthesize nameTextFiled;
 @synthesize locationTextFiled;
 
-@synthesize tableContents;
-@synthesize sortedKeys;
+@synthesize mainTableView;
+@synthesize contentsList;
+
+#pragma mark -
+#pragma mark Dealloc and Memory Methods
+
+#pragma mark -
+#pragma mark Initialization and UI Creation Methods
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +36,9 @@
     }
     return self;
 }
+
+#pragma mark -
+#pragma mark UIViewController Methods
 
 - (void)viewDidLoad
 {
@@ -45,15 +57,16 @@
     // Build data for table.
     NSArray *locationArrItem = [[NSArray alloc]initWithObjects:@"Location", @"Current", nil];
     
-    NSDictionary *dictItems = [[NSDictionary alloc] initWithObjectsAndKeys:nameArrItem, @"", locationArrItem, @"", nil];
-    self.tableContents = dictItems;
-    self.sortedKeys =[[self.tableContents allKeys] sortedArrayUsingSelector:@selector(compare:)];
+    //NSDictionary *dictItems = [[NSDictionary alloc] initWithObjectsAndKeys:nameArrItem, @"", locationArrItem, @"", nil];
+    
+    NSMutableArray *sectionsArray = [[NSMutableArray alloc] initWithObjects:nameArrItem, locationArrItem, nil];
+    self.contentsList = sectionsArray;
+//    self.sortedKeys =[[self.tableContents allKeys] sortedArrayUsingSelector:@selector(compare:)];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -61,46 +74,98 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-
-
 #pragma mark -
-#pragma mark Table Methods
+#pragma mark UITableView Datasource Methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return [self.sortedKeys count];
+    //return [self.sortedKeys count];
+    return self.contentsList.count;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-	return [self.sortedKeys objectAtIndex:section];
-}
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//	return [self.sortedKeys objectAtIndex:section];
+//}
 
 - (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section 
 {
-	NSArray *listData =[self.tableContents objectForKey:[self.sortedKeys objectAtIndex:section]];
-	return [listData count];
+//	NSArray *listData =[self.tableContents objectForKey:[self.sortedKeys objectAtIndex:section]];
+//	return [listData count];
+    NSArray *sectionContents = [self.contentsList objectAtIndex:section];
+    return sectionContents.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
-	static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
+    // ?
+	static NSString *CellIdentifier = @"CellIdentifier";
 	
-	NSArray *listData =[self.tableContents objectForKey:[self.sortedKeys objectAtIndex:[indexPath section]]];
+    // Section content
+	NSArray *sectionContents =[self.contentsList objectAtIndex:[indexPath section]];
+    
+    NSString *contentForThisRow = [sectionContents objectAtIndex:[indexPath row]];
 	
-	UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:SimpleTableIdentifier];
+	UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	
 	if(cell == nil) 
     {	
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimpleTableIdentifier];
-        cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        
+        if ([indexPath section] == 0) {
+            UITextField *playerTextField = [[UITextField alloc] initWithFrame:CGRectMake(110, 10, 185, 30)];
+            playerTextField.adjustsFontSizeToFitWidth = YES;
+            playerTextField.textColor = [UIColor blackColor];
+            if ([indexPath row] == 0) 
+            {
+                playerTextField.placeholder = @"example@gmail.com";
+                playerTextField.keyboardType = UIKeyboardTypeEmailAddress;
+                playerTextField.returnKeyType = UIReturnKeyNext;
+            }
+            
+            else {
+                playerTextField.placeholder = @"Required";
+                playerTextField.keyboardType = UIKeyboardTypeDefault;
+                playerTextField.returnKeyType = UIReturnKeyDone;
+                playerTextField.secureTextEntry = YES;
+            }       
+            playerTextField.backgroundColor = [UIColor whiteColor];
+            playerTextField.autocorrectionType = UITextAutocorrectionTypeNo; // no auto correction support
+            playerTextField.autocapitalizationType = UITextAutocapitalizationTypeNone; // no auto capitalization support
+            playerTextField.textAlignment = UITextAlignmentLeft;
+            playerTextField.tag = 0;
+            //playerTextField.delegate = self;
+            
+            playerTextField.clearButtonMode = UITextFieldViewModeNever; // no clear 'x' button to the right
+            [playerTextField setEnabled: YES];
+            
+            [cell addSubview:playerTextField];
+        }
 	}
-	
-	NSUInteger row = [indexPath row];
-	cell.textLabel.text = [listData objectAtIndex:row];
-	
+    
+
+    
+    [[cell textLabel] setText:contentForThisRow];
+    
+    if ([indexPath section] == 0) { // Email & Password Section
+        if ([indexPath row] == 0) { // Email
+            cell.textLabel.text = @"Email";
+        }
+        else {
+            cell.textLabel.text = @"Password";
+        }
+    }
+    else { // Login button section
+        cell.textLabel.text = @"Log in";
+    }
+    
 	return cell;
 }
+
+#pragma mark -
+#pragma mark UITableView Delegate Methods
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
 {

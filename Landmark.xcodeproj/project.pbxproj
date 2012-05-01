@@ -34,7 +34,6 @@
 		386C596615454C1A000B592A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386C596515454C1A000B592A /* UIKit.framework */; };
 		386C596815454C1A000B592A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386C596715454C1A000B592A /* Foundation.framework */; };
 		386C596A15454C1A000B592A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386C596915454C1A000B592A /* CoreGraphics.framework */; };
-		386C597015454C1A000B592A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 386C596E15454C1A000B592A /* InfoPlist.strings */; };
 		386C597215454C1A000B592A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 386C597115454C1A000B592A /* main.m */; };
 		386C597615454C1A000B592A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 386C597515454C1A000B592A /* AppDelegate.m */; };
 		386C597915454C1A000B592A /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386C597815454C1A000B592A /* SplashViewController.m */; };
@@ -145,7 +144,6 @@
 		386C596715454C1A000B592A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		386C596915454C1A000B592A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		386C596D15454C1A000B592A /* Landmark-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Landmark-Info.plist"; sourceTree = "<group>"; };
-		386C596F15454C1A000B592A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		386C597115454C1A000B592A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		386C597315454C1A000B592A /* Landmark-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Landmark-Prefix.pch"; sourceTree = "<group>"; };
 		386C597415454C1A000B592A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -378,7 +376,6 @@
 			isa = PBXGroup;
 			children = (
 				386C596D15454C1A000B592A /* Landmark-Info.plist */,
-				386C596E15454C1A000B592A /* InfoPlist.strings */,
 				386C597115454C1A000B592A /* main.m */,
 				386C597315454C1A000B592A /* Landmark-Prefix.pch */,
 			);
@@ -574,7 +571,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				386C597015454C1A000B592A /* InfoPlist.strings in Resources */,
 				380F066E1545840D00C9CF7C /* LoginView_iPhone.xib in Resources */,
 				3822BF3715467D3400FB996A /* Default.png in Resources */,
 				3822BF3815467D3400FB996A /* Default@2x.png in Resources */,
@@ -634,14 +630,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		386C596E15454C1A000B592A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				386C596F15454C1A000B592A /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		3894D1401549218900707389 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

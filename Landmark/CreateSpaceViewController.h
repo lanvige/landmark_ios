@@ -14,13 +14,11 @@
     IBOutlet UITextField *nameTextFiled;
     IBOutlet UITextField *locationTextFiled;
 
-    NSDictionary *tableContents;
-    NSArray *sortedKeys;
-
+    //NSDictionary *tableContents;
 }
 
-@property (nonatomic,retain) NSDictionary *tableContents;
-@property (nonatomic,retain) NSArray *sortedKeys;
+@property (nonatomic, strong) IBOutlet UITableView *mainTableView;
+@property (nonatomic, strong) NSMutableArray *contentsList;
 
 @property (nonatomic, strong) UITextField *nameTextFiled;
 @property (nonatomic, strong) UITextField *locationTextFiled;

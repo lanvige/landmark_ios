@@ -149,15 +149,21 @@
     
     [[cell textLabel] setText:contentForThisRow];
     
-    if ([indexPath section] == 0) { // Email & Password Section
-        if ([indexPath row] == 0) { // Email
-            cell.textLabel.text = @"Email";
+    if ([indexPath section] == 0) 
+    {
+        // Email & Password Section
+        if ([indexPath row] == 0) 
+        { // Email
+            cell.textLabel.text = @"Name";
         }
-        else {
+        else 
+        {
             cell.textLabel.text = @"Password";
         }
     }
-    else { // Login button section
+    else
+    { 
+        // Login button section
         cell.textLabel.text = @"Log in";
     }
     

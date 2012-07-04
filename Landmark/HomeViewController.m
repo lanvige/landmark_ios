@@ -136,8 +136,8 @@
         }
         case 1:
         {
-            CreateSpaceViewController *createSpaceViewController = [[CreateSpaceViewController alloc] initWithNibName:@"CreateSpaceView_iPhone" bundle:nil];
-            [self.navigationController pushViewController:createSpaceViewController animated:TRUE];
+            CreateSpaceViewController *locationViewController = [[LocationViewController alloc] initWithNibName:@"LocationView_iPhone" bundle:nil];
+            [self.navigationController pushViewController:locationViewController animated:TRUE];
             break;
         }
         case 2:

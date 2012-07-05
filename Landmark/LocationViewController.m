@@ -9,6 +9,8 @@
 #import "LocationViewController.h"
 #import "AboutViewController.h"
 
+#import "LMAnnotation.h"
+
 @implementation LocationViewController
 
 @synthesize segmentedControl;
@@ -97,9 +99,19 @@
     self.locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
     // Set a movement threshold for new events.
     locationManager.distanceFilter = 500;
     [locationManager startUpdatingLocation];
+    
+    // Init a annotation with title.
+    CLLocationCoordinate2D theCoordinate;
+	theCoordinate.latitude = 37.810000;
+    theCoordinate.longitude = -122.477989;
+    
+    LMAnnotation *annotation = [[LMAnnotation alloc] initWithCoordinate:theCoordinate addressDictionary:nil];
+	annotation.title = @"Drag to Move Pin";
+	annotation.subtitle = [NSString	stringWithFormat:@"%f %f", annotation.coordinate.latitude, annotation.coordinate.longitude];
     
     
     // Init the map
@@ -117,6 +129,7 @@
     [self.mapView setZoomEnabled:YES];
     [self.mapView setScrollEnabled:YES];
     
+    [self.mapView addAnnotation:annotation];
     
     [self.mapView setRegion:coordinateRegion animated:YES]; 
 }

@@ -16,6 +16,7 @@
 @synthesize segmentedControl;
 @synthesize locationManager;
 @synthesize currentLocation;
+@synthesize currentLocationButton;
 @synthesize mapView;
 
 
@@ -42,6 +43,7 @@
     
     [self addSegmentedControlOnNavigation];
     [self addDoneButtonOnNavigation];
+    [self addCurrentLocationButton];
     [self initLocationAndMapInfo];
 }
 
@@ -54,17 +56,6 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (IBAction) apple:(id) sender {
-    CLLocationCoordinate2D coords;
-    coords.latitude = 37.33188;
-    coords.longitude = -122.029497;
-    MKCoordinateSpan span = MKCoordinateSpanMake(0.002389, 0.005681);
-    MKCoordinateRegion region = MKCoordinateRegionMake(coords, span);
-    [mapView setRegion:region animated:YES];
-}
-
-
-
 // Add a button on navigation to close the current view.
 - (void)addDoneButtonOnNavigation {
     // Add a done button at left of navigation.
@@ -76,9 +67,27 @@
     self.navigationItem.title = NSLocalizedString(@"about", @"");
 }
 
+// Add a button to back to current location on map.
+- (void)addCurrentLocationButton {
+    // Add a about button on the right of bar.
+    self.currentLocationButton = [[UIBarButtonItem alloc]initWithTitle:NSLocalizedString(@"CL", @"")
+                                                                 style:UIBarButtonItemStyleBordered
+                                                                target:self
+                                                                action:@selector(showCurrentLocation:)];
+    
+    // What's the different between navigationBar.topItem with navigationItem.
+    self.navigationItem.rightBarButtonItem = self.currentLocationButton;
+}
+
 // Close the map view.
 - (void)doneActionPressed: (id)sender {
     [self.navigationController dismissModalViewControllerAnimated:YES];
+}
+
+// Show the about page.
+- (IBAction) showCurrentLocation: (id)sender
+{
+    [self moveMapToLocation:currentLocation];
 }
 
 - (void)initLocationAndMapInfo {
@@ -120,19 +129,23 @@
     NSString *strLng = [NSString stringWithFormat:@"%.4f", newLocation.coordinate.longitude];
     NSLog(@"Lat: %@  Lng: %@", strLat, strLng);
     
-    CLLocationCoordinate2D coords = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude);
+    [self moveMapToLocation:currentLocation];
+    
+//    LMAnnotation *annotation = [[LMAnnotation alloc] initWithCoordinate:coords addressDictionary:nil];
+//	annotation.title = @"Drag to Move Pin";
+//	annotation.subtitle = [NSString	stringWithFormat:@"%f %f", 
+//                           annotation.coordinate.latitude, 
+//                           annotation.coordinate.longitude];
+//    
+//    [self.mapView addAnnotation:annotation];
+}
+
+- (void)moveMapToLocation:(CLLocation *)location {
+    CLLocationCoordinate2D coords = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude);
 	float zoomLevel = 0.02;
-	MKCoordinateRegion region = MKCoordinateRegionMake(coords,MKCoordinateSpanMake(zoomLevel, zoomLevel));
-	[self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
-    
-    LMAnnotation *annotation = [[LMAnnotation alloc] initWithCoordinate:coords addressDictionary:nil];
-	annotation.title = @"Drag to Move Pin";
-	annotation.subtitle = [NSString	stringWithFormat:@"%f %f", 
-                           annotation.coordinate.latitude, 
-                           annotation.coordinate.longitude];
-    
-    [self.mapView addAnnotation:annotation];
-}  
+	MKCoordinateRegion region = MKCoordinateRegionMake(coords, MKCoordinateSpanMake(zoomLevel, zoomLevel));
+	[self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];    
+}
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
     NSLog(@"locError:%@", error);    

@@ -19,17 +19,14 @@
 @synthesize mapView;
 
 
--(IBAction)xx:(id) sender{
-    
+- (IBAction)xx:(id) sender {
     AboutViewController *aboutViewController = [[AboutViewController alloc] initWithNibName:@"AboutView_iPhone" bundle:nil];
     [self.navigationController pushViewController:aboutViewController animated:TRUE];
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) 
-    {
+    if (self) {
         // Custom initialization
     }
     return self;
@@ -48,14 +45,12 @@
     [self initLocationAndMapInfo];
 }
 
-- (void)viewDidUnload
-{
+- (void)viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
@@ -69,15 +64,9 @@
 }
 
 
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
-{  
-    self.currentLocation = newLocation;  
-    //do something else  
-}  
 
 // Add a button on navigation to close the current view.
-- (void)addDoneButtonOnNavigation
-{
+- (void)addDoneButtonOnNavigation {
     // Add a done button at left of navigation.
     UIBarButtonItem *itemDone = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"done", @"")
                                                                  style:UIBarButtonItemStyleBordered 
@@ -88,33 +77,22 @@
 }
 
 // Close the map view.
-- (void)doneActionPressed: (id)sender
-{
+- (void)doneActionPressed: (id)sender {
     [self.navigationController dismissModalViewControllerAnimated:YES];
 }
 
-- (void)initLocationAndMapInfo
-{
+- (void)initLocationAndMapInfo {
     // init the location manager.
     self.locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
+    // 得到想要的精度。
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    
     // Set a movement threshold for new events.
+    // To get the user current location.
     locationManager.distanceFilter = 500;
     [locationManager startUpdatingLocation];
     
-    // Init a annotation with title.
-    CLLocationCoordinate2D theCoordinate;
-	theCoordinate.latitude = 37.810000;
-    theCoordinate.longitude = -122.477989;
-    
-    LMAnnotation *annotation = [[LMAnnotation alloc] initWithCoordinate:theCoordinate addressDictionary:nil];
-	annotation.title = @"Drag to Move Pin";
-	annotation.subtitle = [NSString	stringWithFormat:@"%f %f", annotation.coordinate.latitude, annotation.coordinate.longitude];
-    
-    
-    // Init the map
+    // Init the map size.
     MKCoordinateRegion coordinateRegion;
     coordinateRegion.center = [[locationManager location] coordinate];
     
@@ -124,21 +102,48 @@
     
     coordinateRegion.span = coordinateSpan;
     
+    // Show user's current location.
     self.mapView.showsUserLocation = YES;
     [self.mapView setMapType:MKMapTypeStandard];
     [self.mapView setZoomEnabled:YES];
     [self.mapView setScrollEnabled:YES];
-    
-    [self.mapView addAnnotation:annotation];
-    
+
     [self.mapView setRegion:coordinateRegion animated:YES]; 
 }
 
+// If the system get the user's location, this method will be invoked.
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {  
+    //[locationManager stopUpdatingLocation];
+    self.currentLocation = newLocation;
+    
+    NSString *strLat = [NSString stringWithFormat:@"%.4f", newLocation.coordinate.latitude];
+    NSString *strLng = [NSString stringWithFormat:@"%.4f", newLocation.coordinate.longitude];
+    NSLog(@"Lat: %@  Lng: %@", strLat, strLng);
+    
+    CLLocationCoordinate2D coords = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude);
+	float zoomLevel = 0.02;
+	MKCoordinateRegion region = MKCoordinateRegionMake(coords,MKCoordinateSpanMake(zoomLevel, zoomLevel));
+	[self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+    
+    LMAnnotation *annotation = [[LMAnnotation alloc] initWithCoordinate:coords addressDictionary:nil];
+	annotation.title = @"Drag to Move Pin";
+	annotation.subtitle = [NSString	stringWithFormat:@"%f %f", 
+                           annotation.coordinate.latitude, 
+                           annotation.coordinate.longitude];
+    
+    [self.mapView addAnnotation:annotation];
+}  
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    NSLog(@"locError:%@", error);    
+}
+
 // Add segmented control in navigation bar.
-- (void)addSegmentedControlOnNavigation
-{
+- (void)addSegmentedControlOnNavigation {
     self.segmentedControl = [[UISegmentedControl alloc] 
-                             initWithItems:[NSArray arrayWithObjects:NSLocalizedString(@"standard", @""),                                                  NSLocalizedString(@"satellite", @""), nil]];
+                             initWithItems:[NSArray arrayWithObjects:NSLocalizedString(@"standard", @""),
+                                            NSLocalizedString(@"satellite", @""),
+                                            nil]];
     
     [segmentedControl setSelectedSegmentIndex:0];
     [segmentedControl setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
@@ -151,15 +156,12 @@
     self.navigationItem.titleView = segmentedControl;
 }
 
-- (IBAction)segmentedChanged:(id)sender
-{
-    if (self.segmentedControl.selectedSegmentIndex == 0) 
-    {
+- (IBAction)segmentedChanged:(id)sender {
+    if (self.segmentedControl.selectedSegmentIndex == 0) {
         //write here your action when first item selected
         NSLog(@"1");
     } 
-    else
-    {
+    else {
         NSLog(@"2");
     }
 }

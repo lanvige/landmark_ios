@@ -10,9 +10,9 @@
 
 @implementation LMAnnotation
 
-@synthesize coordinate = coordinate_;
-@synthesize title = title_;
-@synthesize subtitle = subtitle_;
+@synthesize coordinate = coordinate;
+@synthesize title = title;
+@synthesize subtitle = subtitle;
 
 - (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate addressDictionary:(NSDictionary *)addressDictionary {
 	

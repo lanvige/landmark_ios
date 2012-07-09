@@ -45,11 +45,38 @@
     [self addDoneButtonOnNavigation];
     [self addCurrentLocationButton];
     [self initLocationAndMapInfo];
+    
+    
+    //Long time press.
+    UILongPressGestureRecognizer* lpgr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
+    lpgr.minimumPressDuration = 0.5;
+    //lpgr.delegate = self;
+    [self.mapView addGestureRecognizer:lpgr];
 }
 
 - (void)viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+- (void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer {
+    if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
+        /*
+         Only handle state as the touches began
+         set the location of the annotation
+         */
+        CLLocationCoordinate2D coordinate = [self.mapView convertPoint:[gestureRecognizer locationInView:self.mapView] toCoordinateFromView:self.mapView];
+        //[self.mapView setCenterCoordinate:coordinate animated:YES];
+        // Do anything else with the coordinate as you see fit in your application
+
+//        NSString *strLat = [NSString stringWithFormat:@"%.4f", coordinate.latitude];
+//        NSString *strLng = [NSString stringWithFormat:@"%.4f", coordinate.longitude];
+//        
+//        NSLog(@"New |||| Lat: %@  Lng: %@", strLat, strLng);
+        
+        // Add annonation.
+        [self addAnnonation:coordinate];
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -130,14 +157,17 @@
     NSLog(@"Lat: %@  Lng: %@", strLat, strLng);
     
     [self moveMapToLocation:currentLocation];
+}
+
+
+- (void)addAnnonation:(CLLocationCoordinate2D)coordinate {
+    LMAnnotation *annotation = [[LMAnnotation alloc] initWithCoordinate:coordinate addressDictionary:nil];
+	annotation.title = @"Drag to Move Pin";
+	annotation.subtitle = [NSString	stringWithFormat:@"%f %f", 
+                           annotation.coordinate.latitude, 
+                           annotation.coordinate.longitude];
     
-//    LMAnnotation *annotation = [[LMAnnotation alloc] initWithCoordinate:coords addressDictionary:nil];
-//	annotation.title = @"Drag to Move Pin";
-//	annotation.subtitle = [NSString	stringWithFormat:@"%f %f", 
-//                           annotation.coordinate.latitude, 
-//                           annotation.coordinate.longitude];
-//    
-//    [self.mapView addAnnotation:annotation];
+    [self.mapView addAnnotation:annotation];
 }
 
 - (void)moveMapToLocation:(CLLocation *)location {

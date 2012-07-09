@@ -9,9 +9,9 @@
 #import <MapKit/MapKit.h>
 
 @interface LMAnnotation : MKPlacemark {
-	CLLocationCoordinate2D coordinate_;
-	NSString *title_;
-	NSString *subtitle_;
+	CLLocationCoordinate2D coordinate;
+	NSString *title;
+	NSString *subtitle;
 }
 
 // Re-declare MKAnnotation's readonly property 'coordinate' to readwrite. 

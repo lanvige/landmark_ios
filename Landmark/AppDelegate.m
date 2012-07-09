@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "NavigationManager.h"
+#import "RestKit/RestKit.h"
 
 @implementation AppDelegate
 
@@ -23,6 +24,10 @@
     [_navigationManager displayRootView];
 
     [self.window makeKeyAndVisible];
+    
+    RKClient* client = [RKClient clientWithBaseURLString:@"http://landmark.dev/api/v1"]; 
+    NSLog(@"I am your RKClient singleton : %@", [RKClient sharedClient]);
+    RKLogInfo(@"Configred restkit client: %@", client);
     
     return YES;
 }

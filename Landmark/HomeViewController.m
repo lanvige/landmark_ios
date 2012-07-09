@@ -11,6 +11,8 @@
 #import "CreateSpaceViewController.h"
 #import "LocationViewController.h"
 
+#import "LMRequestDemo.h"
+
 @implementation HomeViewController
 
 #pragma mark -
@@ -36,6 +38,18 @@
     return self;
 }
 
+- (void)fetchEvents;
+{
+    //[[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/events.json" delegate:self];
+    [[RKClient sharedClient] get:@"/coordinates/4ffab38d35ef0f44d7000002" delegate:self];
+}
+
+
+- (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response {
+    
+    RKLogInfo(@"Yay! We Got a response");
+    NSLog(@"%@", response.bodyAsString);
+}
 
 - (void)viewDidLoad
 {    
@@ -125,6 +139,8 @@
 	//[alert show];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+
+    
     //NSLog([NSString stringWithFormat:@"%d", row]);
     switch (row) 
     {
@@ -136,16 +152,21 @@
         }
         case 1:
         {
-            CreateSpaceViewController *locationViewController = [[LocationViewController alloc] initWithNibName:@"LocationView_iPhone" bundle:nil];
+            LocationViewController *locationViewController = [[LocationViewController alloc] initWithNibName:@"LocationView_iPhone" bundle:nil];
             [self.navigationController pushViewController:locationViewController animated:TRUE];
             break;
         }
         case 2:
             //self.createSpaceViewController = [[CreateSpaceViewController alloc] initWithNibName:@"CreateSpaceView_iPhone" bundle:nil];
             //[self.navigationController pushViewController:self.createSpaceViewController animated:false];
+            //[[RKClient sharedClient] get:@"/api/v1/coordinates/4ffab38d35ef0f44d7000002" delegate:self];
+            [self fetchEvents];
+            
             break;
     }
 }
+
+
 
 #pragma mark -
 #pragma mark textbox keyboard hidden

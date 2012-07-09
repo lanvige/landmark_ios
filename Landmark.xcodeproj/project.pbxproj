@@ -54,6 +54,7 @@
 		3894D14C1549219100707389 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3894D1491549219100707389 /* Localizable.strings */; };
 		3894D17315495B5400707389 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3894D17215495B5300707389 /* LocationViewController.m */; };
 		3894D17515495B7100707389 /* CreateSpaceView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D17415495B7100707389 /* CreateSpaceView_iPhone.xib */; };
+		38D9BE9E15AAF5AD00F1CEA7 /* LMRequestDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D9BE9D15AAF5AD00F1CEA7 /* LMRequestDemo.m */; };
 		38DB056C154854F80092CDCD /* AboutView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DB056B154854F80092CDCD /* AboutView_iPhone.xib */; };
 		38DB056F154855140092CDCD /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DB056E154855140092CDCD /* AboutViewController.m */; };
 /* End PBXBuildFile section */
@@ -174,6 +175,8 @@
 		3894D17115495B5300707389 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		3894D17215495B5300707389 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		3894D17415495B7100707389 /* CreateSpaceView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateSpaceView_iPhone.xib; sourceTree = "<group>"; };
+		38D9BE9C15AAF5AD00F1CEA7 /* LMRequestDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; path = LMRequestDemo.h; sourceTree = "<group>"; };
+		38D9BE9D15AAF5AD00F1CEA7 /* LMRequestDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMRequestDemo.m; sourceTree = "<group>"; };
 		38DB056B154854F80092CDCD /* AboutView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView_iPhone.xib; sourceTree = "<group>"; };
 		38DB056D154855140092CDCD /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		38DB056E154855140092CDCD /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
@@ -423,6 +426,8 @@
 				385E61F2154A853100964706 /* LMSet.m */,
 				384E236515A4762900D55EF5 /* LMAnnotation.h */,
 				384E236615A4762900D55EF5 /* LMAnnotation.m */,
+				38D9BE9C15AAF5AD00F1CEA7 /* LMRequestDemo.h */,
+				38D9BE9D15AAF5AD00F1CEA7 /* LMRequestDemo.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -622,6 +627,7 @@
 				385E620C154BDADC00964706 /* HistoryViewController.m in Sources */,
 				387C69FF154C3BE3005768B9 /* ContactsViewController.m in Sources */,
 				384E236715A4762900D55EF5 /* LMAnnotation.m in Sources */,
+				38D9BE9E15AAF5AD00F1CEA7 /* LMRequestDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

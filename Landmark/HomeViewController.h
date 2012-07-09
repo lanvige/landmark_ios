@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RestKit/RestKit.h"
 
 @class LandViewController;
 @class CreateSpaceViewController;
 @class LocationViewController;
 
-@interface HomeViewController : UIViewController<UITextFieldDelegate>
+
+@interface HomeViewController : UIViewController<UITextFieldDelegate, RKObjectLoaderDelegate>
 { 
     IBOutlet UITextField *codeTextFiled;
     NSDictionary *tableContents;

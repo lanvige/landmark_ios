@@ -6,8 +6,12 @@
 //  Copyright (c) 2012 LANVIGE. All rights reserved.
 //
 
-#import "LMPlace.h"
+#import "LMUser.h"
 
-@implementation LMPlace
+@implementation LMUser
+
+@dynamic id;
+@dynamic name;
+@dynamic email;
 
 @end

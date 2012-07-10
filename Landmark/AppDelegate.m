@@ -11,9 +11,24 @@
 #import "NavigationManager.h"
 #import "RestKit/RestKit.h"
 
+@interface AppDelegate ()
+@property (nonatomic, strong, readwrite) RKObjectManager *objectManager;
+@property (nonatomic, strong, readwrite) RKManagedObjectStore *objectStore;
+@end
+
 @implementation AppDelegate
 
 @synthesize window = _window;
+@synthesize objectManager;
+@synthesize objectStore;
+
+- (void)initializeRestKit
+{
+    self.objectManager = [RKObjectManager managerWithBaseURLString:@"http://landmark.10.128.42.86.xip.io/api/"];
+    self.objectStore = [RKManagedObjectStore objectStoreWithStoreFilename:@"Landmark.sqlite"];
+    self.objectManager.objectStore = self.objectStore;
+    //self.objectManager.mappingProvider = [RKGHMappingProvider mappingProviderWithObjectStore:self.objectStore];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -25,9 +40,7 @@
 
     [self.window makeKeyAndVisible];
     
-    RKClient* client = [RKClient clientWithBaseURLString:@"http://landmark.dev/api/v1"]; 
-    NSLog(@"I am your RKClient singleton : %@", [RKClient sharedClient]);
-    RKLogInfo(@"Configred restkit client: %@", client);
+    [self initializeRestKit];
     
     return YES;
 }
@@ -57,6 +70,10 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    NSError *error = nil;
+    if (! [self.objectStore save:&error]) {
+        RKLogError(@"Failed to save RestKit managed object store: %@", error);
+    }
 }
 
 @end

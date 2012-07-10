@@ -23,8 +23,7 @@
 		3822BF9C154695DA00FB996A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822BF9B154695DA00FB996A /* SystemConfiguration.framework */; };
 		3822BF9E154695E900FB996A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822BF9D154695E900FB996A /* libxml2.dylib */; };
 		384E236715A4762900D55EF5 /* LMAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 384E236615A4762900D55EF5 /* LMAnnotation.m */; };
-		385E61F0154A850E00964706 /* LMPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E61EF154A850E00964706 /* LMPlace.m */; };
-		385E61F3154A853100964706 /* LMSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E61F2154A853100964706 /* LMSet.m */; };
+		385E61F0154A850E00964706 /* LMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E61EF154A850E00964706 /* LMUser.m */; };
 		385E61F7154A8ABE00964706 /* CreateSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E61F6154A8ABE00964706 /* CreateSpaceViewController.m */; };
 		385E6207154BDA9700964706 /* LocationView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385E6206154BDA9700964706 /* LocationView_iPhone.xib */; };
 		385E6209154BDAC200964706 /* HistoryView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385E6208154BDAC200964706 /* HistoryView_iPhone.xib */; };
@@ -47,14 +46,15 @@
 		3894D0F41547FBE900707389 /* SettingsView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D0F31547FBE900707389 /* SettingsView_iPhone.xib */; };
 		3894D0F71547FC0000707389 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3894D0F61547FC0000707389 /* SettingsViewController.m */; };
 		3894D0F91548002F00707389 /* HomeView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D0F81548002F00707389 /* HomeView_iPhone.xib */; };
-		3894D11E1549150900707389 /* LMLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3894D11D1549150900707389 /* LMLocation.m */; };
+		3894D11E1549150900707389 /* LMSharing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3894D11D1549150900707389 /* LMSharing.m */; };
 		3894D1441549218900707389 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3894D1401549218900707389 /* InfoPlist.strings */; };
 		3894D1451549218900707389 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3894D1421549218900707389 /* Localizable.strings */; };
 		3894D14B1549219100707389 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3894D1471549219100707389 /* InfoPlist.strings */; };
 		3894D14C1549219100707389 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3894D1491549219100707389 /* Localizable.strings */; };
 		3894D17315495B5400707389 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3894D17215495B5300707389 /* LocationViewController.m */; };
 		3894D17515495B7100707389 /* CreateSpaceView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D17415495B7100707389 /* CreateSpaceView_iPhone.xib */; };
-		38D9BE9E15AAF5AD00F1CEA7 /* LMRequestDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D9BE9D15AAF5AD00F1CEA7 /* LMRequestDemo.m */; };
+		38D9BEAE15ABE10A00F1CEA7 /* LMMappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D9BEAD15ABE10A00F1CEA7 /* LMMappingProvider.m */; };
+		38D9BEBD15ABFFD500F1CEA7 /* LMUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D9BEBC15ABFFD500F1CEA7 /* LMUserCell.xib */; };
 		38DB056C154854F80092CDCD /* AboutView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DB056B154854F80092CDCD /* AboutView_iPhone.xib */; };
 		38DB056F154855140092CDCD /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DB056E154855140092CDCD /* AboutViewController.m */; };
 /* End PBXBuildFile section */
@@ -129,10 +129,8 @@
 		3822BFA31546961500FB996A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		384E236515A4762900D55EF5 /* LMAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAnnotation.h; sourceTree = "<group>"; };
 		384E236615A4762900D55EF5 /* LMAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAnnotation.m; sourceTree = "<group>"; };
-		385E61EE154A850E00964706 /* LMPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMPlace.h; sourceTree = "<group>"; };
-		385E61EF154A850E00964706 /* LMPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMPlace.m; sourceTree = "<group>"; };
-		385E61F1154A853100964706 /* LMSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSet.h; sourceTree = "<group>"; };
-		385E61F2154A853100964706 /* LMSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSet.m; sourceTree = "<group>"; };
+		385E61EE154A850E00964706 /* LMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMUser.h; sourceTree = "<group>"; };
+		385E61EF154A850E00964706 /* LMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMUser.m; sourceTree = "<group>"; };
 		385E61F5154A8ABE00964706 /* CreateSpaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateSpaceViewController.h; sourceTree = "<group>"; };
 		385E61F6154A8ABE00964706 /* CreateSpaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateSpaceViewController.m; sourceTree = "<group>"; };
 		385E6206154BDA9700964706 /* LocationView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationView_iPhone.xib; sourceTree = "<group>"; };
@@ -166,8 +164,8 @@
 		3894D0F61547FC0000707389 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		3894D0F81548002F00707389 /* HomeView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeView_iPhone.xib; sourceTree = "<group>"; };
 		3894D11B154901E300707389 /* ModalViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModalViewControllerDelegate.h; sourceTree = "<group>"; };
-		3894D11C1549150900707389 /* LMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMLocation.h; sourceTree = "<group>"; };
-		3894D11D1549150900707389 /* LMLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMLocation.m; sourceTree = "<group>"; };
+		3894D11C1549150900707389 /* LMSharing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSharing.h; sourceTree = "<group>"; };
+		3894D11D1549150900707389 /* LMSharing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSharing.m; sourceTree = "<group>"; };
 		3894D1411549218900707389 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		3894D1431549218900707389 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		3894D1481549219100707389 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = InfoPlist.strings; sourceTree = "<group>"; };
@@ -175,8 +173,9 @@
 		3894D17115495B5300707389 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		3894D17215495B5300707389 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		3894D17415495B7100707389 /* CreateSpaceView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateSpaceView_iPhone.xib; sourceTree = "<group>"; };
-		38D9BE9C15AAF5AD00F1CEA7 /* LMRequestDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; path = LMRequestDemo.h; sourceTree = "<group>"; };
-		38D9BE9D15AAF5AD00F1CEA7 /* LMRequestDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMRequestDemo.m; sourceTree = "<group>"; };
+		38D9BEAC15ABE10A00F1CEA7 /* LMMappingProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMMappingProvider.h; sourceTree = "<group>"; };
+		38D9BEAD15ABE10A00F1CEA7 /* LMMappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMMappingProvider.m; sourceTree = "<group>"; };
+		38D9BEBC15ABFFD500F1CEA7 /* LMUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LMUserCell.xib; sourceTree = "<group>"; };
 		38DB056B154854F80092CDCD /* AboutView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView_iPhone.xib; sourceTree = "<group>"; };
 		38DB056D154855140092CDCD /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		38DB056E154855140092CDCD /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
@@ -368,6 +367,8 @@
 			children = (
 				386C597415454C1A000B592A /* AppDelegate.h */,
 				386C597515454C1A000B592A /* AppDelegate.m */,
+				38D9BEAC15ABE10A00F1CEA7 /* LMMappingProvider.h */,
+				38D9BEAD15ABE10A00F1CEA7 /* LMMappingProvider.m */,
 				380F063F154566CC00C9CF7C /* ViewManager */,
 				3894D11A154901BC00707389 /* Protocals */,
 				386C598815455369000B592A /* Models */,
@@ -418,16 +419,12 @@
 		386C598815455369000B592A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3894D11C1549150900707389 /* LMLocation.h */,
-				3894D11D1549150900707389 /* LMLocation.m */,
-				385E61EE154A850E00964706 /* LMPlace.h */,
-				385E61EF154A850E00964706 /* LMPlace.m */,
-				385E61F1154A853100964706 /* LMSet.h */,
-				385E61F2154A853100964706 /* LMSet.m */,
+				385E61EE154A850E00964706 /* LMUser.h */,
+				385E61EF154A850E00964706 /* LMUser.m */,
+				3894D11C1549150900707389 /* LMSharing.h */,
+				3894D11D1549150900707389 /* LMSharing.m */,
 				384E236515A4762900D55EF5 /* LMAnnotation.h */,
 				384E236615A4762900D55EF5 /* LMAnnotation.m */,
-				38D9BE9C15AAF5AD00F1CEA7 /* LMRequestDemo.h */,
-				38D9BE9D15AAF5AD00F1CEA7 /* LMRequestDemo.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -445,6 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				387C6A01154C3BFE005768B9 /* ContactsView_iPhone.xib */,
+				38D9BEBC15ABFFD500F1CEA7 /* LMUserCell.xib */,
 			);
 			name = Contacts;
 			sourceTree = "<group>";
@@ -600,6 +598,7 @@
 				387C6A02154C3BFE005768B9 /* ContactsView_iPhone.xib in Resources */,
 				387C6A04154C3FC0005768B9 /* SplashView_iPhone.xib in Resources */,
 				387C6A06154C3FD0005768B9 /* SplashView_iPad.xib in Resources */,
+				38D9BEBD15ABFFD500F1CEA7 /* LMUserCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,15 +618,14 @@
 				386935221545B0EC00EDF001 /* HomeViewController.m in Sources */,
 				3894D0F71547FC0000707389 /* SettingsViewController.m in Sources */,
 				38DB056F154855140092CDCD /* AboutViewController.m in Sources */,
-				3894D11E1549150900707389 /* LMLocation.m in Sources */,
+				3894D11E1549150900707389 /* LMSharing.m in Sources */,
 				3894D17315495B5400707389 /* LocationViewController.m in Sources */,
-				385E61F0154A850E00964706 /* LMPlace.m in Sources */,
-				385E61F3154A853100964706 /* LMSet.m in Sources */,
+				385E61F0154A850E00964706 /* LMUser.m in Sources */,
 				385E61F7154A8ABE00964706 /* CreateSpaceViewController.m in Sources */,
 				385E620C154BDADC00964706 /* HistoryViewController.m in Sources */,
 				387C69FF154C3BE3005768B9 /* ContactsViewController.m in Sources */,
 				384E236715A4762900D55EF5 /* LMAnnotation.m in Sources */,
-				38D9BE9E15AAF5AD00F1CEA7 /* LMRequestDemo.m in Sources */,
+				38D9BEAE15ABE10A00F1CEA7 /* LMMappingProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

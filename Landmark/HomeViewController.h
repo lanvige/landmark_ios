@@ -14,7 +14,7 @@
 @class LocationViewController;
 
 
-@interface HomeViewController : UIViewController<UITextFieldDelegate, RKObjectLoaderDelegate>
+@interface HomeViewController : UIViewController<UITextFieldDelegate>
 { 
     IBOutlet UITextField *codeTextFiled;
     NSDictionary *tableContents;

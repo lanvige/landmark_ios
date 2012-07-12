@@ -22,6 +22,8 @@
 		3822BF9A154695CD00FB996A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822BF99154695CD00FB996A /* Security.framework */; };
 		3822BF9C154695DA00FB996A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822BF9B154695DA00FB996A /* SystemConfiguration.framework */; };
 		3822BF9E154695E900FB996A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822BF9D154695E900FB996A /* libxml2.dylib */; };
+		382FBC9415AF1CB6003298B6 /* LMContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 382FBC9315AF1CB6003298B6 /* LMContact.m */; };
+		382FBC9715AF1D26003298B6 /* LMSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 382FBC9615AF1D26003298B6 /* LMSetting.m */; };
 		384E236715A4762900D55EF5 /* LMAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 384E236615A4762900D55EF5 /* LMAnnotation.m */; };
 		385E61F0154A850E00964706 /* LMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E61EF154A850E00964706 /* LMUser.m */; };
 		385E61F7154A8ABE00964706 /* CreateSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E61F6154A8ABE00964706 /* CreateSpaceViewController.m */; };
@@ -127,6 +129,10 @@
 		3822BFA11546961500FB996A /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		3822BFA21546961500FB996A /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		3822BFA31546961500FB996A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		382FBC9215AF1CB6003298B6 /* LMContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMContact.h; sourceTree = "<group>"; };
+		382FBC9315AF1CB6003298B6 /* LMContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMContact.m; sourceTree = "<group>"; };
+		382FBC9515AF1D26003298B6 /* LMSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSetting.h; sourceTree = "<group>"; };
+		382FBC9615AF1D26003298B6 /* LMSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSetting.m; sourceTree = "<group>"; };
 		384E236515A4762900D55EF5 /* LMAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAnnotation.h; sourceTree = "<group>"; };
 		384E236615A4762900D55EF5 /* LMAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAnnotation.m; sourceTree = "<group>"; };
 		385E61EE154A850E00964706 /* LMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMUser.h; sourceTree = "<group>"; };
@@ -419,12 +425,16 @@
 		386C598815455369000B592A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				385E61EE154A850E00964706 /* LMUser.h */,
-				385E61EF154A850E00964706 /* LMUser.m */,
-				3894D11C1549150900707389 /* LMSharing.h */,
-				3894D11D1549150900707389 /* LMSharing.m */,
 				384E236515A4762900D55EF5 /* LMAnnotation.h */,
 				384E236615A4762900D55EF5 /* LMAnnotation.m */,
+				3894D11C1549150900707389 /* LMSharing.h */,
+				3894D11D1549150900707389 /* LMSharing.m */,
+				385E61EE154A850E00964706 /* LMUser.h */,
+				385E61EF154A850E00964706 /* LMUser.m */,
+				382FBC9215AF1CB6003298B6 /* LMContact.h */,
+				382FBC9315AF1CB6003298B6 /* LMContact.m */,
+				382FBC9515AF1D26003298B6 /* LMSetting.h */,
+				382FBC9615AF1D26003298B6 /* LMSetting.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -626,6 +636,8 @@
 				387C69FF154C3BE3005768B9 /* ContactsViewController.m in Sources */,
 				384E236715A4762900D55EF5 /* LMAnnotation.m in Sources */,
 				38D9BEAE15ABE10A00F1CEA7 /* LMMappingProvider.m in Sources */,
+				382FBC9415AF1CB6003298B6 /* LMContact.m in Sources */,
+				382FBC9715AF1D26003298B6 /* LMSetting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

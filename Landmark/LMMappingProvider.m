@@ -26,6 +26,16 @@
     if (self) {
         self.objectStore = theObjectStore;
         
+        [self setObjectMapping:[self userObjectMapping] 
+        forResourcePathPattern:@"/api/v1/users" 
+         withFetchRequestBlock:^NSFetchRequest *(NSString *resourcePath) {
+            // NOTE: We could use RKPathMatcher here to easily tokenize the requested resourcePath
+            NSFetchRequest *fetchRequest = [LMUser fetchRequest];
+             
+            return fetchRequest;
+        }];
+
+        
         [self setObjectMapping:[self sharingObjectMapping] forResourcePathPattern:@"/sharings"];
     }
     
@@ -36,7 +46,7 @@
     RKManagedObjectMapping *mapping =  [RKManagedObjectMapping mappingForEntityWithName:@"LMUser" inManagedObjectStore:self.objectStore];
     mapping.primaryKeyAttribute = @"id";
     [mapping mapKeyPathsToAttributes:
-     @"_id", @"id",
+     @"_id", @"userId",
      @"name", @"name",
      @"email", @"email",
      nil];

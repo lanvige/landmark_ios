@@ -11,7 +11,7 @@
 
 @interface LMUser : NSManagedObject
 
-@property (nonatomic, strong) NSNumber *id;
+@property (nonatomic, strong) NSNumber *userId;
 
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *email;

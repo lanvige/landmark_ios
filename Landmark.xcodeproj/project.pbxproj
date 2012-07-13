@@ -57,6 +57,7 @@
 		3894D17515495B7100707389 /* CreateSpaceView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D17415495B7100707389 /* CreateSpaceView_iPhone.xib */; };
 		38D9BEAE15ABE10A00F1CEA7 /* LMMappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D9BEAD15ABE10A00F1CEA7 /* LMMappingProvider.m */; };
 		38D9BEBD15ABFFD500F1CEA7 /* LMUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D9BEBC15ABFFD500F1CEA7 /* LMUserCell.xib */; };
+		38D9BEC415AC0BF800F1CEA7 /* LMUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D9BEC315AC0BF800F1CEA7 /* LMUserCell.m */; };
 		38DB056C154854F80092CDCD /* AboutView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DB056B154854F80092CDCD /* AboutView_iPhone.xib */; };
 		38DB056F154855140092CDCD /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DB056E154855140092CDCD /* AboutViewController.m */; };
 /* End PBXBuildFile section */
@@ -182,6 +183,8 @@
 		38D9BEAC15ABE10A00F1CEA7 /* LMMappingProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMMappingProvider.h; sourceTree = "<group>"; };
 		38D9BEAD15ABE10A00F1CEA7 /* LMMappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMMappingProvider.m; sourceTree = "<group>"; };
 		38D9BEBC15ABFFD500F1CEA7 /* LMUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LMUserCell.xib; sourceTree = "<group>"; };
+		38D9BEC215AC0BF800F1CEA7 /* LMUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMUserCell.h; sourceTree = "<group>"; };
+		38D9BEC315AC0BF800F1CEA7 /* LMUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMUserCell.m; sourceTree = "<group>"; };
 		38DB056B154854F80092CDCD /* AboutView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView_iPhone.xib; sourceTree = "<group>"; };
 		38DB056D154855140092CDCD /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		38DB056E154855140092CDCD /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
@@ -444,6 +447,8 @@
 			children = (
 				387C69FD154C3BE3005768B9 /* ContactsViewController.h */,
 				387C69FE154C3BE3005768B9 /* ContactsViewController.m */,
+				38D9BEC215AC0BF800F1CEA7 /* LMUserCell.h */,
+				38D9BEC315AC0BF800F1CEA7 /* LMUserCell.m */,
 			);
 			name = Contracts;
 			sourceTree = "<group>";
@@ -638,6 +643,7 @@
 				38D9BEAE15ABE10A00F1CEA7 /* LMMappingProvider.m in Sources */,
 				382FBC9415AF1CB6003298B6 /* LMContact.m in Sources */,
 				382FBC9715AF1D26003298B6 /* LMSetting.m in Sources */,
+				38D9BEC415AC0BF800F1CEA7 /* LMUserCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

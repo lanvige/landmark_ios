@@ -11,9 +11,13 @@
 #import "NavigationManager.h"
 #import "RestKit/RestKit.h"
 
+#import "LMMappingProvider.h"
+
 @interface AppDelegate ()
+
 @property (nonatomic, strong, readwrite) RKObjectManager *objectManager;
 @property (nonatomic, strong, readwrite) RKManagedObjectStore *objectStore;
+
 @end
 
 @implementation AppDelegate
@@ -24,14 +28,20 @@
 
 - (void)initializeRestKit
 {
-    self.objectManager = [RKObjectManager managerWithBaseURLString:@"http://landmark.10.128.42.86.xip.io/api/"];
+    //self.objectManager = [RKObjectManager managerWithBaseURLString:@"http://landmark.10.128.42.86.xip.io/"];
+    
+    self.objectManager = [RKObjectManager managerWithBaseURLString:@"https://api.github.com/"];
+    
     self.objectStore = [RKManagedObjectStore objectStoreWithStoreFilename:@"Landmark.sqlite"];
     self.objectManager.objectStore = self.objectStore;
-    //self.objectManager.mappingProvider = [RKGHMappingProvider mappingProviderWithObjectStore:self.objectStore];
+    self.objectManager.mappingProvider = [LMMappingProvider mappingProviderWithObjectStore:self.objectStore];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [self initializeRestKit];
+    
     // Init the window as global.
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
@@ -39,8 +49,6 @@
     [_navigationManager displayRootView];
 
     [self.window makeKeyAndVisible];
-    
-    [self initializeRestKit];
     
     return YES;
 }

@@ -10,7 +10,7 @@
 
 @implementation LMUser
 
-@dynamic id;
+@dynamic userId;
 @dynamic name;
 @dynamic email;
 

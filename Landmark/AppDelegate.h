@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <RestKit/RestKit.h>
 
 @class NavigationManager;
-
 
 @interface AppDelegate : NSObject <UIApplicationDelegate>
 {
@@ -17,10 +17,9 @@
     NavigationManager *_navigationManager;
 }
 
-// Global window
 @property (strong, nonatomic) UIWindow *window;
 
-// Shared navigation manager
-+ (NavigationManager *)sharedNavigationManager;
+@property (readonly, strong, nonatomic) RKObjectManager *objectManager;
+@property (readonly, strong, nonatomic) RKManagedObjectStore *objectStore;
 
 @end

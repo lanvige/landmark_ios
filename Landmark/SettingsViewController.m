@@ -24,18 +24,13 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+    if (self) 
+    {
         // Set the title and image for Tab bar.
-        self.title = NSLocalizedString(@"Settings", @"Settings");
+        self.title = NSLocalizedString(@"settings", @"");
         self.tabBarItem.image = [UIImage imageNamed:@"setting"];
     }
     return self;
-}
-
-- (id)init
-{
-	self = [self initWithNibName:@"SettingsView_iPhone" bundle:nil];	
-	return self;
 }
 
 - (void)viewDidLoad
@@ -44,10 +39,10 @@
     
     // Change the bar's style.
     self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
-    self.navigationItem.title = NSLocalizedString(@"Settings", @"Settings");
+    self.navigationItem.title = NSLocalizedString(@"settings", @"");
     
     // Add a about button on the right of bar.
-    self.aboutButton = [[UIBarButtonItem alloc]initWithTitle:NSLocalizedString(@"About", @"About")
+    self.aboutButton = [[UIBarButtonItem alloc]initWithTitle:NSLocalizedString(@"about", @"")
                                                        style:UIBarButtonItemStyleBordered
                                                       target:self
                                                       action:@selector(aboutAction:)];
@@ -72,7 +67,7 @@
 // Show the about page.
 - (void)aboutAction: (id)sender
 {
-    self.aboutViewController = [[AboutViewController alloc] init];
+    self.aboutViewController = [[AboutViewController alloc] initWithNibName:@"AboutView_iPhone" bundle:nil];
     //_aboutViewController.delegate = self;
     aboutNavigationController = [[UINavigationController alloc] initWithRootViewController:self.aboutViewController];
     

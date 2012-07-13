@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Landmark
+
+  Created by Lanvige Jiang on 4/26/12.
+  Copyright (c) 2012 LANVIGE. All rights reserved.
+*/
+
+"home" = "Home";
+
+"settings" = "Settings";
+
+"about" = "About";
+
+"done" = "Done";

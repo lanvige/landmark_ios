@@ -6,8 +6,15 @@
 //  Copyright (c) 2012 LANVIGE. All rights reserved.
 //
 
-#import "Location.h"
+#import "LMSharing.h"
 
-@implementation Location
+@implementation LMSharing
+
+@dynamic id;
+
+@dynamic title;
+@dynamic description;
+
+@dynamic user;
 
 @end

@@ -23,6 +23,7 @@
 		3822BF9E154695E900FB996A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3822BF9D154695E900FB996A /* libxml2.dylib */; };
 		382FBC9415AF1CB6003298B6 /* LMContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 382FBC9315AF1CB6003298B6 /* LMContact.m */; };
 		382FBC9715AF1D26003298B6 /* LMSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 382FBC9615AF1D26003298B6 /* LMSetting.m */; };
+		3837E37A15B5723E00DF1255 /* UserMappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837E37915B5723E00DF1255 /* UserMappingProvider.m */; };
 		384E236715A4762900D55EF5 /* LMAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 384E236615A4762900D55EF5 /* LMAnnotation.m */; };
 		385E61F0154A850E00964706 /* LMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E61EF154A850E00964706 /* LMUser.m */; };
 		385E61F7154A8ABE00964706 /* CreateSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E61F6154A8ABE00964706 /* CreateSpaceViewController.m */; };
@@ -42,6 +43,7 @@
 		387C6A02154C3BFE005768B9 /* ContactsView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387C6A01154C3BFE005768B9 /* ContactsView_iPhone.xib */; };
 		387C6A04154C3FC0005768B9 /* SplashView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387C6A03154C3FC0005768B9 /* SplashView_iPhone.xib */; };
 		387C6A06154C3FD0005768B9 /* SplashView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387C6A05154C3FD0005768B9 /* SplashView_iPad.xib */; };
+		388B156E15B560FF00348CBD /* LMAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B156D15B560FF00348CBD /* LMAPIClient.m */; };
 		3894D0AD1547E17500707389 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3894D0AB1547E17500707389 /* icon-72.png */; };
 		3894D0AE1547E17500707389 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3894D0AC1547E17500707389 /* icon.png */; };
 		3894D0F41547FBE900707389 /* SettingsView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D0F31547FBE900707389 /* SettingsView_iPhone.xib */; };
@@ -84,6 +86,8 @@
 		382FBC9315AF1CB6003298B6 /* LMContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMContact.m; sourceTree = "<group>"; };
 		382FBC9515AF1D26003298B6 /* LMSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSetting.h; sourceTree = "<group>"; };
 		382FBC9615AF1D26003298B6 /* LMSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSetting.m; sourceTree = "<group>"; };
+		3837E37815B5723E00DF1255 /* UserMappingProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMappingProvider.h; sourceTree = "<group>"; };
+		3837E37915B5723E00DF1255 /* UserMappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserMappingProvider.m; sourceTree = "<group>"; };
 		384E236515A4762900D55EF5 /* LMAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAnnotation.h; sourceTree = "<group>"; };
 		384E236615A4762900D55EF5 /* LMAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAnnotation.m; sourceTree = "<group>"; };
 		385E61EE154A850E00964706 /* LMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMUser.h; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 		387C6A01154C3BFE005768B9 /* ContactsView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsView_iPhone.xib; sourceTree = "<group>"; };
 		387C6A03154C3FC0005768B9 /* SplashView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashView_iPhone.xib; sourceTree = "<group>"; };
 		387C6A05154C3FD0005768B9 /* SplashView_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashView_iPad.xib; sourceTree = "<group>"; };
+		388B156C15B560FE00348CBD /* LMAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAPIClient.h; sourceTree = "<group>"; };
+		388B156D15B560FF00348CBD /* LMAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAPIClient.m; sourceTree = "<group>"; };
 		3894D0AB1547E17500707389 /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72.png"; path = "Icons/icon-72.png"; sourceTree = "<group>"; };
 		3894D0AC1547E17500707389 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Icons/icon.png; sourceTree = "<group>"; };
 		3894D0F31547FBE900707389 /* SettingsView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsView_iPhone.xib; sourceTree = "<group>"; };
@@ -215,6 +221,15 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		3837E37515B5722200DF1255 /* MappingProvider */ = {
+			isa = PBXGroup;
+			children = (
+				3837E37815B5723E00DF1255 /* UserMappingProvider.h */,
+				3837E37915B5723E00DF1255 /* UserMappingProvider.m */,
+			);
+			name = MappingProvider;
+			sourceTree = "<group>";
+		};
 		385E61F4154A8A9500964706 /* Space Set */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,11 +306,14 @@
 		386C596B15454C1A000B592A /* Landmark */ = {
 			isa = PBXGroup;
 			children = (
+				388B156C15B560FE00348CBD /* LMAPIClient.h */,
+				388B156D15B560FF00348CBD /* LMAPIClient.m */,
 				386C597415454C1A000B592A /* AppDelegate.h */,
 				386C597515454C1A000B592A /* AppDelegate.m */,
 				380F063F154566CC00C9CF7C /* ViewManager */,
 				3894D11A154901BC00707389 /* Protocals */,
 				386C598815455369000B592A /* Models */,
+				3837E37515B5722200DF1255 /* MappingProvider */,
 				386C598715455362000B592A /* Views */,
 				386C598615455320000B592A /* ViewControllers */,
 				386C596C15454C1A000B592A /* Supporting Files */,
@@ -531,6 +549,8 @@
 				382FBC9415AF1CB6003298B6 /* LMContact.m in Sources */,
 				382FBC9715AF1D26003298B6 /* LMSetting.m in Sources */,
 				38D9BEC415AC0BF800F1CEA7 /* LMUserCell.m in Sources */,
+				388B156E15B560FF00348CBD /* LMAPIClient.m in Sources */,
+				3837E37A15B5723E00DF1255 /* UserMappingProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,7 +645,6 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Landmark/Landmark-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "Landmark/Landmark-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -639,7 +658,6 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Landmark/Landmark-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "Landmark/Landmark-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -7,13 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
 
-@interface LMUser : NSManagedObject
+@interface LMUser : NSObject
 
-@property (nonatomic, strong) NSNumber *userId;
+@property (nonatomic, strong) NSNumber *userID;
 
-@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NSString *username;
 @property (nonatomic, retain) NSString *email;
 
 @end

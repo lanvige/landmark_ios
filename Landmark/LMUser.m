@@ -10,8 +10,22 @@
 
 @implementation LMUser
 
-@dynamic userId;
-@dynamic name;
-@dynamic email;
+@synthesize userID = _userID;
+@synthesize username = _username;
+@synthesize email = _email;
+
+
+- (id)initWithAttributes:(NSDictionary *)attributes {
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    
+    _userID = [attributes valueForKeyPath:@"id"];
+    _username = [attributes valueForKeyPath:@"username"];
+    _email = [attributes valueForKeyPath:@"email"];
+    
+    return self;
+}
 
 @end

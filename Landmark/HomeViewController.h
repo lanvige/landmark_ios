@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RestKit/RestKit.h"
 
 @class LandViewController;
 @class CreateSpaceViewController;

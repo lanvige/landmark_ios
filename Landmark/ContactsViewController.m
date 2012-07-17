@@ -8,24 +8,11 @@
 
 #import "ContactsViewController.h"
 
-#import "RestKit/RKTableController.h"
-#import <RestKit/RestKit.h>
-#import <RestKit/UI.h>
-
 #import "LMUser.h"
-
-@interface ContactsViewController()
-
-// Used for...
-@property (nonatomic, strong) RKTableController *tableController;
-
-@end
-
 
 
 @implementation ContactsViewController
 
-@synthesize tableController;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -52,41 +39,10 @@
     self.navigationItem.title = NSLocalizedString(@"contacts", @"");
 }
 
-- (void)bindingContactData {
-    /**
-     Configure the RestKit table controller to drive our view
-     */
-//    self.tableController = [[RKObjectManager sharedManager] fetchedResultsTableControllerForTableViewController:self];
-//    self.tableController.autoRefreshFromNetwork = YES;
-//    self.tableController.pullToRefreshEnabled = YES;
-//    self.tableController.resourcePath = @"/api/v1/users";
-//    self.tableController.variableHeightRows = YES;
-    
-//    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:NO];
-//    self.tableController.sortDescriptors = [NSArray arrayWithObject:descriptor];
-    
-
-    
-    RKTableViewCellMapping *cellMapping = [RKTableViewCellMapping cellMapping];
-    //cellMapping.cellClassName = @"LMUserCell";
-    cellMapping.reuseIdentifier = @"LMUser";
-    cellMapping.rowHeight = 100.0;
-    [cellMapping mapKeyPath:@"name" toAttribute:@"nameLabel.text"];
-    [cellMapping mapKeyPath:@"email" toAttribute:@"mailLabel.text"];
-    
-    [tableController mapObjectsWithClass:[LMUser class] toTableCellsWithMapping:cellMapping];
-    
-    /**
-     Use a custom Nib to draw our table cells for RKGHIssue objects
-     */
-//    [self.tableView registerNib:[UINib nibWithNibName:@"LMUserCell" bundle:nil] forCellReuseIdentifier:@"LMUser"];
-}
+- (void)bindingContactData {}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-
-    //[tableController loadTable];
-    [self.tableController loadTableFromResourcePath:@"/api/v1/users"];
 }
 
 - (void)viewDidUnload {    

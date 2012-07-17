@@ -3,4 +3,6 @@ build
 *.mode1v3
 *.pbxuser
 project.xcworkspace
+xcuserdata/*
 xcuserdata
+pods

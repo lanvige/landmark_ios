@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class LMUser;
+
 @interface UserMappingProvider : NSObject
+
++ (void)usersWithBlock:(void (^)(NSArray *users))block;
 
 @end

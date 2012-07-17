@@ -15,4 +15,6 @@
 @property (nonatomic, retain) NSString *username;
 @property (nonatomic, retain) NSString *email;
 
+- (id)initWithAttributes:(NSDictionary *)attributes;
+
 @end

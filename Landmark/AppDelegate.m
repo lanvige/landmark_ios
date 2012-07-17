@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 
 #import "NavigationManager.h"
-
+#import "AFNetworkActivityIndicatorManager.h"
 
 @implementation AppDelegate
 
@@ -18,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+    
     // Init the window as global.
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     

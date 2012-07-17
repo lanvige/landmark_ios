@@ -65,7 +65,8 @@
 - (void)displayRootView
 {    
     self.homeViewController = [[HomeViewController alloc] initWithNibName:@"HomeView_iPhone" bundle:nil];
-    self.historyViewController = [[HistoryViewController alloc] initWithNibName:@"HistoryView_iPhone" bundle:nil];
+    //self.historyViewController = [[HistoryViewController alloc] initWithNibName:@"HistoryView_iPhone" bundle:nil];
+    self.historyViewController = [[HistoryViewController alloc] initWithStyle:UITableViewStylePlain];
     self.contactsViewController = [[ContactsViewController alloc] initWithNibName:@"ContactsView_iPhone" bundle:nil];
     self.settingsViewController = [[SettingsViewController alloc] initWithNibName:@"SettingsView_iPhone" bundle:nil];
     

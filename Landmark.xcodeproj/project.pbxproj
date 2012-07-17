@@ -56,6 +56,7 @@
 		3894D14C1549219100707389 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3894D1491549219100707389 /* Localizable.strings */; };
 		3894D17315495B5400707389 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3894D17215495B5300707389 /* LocationViewController.m */; };
 		3894D17515495B7100707389 /* CreateSpaceView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D17415495B7100707389 /* CreateSpaceView_iPhone.xib */; };
+		38D28E7B15B5A35F00060FB1 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D28E7A15B5A35F00060FB1 /* UserTableViewCell.m */; };
 		38D9BEBD15ABFFD500F1CEA7 /* LMUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D9BEBC15ABFFD500F1CEA7 /* LMUserCell.xib */; };
 		38D9BEC415AC0BF800F1CEA7 /* LMUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D9BEC315AC0BF800F1CEA7 /* LMUserCell.m */; };
 		38DB056C154854F80092CDCD /* AboutView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DB056B154854F80092CDCD /* AboutView_iPhone.xib */; };
@@ -136,6 +137,8 @@
 		3894D17115495B5300707389 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		3894D17215495B5300707389 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		3894D17415495B7100707389 /* CreateSpaceView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateSpaceView_iPhone.xib; sourceTree = "<group>"; };
+		38D28E7915B5A35F00060FB1 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
+		38D28E7A15B5A35F00060FB1 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
 		38D9BEBC15ABFFD500F1CEA7 /* LMUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LMUserCell.xib; sourceTree = "<group>"; };
 		38D9BEC215AC0BF800F1CEA7 /* LMUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMUserCell.h; sourceTree = "<group>"; };
 		38D9BEC315AC0BF800F1CEA7 /* LMUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMUserCell.m; sourceTree = "<group>"; };
@@ -197,6 +200,8 @@
 				380F066D1545840D00C9CF7C /* LoginView_iPhone.xib */,
 				3894D0F31547FBE900707389 /* SettingsView_iPhone.xib */,
 				385E6208154BDAC200964706 /* HistoryView_iPhone.xib */,
+				38D28E7915B5A35F00060FB1 /* UserTableViewCell.h */,
+				38D28E7A15B5A35F00060FB1 /* UserTableViewCell.m */,
 			);
 			name = iPhone;
 			sourceTree = "<group>";
@@ -551,6 +556,7 @@
 				38D9BEC415AC0BF800F1CEA7 /* LMUserCell.m in Sources */,
 				388B156E15B560FF00348CBD /* LMAPIClient.m in Sources */,
 				3837E37A15B5723E00DF1255 /* UserMappingProvider.m in Sources */,
+				38D28E7B15B5A35F00060FB1 /* UserTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

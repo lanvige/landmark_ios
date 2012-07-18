@@ -60,6 +60,10 @@
 		3894D14C1549219100707389 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3894D1491549219100707389 /* Localizable.strings */; };
 		3894D17315495B5400707389 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3894D17215495B5300707389 /* LocationViewController.m */; };
 		3894D17515495B7100707389 /* CreateSpaceView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D17415495B7100707389 /* CreateSpaceView_iPhone.xib */; };
+		38C6C32D15B70F6800E30386 /* contacts.png in Resources */ = {isa = PBXBuildFile; fileRef = 38C6C32915B70F6800E30386 /* contacts.png */; };
+		38C6C32E15B70F6800E30386 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 38C6C32A15B70F6800E30386 /* home.png */; };
+		38C6C32F15B70F6800E30386 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 38C6C32B15B70F6800E30386 /* settings.png */; };
+		38C6C33015B70F6800E30386 /* sharings.png in Resources */ = {isa = PBXBuildFile; fileRef = 38C6C32C15B70F6800E30386 /* sharings.png */; };
 		38D28E7B15B5A35F00060FB1 /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D28E7A15B5A35F00060FB1 /* ContactTableViewCell.m */; };
 		38DB056C154854F80092CDCD /* AboutView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DB056B154854F80092CDCD /* AboutView_iPhone.xib */; };
 		38DB056F154855140092CDCD /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DB056E154855140092CDCD /* AboutViewController.m */; };
@@ -150,6 +154,10 @@
 		3894D17115495B5300707389 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		3894D17215495B5300707389 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		3894D17415495B7100707389 /* CreateSpaceView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateSpaceView_iPhone.xib; sourceTree = "<group>"; };
+		38C6C32915B70F6800E30386 /* contacts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = contacts.png; path = Icons/contacts.png; sourceTree = "<group>"; };
+		38C6C32A15B70F6800E30386 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = Icons/home.png; sourceTree = "<group>"; };
+		38C6C32B15B70F6800E30386 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings.png; path = Icons/settings.png; sourceTree = "<group>"; };
+		38C6C32C15B70F6800E30386 /* sharings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sharings.png; path = Icons/sharings.png; sourceTree = "<group>"; };
 		38D28E7915B5A35F00060FB1 /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewCell.h; sourceTree = "<group>"; };
 		38D28E7A15B5A35F00060FB1 /* ContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewCell.m; sourceTree = "<group>"; };
 		38DB056B154854F80092CDCD /* AboutView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView_iPhone.xib; sourceTree = "<group>"; };
@@ -437,6 +445,10 @@
 		3894D0AA1547E13D00707389 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				38C6C32915B70F6800E30386 /* contacts.png */,
+				38C6C32A15B70F6800E30386 /* home.png */,
+				38C6C32B15B70F6800E30386 /* settings.png */,
+				38C6C32C15B70F6800E30386 /* sharings.png */,
 				3894D0AB1547E17500707389 /* icon-72.png */,
 				3894D0AC1547E17500707389 /* icon.png */,
 			);
@@ -539,6 +551,10 @@
 				385E6207154BDA9700964706 /* LocationView_iPhone.xib in Resources */,
 				387C6A04154C3FC0005768B9 /* SplashView_iPhone.xib in Resources */,
 				387C6A06154C3FD0005768B9 /* SplashView_iPad.xib in Resources */,
+				38C6C32D15B70F6800E30386 /* contacts.png in Resources */,
+				38C6C32E15B70F6800E30386 /* home.png in Resources */,
+				38C6C32F15B70F6800E30386 /* settings.png in Resources */,
+				38C6C33015B70F6800E30386 /* sharings.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

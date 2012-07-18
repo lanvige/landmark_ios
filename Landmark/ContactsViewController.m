@@ -35,6 +35,7 @@
     if (self) 
     {
         self.title = @"Contacts";
+        self.tabBarItem.image = [UIImage imageNamed:@"contacts"];
     }
     
     contactMappingProvider = [[ContactMappingProvider alloc] init];

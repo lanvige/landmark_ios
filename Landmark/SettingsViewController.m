@@ -28,7 +28,7 @@
     {
         // Set the title and image for Tab bar.
         self.title = NSLocalizedString(@"settings", @"");
-        self.tabBarItem.image = [UIImage imageNamed:@"setting"];
+        self.tabBarItem.image = [UIImage imageNamed:@"settings"];
     }
     return self;
 }

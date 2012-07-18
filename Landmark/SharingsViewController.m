@@ -36,6 +36,7 @@
     if (self) 
     {
         self.title = @"Sharings";
+        self.tabBarItem.image = [UIImage imageNamed:@"sharings"];
     }
     
     sharingMappingProvider = [[SharingMappingProvider alloc] init];

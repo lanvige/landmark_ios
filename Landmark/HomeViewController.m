@@ -45,6 +45,9 @@
     NSDictionary *dictItems = [[NSDictionary alloc] initWithObjectsAndKeys:arrItems, @"", nil];
     self.tableContents = dictItems;
     self.sortedKeys =[[self.tableContents allKeys] sortedArrayUsingSelector:@selector(compare:)];
+    
+
+    
 }
 
 - (void)viewDidUnload

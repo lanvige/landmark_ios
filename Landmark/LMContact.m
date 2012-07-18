@@ -10,4 +10,6 @@
 
 @implementation LMContact
 
+@synthesize mID;
+
 @end

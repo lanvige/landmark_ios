@@ -10,7 +10,7 @@
 
 @implementation LMUser
 
-@synthesize userID = _userID;
+@synthesize mID = _userID;
 @synthesize username = _username;
 @synthesize email = _email;
 

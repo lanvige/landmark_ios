@@ -10,7 +10,7 @@
 
 #import "LMUser.h"
 #import "UserTableViewCell.h"
-#import "UserMappingProvider.h"
+#import "ContactMappingProvider.h"
 
 @interface ContactsViewController ()
 - (void)reload:(id)sender;
@@ -37,7 +37,7 @@
     [_activityIndicatorView startAnimating];
     self.navigationItem.rightBarButtonItem.enabled = NO;
     
-    [UserMappingProvider getUsersWithBlock:^(NSArray *contacts) {
+    [ContactMappingProvider getContactsWithBlock:^(NSArray *contacts) {
         if (contacts) {
             _contacts = contacts;
             [self.tableView reloadData];

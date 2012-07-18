@@ -7,61 +7,45 @@
 //
 
 #import "SharingMappingProvider.h"
+
 #import "LMCommon.h"
+#import "LMModelBase.h"
 #import "LMSharing.h"
-#import "LMAPIClient.h"
 
 @implementation SharingMappingProvider
 
+NSString * const kSharingsPath = @"sharings";
+
 // Get all the sharing from current user.
 + (void)getSharingsWithBlock:(void (^)(NSArray *))block {
-    [[LMAPIClient sharedClient] getPath:@"sharings" 
-                             parameters:[NSDictionary dictionaryWithObject:@"false" 
-                                                                    forKey:@"include_entities"] 
-                                success:^(AFHTTPRequestOperation *operation, id response) {
-                                    NSMutableArray *mutableUsers = [NSMutableArray arrayWithCapacity:[response count]];
-                                    for (NSDictionary *attributes in response) {
-                                        LMSharing *sharing = [[LMSharing alloc] initWithAttributes:attributes];
-                                        [mutableUsers addObject:sharing];
-                                    }
-                                    
-                                    if (block) {
-                                        block([NSArray arrayWithArray:mutableUsers]);
-                                    }
-                                } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                    [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil) 
-                                                                message:[error localizedDescription] 
-                                                               delegate:nil 
-                                                      cancelButtonTitle:nil 
-                                                      otherButtonTitles:NSLocalizedString(@"OK", nil), nil] show];
-                                    if (block) {
-                                        block(nil);
-                                    }
-                                }];
+    [super getObjectsWithQueryPath:kSharingsPath WithBlock:^(id jsonData) {
+        if (jsonData) {
+            NSMutableArray *mutableUsers = [NSMutableArray arrayWithCapacity:[jsonData count]];
+            for (NSDictionary *attributes in jsonData) {
+                LMSharing *sharing = [[LMSharing alloc] initWithAttributes:attributes];
+                [mutableUsers addObject:sharing];
+            }
+            
+            if (block) {
+                block([NSArray arrayWithArray:mutableUsers]);
+            }
+        }
+    }];
 }
 
 // Get a sharing with id
 + (void)getSharingWithId:(NSString *)sharingID withBlock:(void (^)(LMSharing *))block {
-    NSLog(@"%@", sharingID);
-    [[LMAPIClient sharedClient] getPath:[NSString stringWithFormat:@"sharings/%@", sharingID]
-                             parameters:nil 
-                                success:^(AFHTTPRequestOperation *operation, id response) {
-                                    DLog(@"SUCCESS %s ", __PRETTY_FUNCTION__);
-                                    
-                                    LMSharing *sharing = [[LMSharing alloc] initWithAttributes:response];
-                                    
-                                    if (block) {
-                                        block(sharing);
-                                    }
-                                }
-                                failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                    DLog(@"ERROR  %@",error);
-                                    
-                                    if (block) {
-                                        block(nil);
-                                    }
-                                }];
+    NSString *path = [NSString stringWithFormat:@"%@/%@", kSharingsPath, sharingID];
+    
+    [super getObjectsWithQueryPath:path WithBlock:^(id jsonData) {
+        if (jsonData) {
+            LMSharing *sharing = [[LMSharing alloc] initWithAttributes:jsonData];
+            
+            if (block) {
+                block(sharing);
+            }
+        }
+    }];
 }
-
 
 @end

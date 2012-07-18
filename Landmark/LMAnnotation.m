@@ -10,14 +10,14 @@
 
 @implementation LMAnnotation
 
-@synthesize coordinate = coordinate;
-@synthesize title = title;
-@synthesize subtitle = subtitle;
+@synthesize coordinate = _coordinate;
+@synthesize title = _title;
+@synthesize subtitle = _subtitle;
 
-- (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate addressDictionary:(NSDictionary *)addressDictionary {
+- (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate1 addressDictionary:(NSDictionary *)addressDictionary {
 	
-	if ((self = [super initWithCoordinate:coordinate addressDictionary:addressDictionary])) {
-		self.coordinate = coordinate;
+	if ((self = [super initWithCoordinate:coordinate1 addressDictionary:addressDictionary])) {
+		_coordinate = coordinate1;
 	}
 	return self;
 }

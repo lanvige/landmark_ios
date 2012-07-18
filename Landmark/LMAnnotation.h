@@ -8,6 +8,8 @@
 
 #import <MapKit/MapKit.h>
 
+#import "LMModelBase.h"
+
 @interface LMAnnotation : MKPlacemark {
 	CLLocationCoordinate2D coordinate;
 	NSString *title;

@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LMUser : NSObject
+#import "LMModelBase.h"
 
-@property (nonatomic, strong) NSNumber *userID;
+@interface LMUser : LMModelBase
 
 @property (nonatomic, retain) NSString *username;
 @property (nonatomic, retain) NSString *email;

@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+#import "BaseMappingProvider.h"
+
 @class LMSharing;
 
-@interface SharingMappingProvider : NSObject
+@interface SharingMappingProvider : BaseMappingProvider
 
 + (void)getSharingsWithBlock:(void (^)(NSArray *sharings))block;
 

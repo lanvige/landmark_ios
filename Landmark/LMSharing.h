@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CoreData/CoreData.h"
+
+#import "LMModelBase.h"
 
 @class LMUser;
 
-@interface LMSharing : NSObject
+@interface LMSharing : LMModelBase
 
-@property (nonatomic, strong) NSString *sharingID;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *description;
 @property (nonatomic, strong) NSDate *createdAt;

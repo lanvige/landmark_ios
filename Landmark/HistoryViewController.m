@@ -121,7 +121,8 @@
     
     [_activityIndicatorView startAnimating];
     
-    [SharingMappingProvider getSharingWithId:[NSString stringWithFormat:@"%@", cell.sharing.sharingID] 
+    DLog(@"%@", cell.sharing.mID);
+    [SharingMappingProvider getSharingWithId:[NSString stringWithFormat:@"%@", cell.sharing.mID] 
                                    withBlock:^(LMSharing *sharing) {
         if (sharing) {
             DLog(@"Sharing Content - %@", sharing.title);

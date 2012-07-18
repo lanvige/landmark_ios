@@ -10,7 +10,7 @@
 
 @implementation LMSharing
 
-@synthesize sharingID = _sharingID;
+@synthesize mID = _sharingID;
 @synthesize title = _title;
 @synthesize description = _description;
 @synthesize createdAt = _createdAt;

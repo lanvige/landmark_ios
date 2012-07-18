@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
 
-@interface LMContact : NSManagedObject
+#import "LMModelBase.h"
+
+@interface LMContact : LMModelBase
 
 @end

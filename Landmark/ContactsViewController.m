@@ -42,6 +42,10 @@
 }
 
 - (void)reload:(id)sender {
+    [self loadContact];
+}
+
+- (void)loadContact {
     [_activityIndicatorView startAnimating];
     self.navigationItem.rightBarButtonItem.enabled = NO;
     
@@ -85,6 +89,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    [self loadContact];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

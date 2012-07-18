@@ -11,8 +11,11 @@
 @interface BaseMappingProvider : NSObject
 
 // Get the all objects json data from API.
-- (void)getObjectsWithQueryPath:(NSString *)path WithBlock:(void (^)(id jsonData))block;
+- (void)getObjectsWithPath:(NSString *)path 
+                     block:(void (^)(id jsonData))block;
 
-//+ (void)getObjectWithBlock:(void (^)(id jsonData))block;
+- (void)saveObjectWithPath:(NSString *)path 
+            parameters:(NSDictionary *) params 
+                 block:(void (^)(BOOL))block;
 
 @end

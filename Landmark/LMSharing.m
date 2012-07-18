@@ -33,4 +33,13 @@
     return self;
 }
 
+- (NSDictionary *)getParameters {
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+                            @"title", _title,
+                            @"description", _description,
+                            nil];
+    
+    return params;
+}
+
 @end

@@ -12,8 +12,8 @@
 
 @implementation BaseMappingProvider
 
-- (void)getObjectsWithQueryPath:(NSString *)path WithBlock:(void (^)(id jsonData))block {
-
+- (void)getObjectsWithPath:(NSString *)path 
+                     block:(void (^)(id jsonData))block {
     [[LMAPIClient sharedClient] getPath:path
                              parameters:nil
                                 success:^(AFHTTPRequestOperation *operation, id response) {
@@ -27,6 +27,24 @@
                                 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                     DLog(@"ERROR - %@", error);
                                 }];    
+}
+
+- (void)saveObjectWithPath:(NSString *)path 
+                parameters:(NSDictionary *)params 
+                     block:(void (^)(BOOL))block {
+    [[LMAPIClient sharedClient] postPath:path 
+                              parameters:params 
+                                 success:^(AFHTTPRequestOperation *operation, id response) {
+                                     DLog(@"SUCCESS - %s ", __PRETTY_FUNCTION__);
+                                     if (block) {
+                                         block(TRUE);
+                                     }
+                                 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                     DLog(@"ERROR - %@", error);
+                                     if (block) {
+                                         block(FALSE);
+                                     }
+                                 }];
 }
 
 @end

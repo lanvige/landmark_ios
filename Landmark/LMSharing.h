@@ -24,4 +24,7 @@
 
 - (id)initWithAttributes:(NSDictionary *)attributes;
 
+// generate the parameters for http post.
+- (NSDictionary *)getParameters;
+
 @end

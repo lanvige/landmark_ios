@@ -18,7 +18,7 @@ NSString * const kSharingsPath = @"sharings";
 
 // Get all the sharing from current user.
 - (void)getSharingsWithBlock:(void (^)(NSArray *))block {
-    [super getObjectsWithQueryPath:kSharingsPath WithBlock:^(id jsonData) {
+    [super getObjectsWithPath:kSharingsPath block:^(id jsonData) {
         if (jsonData) {
             NSMutableArray *mutableUsers = [NSMutableArray arrayWithCapacity:[jsonData count]];
             for (NSDictionary *attributes in jsonData) {
@@ -37,7 +37,7 @@ NSString * const kSharingsPath = @"sharings";
 - (void)getSharingWithId:(NSString *)sharingID withBlock:(void (^)(LMSharing *))block {
     NSString *path = [NSString stringWithFormat:@"%@/%@", kSharingsPath, sharingID];
     
-    [super getObjectsWithQueryPath:path WithBlock:^(id jsonData) {
+    [super getObjectsWithPath:path block:^(id jsonData) {
         if (jsonData) {
             LMSharing *sharing = [[LMSharing alloc] initWithAttributes:jsonData];
             
@@ -49,6 +49,10 @@ NSString * const kSharingsPath = @"sharings";
 }
 
 - (void)saveSharingWith:(LMSharing *)sharing withBlock:(void (^)(BOOL *))block {
+    [super saveObjectWithPath:kSharingsPath parameters:sharing.getParameters block:^(BOOL result) {
+        if(result) {
+        }
+    }];
 }
 
 @end

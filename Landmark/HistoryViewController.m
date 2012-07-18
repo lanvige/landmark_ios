@@ -43,6 +43,10 @@
 }
 
 - (void)reload:(id)sender {
+    [self loadSharings];
+}
+
+- (void)loadSharings {
     [_activityIndicatorView startAnimating];
     self.navigationItem.rightBarButtonItem.enabled = NO;
     
@@ -87,6 +91,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    [self loadSharings];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

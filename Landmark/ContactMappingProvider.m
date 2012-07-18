@@ -14,7 +14,7 @@
 NSString * const kContactsPath = @"users";
 
 - (void)getContactsWithBlock:(void (^)(NSArray *contacts))block {
-    [super getObjectsWithQueryPath:kContactsPath WithBlock:^(id jsonData) {
+    [super getObjectsWithPath:kContactsPath block:^(id jsonData) {
         if (jsonData) {
             NSMutableArray *mutableUsers = [NSMutableArray arrayWithCapacity:[jsonData count]];
             for (NSDictionary *attributes in jsonData) {
@@ -33,7 +33,7 @@ NSString * const kContactsPath = @"users";
 - (void)getContactWithId:(NSString *)contactID withBlock:(void (^)(LMUser *))block {
     NSString *path = [NSString stringWithFormat:@"%@/%@", kContactsPath, contactID];
     
-    [super getObjectsWithQueryPath:path WithBlock:^(id jsonData) {
+    [super getObjectsWithPath:path block:^(id jsonData) {
         if (jsonData) {
             LMUser *user = [[LMUser alloc] initWithAttributes:jsonData];
             

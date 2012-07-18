@@ -9,7 +9,7 @@
 #import "ContactsViewController.h"
 
 #import "LMUser.h"
-#import "UserTableViewCell.h"
+#import "ContactTableViewCell.h"
 #import "ContactMappingProvider.h"
 
 @interface ContactsViewController ()
@@ -114,10 +114,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
     
-    UserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    ContactTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (!cell) {
-        cell = [[UserTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[ContactTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
     cell.user = [_contacts objectAtIndex:indexPath.row];

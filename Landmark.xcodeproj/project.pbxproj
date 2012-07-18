@@ -45,7 +45,6 @@
 		386C597615454C1A000B592A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 386C597515454C1A000B592A /* AppDelegate.m */; };
 		386C597915454C1A000B592A /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386C597815454C1A000B592A /* SplashViewController.m */; };
 		387C69FF154C3BE3005768B9 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C69FE154C3BE3005768B9 /* ContactsViewController.m */; };
-		387C6A02154C3BFE005768B9 /* ContactsView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387C6A01154C3BFE005768B9 /* ContactsView_iPhone.xib */; };
 		387C6A04154C3FC0005768B9 /* SplashView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387C6A03154C3FC0005768B9 /* SplashView_iPhone.xib */; };
 		387C6A06154C3FD0005768B9 /* SplashView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387C6A05154C3FD0005768B9 /* SplashView_iPad.xib */; };
 		388B156E15B560FF00348CBD /* LMAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B156D15B560FF00348CBD /* LMAPIClient.m */; };
@@ -61,8 +60,7 @@
 		3894D14C1549219100707389 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3894D1491549219100707389 /* Localizable.strings */; };
 		3894D17315495B5400707389 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3894D17215495B5300707389 /* LocationViewController.m */; };
 		3894D17515495B7100707389 /* CreateSpaceView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D17415495B7100707389 /* CreateSpaceView_iPhone.xib */; };
-		38D28E7B15B5A35F00060FB1 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D28E7A15B5A35F00060FB1 /* UserTableViewCell.m */; };
-		38D9BEBD15ABFFD500F1CEA7 /* LMUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D9BEBC15ABFFD500F1CEA7 /* LMUserCell.xib */; };
+		38D28E7B15B5A35F00060FB1 /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D28E7A15B5A35F00060FB1 /* ContactTableViewCell.m */; };
 		38DB056C154854F80092CDCD /* AboutView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DB056B154854F80092CDCD /* AboutView_iPhone.xib */; };
 		38DB056F154855140092CDCD /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DB056E154855140092CDCD /* AboutViewController.m */; };
 		75D76D9637544FD5BB1EDDA1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 118341ABCA8344ECA3D12B55 /* libPods.a */; };
@@ -132,7 +130,6 @@
 		386C597815454C1A000B592A /* SplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		387C69FD154C3BE3005768B9 /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
 		387C69FE154C3BE3005768B9 /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
-		387C6A01154C3BFE005768B9 /* ContactsView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsView_iPhone.xib; sourceTree = "<group>"; };
 		387C6A03154C3FC0005768B9 /* SplashView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashView_iPhone.xib; sourceTree = "<group>"; };
 		387C6A05154C3FD0005768B9 /* SplashView_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashView_iPad.xib; sourceTree = "<group>"; };
 		388B156C15B560FE00348CBD /* LMAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAPIClient.h; sourceTree = "<group>"; };
@@ -153,9 +150,8 @@
 		3894D17115495B5300707389 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		3894D17215495B5300707389 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		3894D17415495B7100707389 /* CreateSpaceView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateSpaceView_iPhone.xib; sourceTree = "<group>"; };
-		38D28E7915B5A35F00060FB1 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
-		38D28E7A15B5A35F00060FB1 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
-		38D9BEBC15ABFFD500F1CEA7 /* LMUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LMUserCell.xib; sourceTree = "<group>"; };
+		38D28E7915B5A35F00060FB1 /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewCell.h; sourceTree = "<group>"; };
+		38D28E7A15B5A35F00060FB1 /* ContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewCell.m; sourceTree = "<group>"; };
 		38DB056B154854F80092CDCD /* AboutView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView_iPhone.xib; sourceTree = "<group>"; };
 		38DB056D154855140092CDCD /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		38DB056E154855140092CDCD /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
@@ -432,10 +428,8 @@
 		387C6A00154C3BEC005768B9 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				38D28E7915B5A35F00060FB1 /* UserTableViewCell.h */,
-				38D28E7A15B5A35F00060FB1 /* UserTableViewCell.m */,
-				387C6A01154C3BFE005768B9 /* ContactsView_iPhone.xib */,
-				38D9BEBC15ABFFD500F1CEA7 /* LMUserCell.xib */,
+				38D28E7915B5A35F00060FB1 /* ContactTableViewCell.h */,
+				38D28E7A15B5A35F00060FB1 /* ContactTableViewCell.m */,
 			);
 			name = Contacts;
 			sourceTree = "<group>";
@@ -543,10 +537,8 @@
 				3894D14C1549219100707389 /* Localizable.strings in Resources */,
 				3894D17515495B7100707389 /* CreateSpaceView_iPhone.xib in Resources */,
 				385E6207154BDA9700964706 /* LocationView_iPhone.xib in Resources */,
-				387C6A02154C3BFE005768B9 /* ContactsView_iPhone.xib in Resources */,
 				387C6A04154C3FC0005768B9 /* SplashView_iPhone.xib in Resources */,
 				387C6A06154C3FD0005768B9 /* SplashView_iPad.xib in Resources */,
-				38D9BEBD15ABFFD500F1CEA7 /* LMUserCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,7 +586,7 @@
 				382FBC9715AF1D26003298B6 /* LMSetting.m in Sources */,
 				388B156E15B560FF00348CBD /* LMAPIClient.m in Sources */,
 				3837E37A15B5723E00DF1255 /* UserMappingProvider.m in Sources */,
-				38D28E7B15B5A35F00060FB1 /* UserTableViewCell.m in Sources */,
+				38D28E7B15B5A35F00060FB1 /* ContactTableViewCell.m in Sources */,
 				3837E38D15B6901900DF1255 /* SharingMappingProvider.m in Sources */,
 				3837E39315B6989F00DF1255 /* SharingTableViewCell.m in Sources */,
 				3837E39915B6C1B500DF1255 /* LMModelBase.m in Sources */,

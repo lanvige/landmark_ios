@@ -10,7 +10,7 @@
 
 @class LMUser;
 
-@interface UserTableViewCell : UITableViewCell
+@interface ContactTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) LMUser *user;
 

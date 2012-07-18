@@ -6,11 +6,11 @@
 //  Copyright (c) 2012 LANVIGE. All rights reserved.
 //
 
-#import "UserTableViewCell.h"
+#import "ContactTableViewCell.h"
 
 #import "LMUser.h"
 
-@implementation UserTableViewCell {
+@implementation ContactTableViewCell {
     
 @private
     __strong LMUser *_user;    

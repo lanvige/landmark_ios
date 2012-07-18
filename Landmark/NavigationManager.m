@@ -19,8 +19,6 @@
 @implementation NavigationManager
 
 @synthesize currentViewController;
-@synthesize splashViewController;
-@synthesize loginViewContgroller;
 
 @synthesize tabBarController;
 @synthesize homeNavigationController;
@@ -28,6 +26,8 @@
 @synthesize contactsNavigationController;
 @synthesize settingsNavigationController;
 
+@synthesize splashViewController;
+@synthesize loginViewContgroller;
 @synthesize homeViewController;
 @synthesize sharingsViewController;
 @synthesize contactsViewController;
@@ -71,7 +71,7 @@
     
     // Init a new nav controller as container to include setting view.
     self.homeNavigationController = [[UINavigationController alloc] initWithRootViewController:self.homeViewController];
-    self.sharingsNavigationController = [[UINavigationController alloc] initWithRootViewController:self.sharingsNavigationController];
+    self.sharingsNavigationController = [[UINavigationController alloc] initWithRootViewController:self.sharingsViewController];
     self.contactsNavigationController = [[UINavigationController alloc] initWithRootViewController:self.contactsViewController];
     self.settingsNavigationController = [[UINavigationController alloc] initWithRootViewController:self.settingsViewController];
     

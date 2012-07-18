@@ -1,12 +1,12 @@
 //
-//  HistoryViewController.m
+//  SharingsViewController.m
 //  Landmark
 //
 //  Created by Lanvige Jiang on 4/28/12.
 //  Copyright (c) 2012 LANVIGE. All rights reserved.
 //
 
-#import "HistoryViewController.h"
+#import "SharingsViewController.h"
 
 #import "LMCommon.h"
 #import "LMSharing.h"
@@ -14,14 +14,14 @@
 #import "SharingMappingProvider.h"
 
 
-@interface HistoryViewController ()
+@interface SharingsViewController ()
 
 @property (nonatomic, strong) SharingMappingProvider *sharingMappingProvider;
 - (void)reload:(id)sender;
 
 @end
 
-@implementation HistoryViewController {
+@implementation SharingsViewController {
 
 @private
     NSArray *_sharings;
@@ -39,11 +39,16 @@
     }
     
     sharingMappingProvider = [[SharingMappingProvider alloc] init];
+    
     return self;
 }
 
 - (void)reload:(id)sender {
     [self loadSharings];
+}
+
+- (void)addSharing:(id)sender {
+    // TODO:: Open another to add the sharing info.
 }
 
 - (void)loadSharings {
@@ -78,7 +83,8 @@
     // self.title = NSLocalizedString(@"AFNetworking", nil);
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_activityIndicatorView];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reload:)];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addSharing:)];
     
     self.tableView.rowHeight = 70.0f;
 }

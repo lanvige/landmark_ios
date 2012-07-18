@@ -1,5 +1,5 @@
 //
-//  HistoryViewController.h
+//  SharingsViewController.h
 //  Landmark
 //
 //  Created by Lanvige Jiang on 4/28/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HistoryViewController : UITableViewController
+@interface SharingsViewController : UITableViewController
 
 @end

@@ -29,12 +29,12 @@
 		3837E39915B6C1B500DF1255 /* LMModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837E39815B6C1B500DF1255 /* LMModelBase.m */; };
 		3837E39C15B6C58800DF1255 /* ContactMappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837E39B15B6C58700DF1255 /* ContactMappingProvider.m */; };
 		3837E39F15B6C5A400DF1255 /* BaseMappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837E39E15B6C5A400DF1255 /* BaseMappingProvider.m */; };
+		3846562815B6F00900C4CF63 /* CreateSharingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3846562715B6F00900C4CF63 /* CreateSharingViewController.m */; };
 		384E236715A4762900D55EF5 /* LMAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 384E236615A4762900D55EF5 /* LMAnnotation.m */; };
 		385E61F0154A850E00964706 /* LMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E61EF154A850E00964706 /* LMUser.m */; };
 		385E61F7154A8ABE00964706 /* CreateSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E61F6154A8ABE00964706 /* CreateSpaceViewController.m */; };
 		385E6207154BDA9700964706 /* LocationView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385E6206154BDA9700964706 /* LocationView_iPhone.xib */; };
-		385E6209154BDAC200964706 /* HistoryView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385E6208154BDAC200964706 /* HistoryView_iPhone.xib */; };
-		385E620C154BDADC00964706 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E620B154BDADC00964706 /* HistoryViewController.m */; };
+		385E620C154BDADC00964706 /* SharingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E620B154BDADC00964706 /* SharingsViewController.m */; };
 		385E620F154BE5E000964706 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385E620E154BE5E000964706 /* MapKit.framework */; };
 		385E6211154BEAB600964706 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385E6210154BEAB600964706 /* CoreLocation.framework */; };
 		386935221545B0EC00EDF001 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386935211545B0EC00EDF001 /* HomeViewController.m */; };
@@ -63,7 +63,6 @@
 		3894D17515495B7100707389 /* CreateSpaceView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D17415495B7100707389 /* CreateSpaceView_iPhone.xib */; };
 		38D28E7B15B5A35F00060FB1 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D28E7A15B5A35F00060FB1 /* UserTableViewCell.m */; };
 		38D9BEBD15ABFFD500F1CEA7 /* LMUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D9BEBC15ABFFD500F1CEA7 /* LMUserCell.xib */; };
-		38D9BEC415AC0BF800F1CEA7 /* LMUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D9BEC315AC0BF800F1CEA7 /* LMUserCell.m */; };
 		38DB056C154854F80092CDCD /* AboutView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DB056B154854F80092CDCD /* AboutView_iPhone.xib */; };
 		38DB056F154855140092CDCD /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DB056E154855140092CDCD /* AboutViewController.m */; };
 		75D76D9637544FD5BB1EDDA1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 118341ABCA8344ECA3D12B55 /* libPods.a */; };
@@ -105,6 +104,8 @@
 		3837E39B15B6C58700DF1255 /* ContactMappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactMappingProvider.m; sourceTree = "<group>"; };
 		3837E39D15B6C5A400DF1255 /* BaseMappingProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMappingProvider.h; sourceTree = "<group>"; };
 		3837E39E15B6C5A400DF1255 /* BaseMappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMappingProvider.m; sourceTree = "<group>"; };
+		3846562615B6F00900C4CF63 /* CreateSharingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateSharingViewController.h; sourceTree = "<group>"; };
+		3846562715B6F00900C4CF63 /* CreateSharingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateSharingViewController.m; sourceTree = "<group>"; };
 		384E236515A4762900D55EF5 /* LMAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAnnotation.h; sourceTree = "<group>"; };
 		384E236615A4762900D55EF5 /* LMAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAnnotation.m; sourceTree = "<group>"; };
 		385E61EE154A850E00964706 /* LMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMUser.h; sourceTree = "<group>"; };
@@ -112,9 +113,8 @@
 		385E61F5154A8ABE00964706 /* CreateSpaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateSpaceViewController.h; sourceTree = "<group>"; };
 		385E61F6154A8ABE00964706 /* CreateSpaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateSpaceViewController.m; sourceTree = "<group>"; };
 		385E6206154BDA9700964706 /* LocationView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationView_iPhone.xib; sourceTree = "<group>"; };
-		385E6208154BDAC200964706 /* HistoryView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryView_iPhone.xib; sourceTree = "<group>"; };
-		385E620A154BDADC00964706 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
-		385E620B154BDADC00964706 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		385E620A154BDADC00964706 /* SharingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharingsViewController.h; sourceTree = "<group>"; };
+		385E620B154BDADC00964706 /* SharingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharingsViewController.m; sourceTree = "<group>"; };
 		385E620E154BE5E000964706 /* MapKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		385E6210154BEAB600964706 /* CoreLocation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		386935201545B0EC00EDF001 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -156,8 +156,6 @@
 		38D28E7915B5A35F00060FB1 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
 		38D28E7A15B5A35F00060FB1 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
 		38D9BEBC15ABFFD500F1CEA7 /* LMUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LMUserCell.xib; sourceTree = "<group>"; };
-		38D9BEC215AC0BF800F1CEA7 /* LMUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMUserCell.h; sourceTree = "<group>"; };
-		38D9BEC315AC0BF800F1CEA7 /* LMUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMUserCell.m; sourceTree = "<group>"; };
 		38DB056B154854F80092CDCD /* AboutView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView_iPhone.xib; sourceTree = "<group>"; };
 		38DB056D154855140092CDCD /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		38DB056E154855140092CDCD /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
@@ -216,7 +214,6 @@
 				3894D0F81548002F00707389 /* HomeView_iPhone.xib */,
 				380F066D1545840D00C9CF7C /* LoginView_iPhone.xib */,
 				3894D0F31547FBE900707389 /* SettingsView_iPhone.xib */,
-				385E6208154BDAC200964706 /* HistoryView_iPhone.xib */,
 			);
 			name = iPhone;
 			sourceTree = "<group>";
@@ -261,8 +258,10 @@
 		3837E38F15B6950D00DF1255 /* Sharings */ = {
 			isa = PBXGroup;
 			children = (
-				385E620A154BDADC00964706 /* HistoryViewController.h */,
-				385E620B154BDADC00964706 /* HistoryViewController.m */,
+				385E620A154BDADC00964706 /* SharingsViewController.h */,
+				385E620B154BDADC00964706 /* SharingsViewController.m */,
+				3846562615B6F00900C4CF63 /* CreateSharingViewController.h */,
+				3846562715B6F00900C4CF63 /* CreateSharingViewController.m */,
 			);
 			name = Sharings;
 			sourceTree = "<group>";
@@ -426,8 +425,6 @@
 			children = (
 				387C69FD154C3BE3005768B9 /* ContactsViewController.h */,
 				387C69FE154C3BE3005768B9 /* ContactsViewController.m */,
-				38D9BEC215AC0BF800F1CEA7 /* LMUserCell.h */,
-				38D9BEC315AC0BF800F1CEA7 /* LMUserCell.m */,
 			);
 			name = Contracts;
 			sourceTree = "<group>";
@@ -546,7 +543,6 @@
 				3894D14C1549219100707389 /* Localizable.strings in Resources */,
 				3894D17515495B7100707389 /* CreateSpaceView_iPhone.xib in Resources */,
 				385E6207154BDA9700964706 /* LocationView_iPhone.xib in Resources */,
-				385E6209154BDAC200964706 /* HistoryView_iPhone.xib in Resources */,
 				387C6A02154C3BFE005768B9 /* ContactsView_iPhone.xib in Resources */,
 				387C6A04154C3FC0005768B9 /* SplashView_iPhone.xib in Resources */,
 				387C6A06154C3FD0005768B9 /* SplashView_iPad.xib in Resources */,
@@ -591,12 +587,11 @@
 				3894D17315495B5400707389 /* LocationViewController.m in Sources */,
 				385E61F0154A850E00964706 /* LMUser.m in Sources */,
 				385E61F7154A8ABE00964706 /* CreateSpaceViewController.m in Sources */,
-				385E620C154BDADC00964706 /* HistoryViewController.m in Sources */,
+				385E620C154BDADC00964706 /* SharingsViewController.m in Sources */,
 				387C69FF154C3BE3005768B9 /* ContactsViewController.m in Sources */,
 				384E236715A4762900D55EF5 /* LMAnnotation.m in Sources */,
 				382FBC9415AF1CB6003298B6 /* LMContact.m in Sources */,
 				382FBC9715AF1D26003298B6 /* LMSetting.m in Sources */,
-				38D9BEC415AC0BF800F1CEA7 /* LMUserCell.m in Sources */,
 				388B156E15B560FF00348CBD /* LMAPIClient.m in Sources */,
 				3837E37A15B5723E00DF1255 /* UserMappingProvider.m in Sources */,
 				38D28E7B15B5A35F00060FB1 /* UserTableViewCell.m in Sources */,
@@ -605,6 +600,7 @@
 				3837E39915B6C1B500DF1255 /* LMModelBase.m in Sources */,
 				3837E39C15B6C58800DF1255 /* ContactMappingProvider.m in Sources */,
 				3837E39F15B6C5A400DF1255 /* BaseMappingProvider.m in Sources */,
+				3846562815B6F00900C4CF63 /* CreateSharingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@
 @class SplashViewController;
 @class LoginViewController;
 @class HomeViewController;
-@class HistoryViewController;
+@class SharingsViewController;
 @class ContactsViewController;
 @class SettingsViewController;
 
@@ -27,12 +27,12 @@
 
 @property (strong, nonatomic) UITabBarController *tabBarController;
 @property (strong, nonatomic) UINavigationController *homeNavigationController;
-@property (strong, nonatomic) UINavigationController *historyNavigationController;
+@property (strong, nonatomic) UINavigationController *sharingsNavigationController;
 @property (strong, nonatomic) UINavigationController *contactsNavigationController;
 @property (strong, nonatomic) UINavigationController *settingsNavigationController;
 
 @property (strong, nonatomic) HomeViewController *homeViewController;
-@property (strong, nonatomic) HistoryViewController *historyViewController;
+@property (strong, nonatomic) SharingsViewController *sharingsController;
 @property (strong, nonatomic) ContactsViewController *contactsViewController;
 @property (strong, nonatomic) SettingsViewController *settingsViewController;
 

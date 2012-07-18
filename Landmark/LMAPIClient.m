@@ -17,6 +17,7 @@ static NSString * const kLMAPIBaseURLString = @"http://api.landmark.dev/v1/";
 + (LMAPIClient *)sharedClient {
     static LMAPIClient *_sharedClient = nil;
     static dispatch_once_t onceToken;
+    
     dispatch_once(&onceToken, ^{
         _sharedClient = [[LMAPIClient alloc] initWithBaseURL:[NSURL URLWithString:kLMAPIBaseURLString]];
     });

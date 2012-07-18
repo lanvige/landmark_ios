@@ -63,6 +63,4 @@
     self.detailTextLabel.frame = CGRectMake(70.0f, 30.0f, 240.0f, 20.0f);
 }
 
-
-
 @end

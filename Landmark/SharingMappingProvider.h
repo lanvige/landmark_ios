@@ -12,6 +12,14 @@
 
 @interface SharingMappingProvider : NSObject
 
-+ (void)getShaingsWithBlock:(void (^)(NSArray *sharings))block;
++ (void)getSharingsWithBlock:(void (^)(NSArray *sharings))block;
+
++ (void)getSharingWithId:(NSString *)sharingID withBlock:(void (^)(LMSharing *sharing))block;
+
+//+ (void)saveSharingWith:(LMSharing *)sharing withBlock:(BOOL *)block;
+//
+//+ (void)updateSharingWith:(LMSharing *)sharing withBlock:(BOOL *)block;
+//
+//+ (void)deleteSharingWith:(LMSharing *)sharing withBlock:(BOOL *)block;
 
 @end

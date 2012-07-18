@@ -95,6 +95,7 @@
 		3837E38C15B6901900DF1255 /* SharingMappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharingMappingProvider.m; sourceTree = "<group>"; };
 		3837E39115B6989F00DF1255 /* SharingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharingTableViewCell.h; sourceTree = "<group>"; };
 		3837E39215B6989F00DF1255 /* SharingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharingTableViewCell.m; sourceTree = "<group>"; };
+		3837E39415B6BBB400DF1255 /* LMCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMCommon.h; sourceTree = "<group>"; };
 		384E236515A4762900D55EF5 /* LMAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAnnotation.h; sourceTree = "<group>"; };
 		384E236615A4762900D55EF5 /* LMAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAnnotation.m; sourceTree = "<group>"; };
 		385E61EE154A850E00964706 /* LMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMUser.h; sourceTree = "<group>"; };
@@ -340,6 +341,7 @@
 			children = (
 				386C597415454C1A000B592A /* AppDelegate.h */,
 				386C597515454C1A000B592A /* AppDelegate.m */,
+				3837E39415B6BBB400DF1255 /* LMCommon.h */,
 				380F063F154566CC00C9CF7C /* ViewManager */,
 				3894D11A154901BC00707389 /* Protocals */,
 				386C598815455369000B592A /* Models */,

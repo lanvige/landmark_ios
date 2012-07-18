@@ -8,6 +8,7 @@
 
 #import "HistoryViewController.h"
 
+#import "LMCommon.h"
 #import "LMSharing.h"
 #import "SharingTableViewCell.h"
 #import "SharingMappingProvider.h"
@@ -38,7 +39,7 @@
     [_activityIndicatorView startAnimating];
     self.navigationItem.rightBarButtonItem.enabled = NO;
     
-    [SharingMappingProvider getShaingsWithBlock:^(NSArray *sharings) {
+    [SharingMappingProvider getSharingsWithBlock:^(NSArray *sharings) {
         if (sharings) {
             _sharings = sharings;
             [self.tableView reloadData];
@@ -116,6 +117,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    SharingTableViewCell *cell = (SharingTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    
+    [_activityIndicatorView startAnimating];
+    
+    [SharingMappingProvider getSharingWithId:[NSString stringWithFormat:@"%@", cell.sharing.sharingID] 
+                                   withBlock:^(LMSharing *sharing) {
+        if (sharing) {
+            DLog(@"Sharing Content - %@", sharing.title);
+        }
+        
+        [_activityIndicatorView stopAnimating];
+        self.navigationItem.rightBarButtonItem.enabled = YES;
+    }];
+    
 }
 
 

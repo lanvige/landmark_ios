@@ -7,19 +7,20 @@
 //
 
 #import "SharingMappingProvider.h"
-
+#import "LMCommon.h"
 #import "LMSharing.h"
 #import "LMAPIClient.h"
 
 @implementation SharingMappingProvider
 
-+ (void)getShaingsWithBlock:(void (^)(NSArray *))block {
+// Get all the sharing from current user.
++ (void)getSharingsWithBlock:(void (^)(NSArray *))block {
     [[LMAPIClient sharedClient] getPath:@"sharings" 
                              parameters:[NSDictionary dictionaryWithObject:@"false" 
                                                                     forKey:@"include_entities"] 
-                                success:^(AFHTTPRequestOperation *operation, id JSON) {
-                                    NSMutableArray *mutableUsers = [NSMutableArray arrayWithCapacity:[JSON count]];
-                                    for (NSDictionary *attributes in JSON) {
+                                success:^(AFHTTPRequestOperation *operation, id response) {
+                                    NSMutableArray *mutableUsers = [NSMutableArray arrayWithCapacity:[response count]];
+                                    for (NSDictionary *attributes in response) {
                                         LMSharing *sharing = [[LMSharing alloc] initWithAttributes:attributes];
                                         [mutableUsers addObject:sharing];
                                     }
@@ -38,5 +39,29 @@
                                     }
                                 }];
 }
+
+// Get a sharing with id
++ (void)getSharingWithId:(NSString *)sharingID withBlock:(void (^)(LMSharing *))block {
+    NSLog(@"%@", sharingID);
+    [[LMAPIClient sharedClient] getPath:[NSString stringWithFormat:@"sharings/%@", sharingID]
+                             parameters:nil 
+                                success:^(AFHTTPRequestOperation *operation, id response) {
+                                    DLog(@"SUCCESS %s ", __PRETTY_FUNCTION__);
+                                    
+                                    LMSharing *sharing = [[LMSharing alloc] initWithAttributes:response];
+                                    
+                                    if (block) {
+                                        block(sharing);
+                                    }
+                                }
+                                failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                    DLog(@"ERROR  %@",error);
+                                    
+                                    if (block) {
+                                        block(nil);
+                                    }
+                                }];
+}
+
 
 @end

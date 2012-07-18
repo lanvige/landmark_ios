@@ -15,7 +15,10 @@
 
 
 @interface HistoryViewController ()
+
+@property (nonatomic, strong) SharingMappingProvider *sharingMappingProvider;
 - (void)reload:(id)sender;
+
 @end
 
 @implementation HistoryViewController {
@@ -25,6 +28,8 @@
     __strong UIActivityIndicatorView *_activityIndicatorView;
 }
 
+@synthesize sharingMappingProvider;
+
 - (id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
     
@@ -32,6 +37,8 @@
     {
         self.title = @"Sharings";
     }
+    
+    sharingMappingProvider = [[SharingMappingProvider alloc] init];
     return self;
 }
 
@@ -39,7 +46,7 @@
     [_activityIndicatorView startAnimating];
     self.navigationItem.rightBarButtonItem.enabled = NO;
     
-    [SharingMappingProvider getSharingsWithBlock:^(NSArray *sharings) {
+    [sharingMappingProvider getSharingsWithBlock:^(NSArray *sharings) {
         if (sharings) {
             _sharings = sharings;
             [self.tableView reloadData];
@@ -122,7 +129,7 @@
     [_activityIndicatorView startAnimating];
     
     DLog(@"%@", cell.sharing.mID);
-    [SharingMappingProvider getSharingWithId:[NSString stringWithFormat:@"%@", cell.sharing.mID] 
+    [sharingMappingProvider getSharingWithId:[NSString stringWithFormat:@"%@", cell.sharing.mID] 
                                    withBlock:^(LMSharing *sharing) {
         if (sharing) {
             DLog(@"Sharing Content - %@", sharing.title);

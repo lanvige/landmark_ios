@@ -17,7 +17,7 @@
 NSString * const kSharingsPath = @"sharings";
 
 // Get all the sharing from current user.
-+ (void)getSharingsWithBlock:(void (^)(NSArray *))block {
+- (void)getSharingsWithBlock:(void (^)(NSArray *))block {
     [super getObjectsWithQueryPath:kSharingsPath WithBlock:^(id jsonData) {
         if (jsonData) {
             NSMutableArray *mutableUsers = [NSMutableArray arrayWithCapacity:[jsonData count]];
@@ -34,7 +34,7 @@ NSString * const kSharingsPath = @"sharings";
 }
 
 // Get a sharing with id
-+ (void)getSharingWithId:(NSString *)sharingID withBlock:(void (^)(LMSharing *))block {
+- (void)getSharingWithId:(NSString *)sharingID withBlock:(void (^)(LMSharing *))block {
     NSString *path = [NSString stringWithFormat:@"%@/%@", kSharingsPath, sharingID];
     
     [super getObjectsWithQueryPath:path WithBlock:^(id jsonData) {
@@ -46,6 +46,9 @@ NSString * const kSharingsPath = @"sharings";
             }
         }
     }];
+}
+
+- (void)saveSharingWith:(LMSharing *)sharing withBlock:(void (^)(BOOL *))block {
 }
 
 @end

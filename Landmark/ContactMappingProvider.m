@@ -13,7 +13,7 @@
 
 NSString * const kContactsPath = @"users";
 
-+ (void)getContactsWithBlock:(void (^)(NSArray *contacts))block {
+- (void)getContactsWithBlock:(void (^)(NSArray *contacts))block {
     [super getObjectsWithQueryPath:kContactsPath WithBlock:^(id jsonData) {
         if (jsonData) {
             NSMutableArray *mutableUsers = [NSMutableArray arrayWithCapacity:[jsonData count]];
@@ -30,7 +30,7 @@ NSString * const kContactsPath = @"users";
 }
 
 // Get a sharing with id
-+ (void)getContactWithId:(NSString *)contactID withBlock:(void (^)(LMUser *))block {
+- (void)getContactWithId:(NSString *)contactID withBlock:(void (^)(LMUser *))block {
     NSString *path = [NSString stringWithFormat:@"%@/%@", kContactsPath, contactID];
     
     [super getObjectsWithQueryPath:path WithBlock:^(id jsonData) {

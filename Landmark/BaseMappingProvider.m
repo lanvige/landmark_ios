@@ -12,7 +12,7 @@
 
 @implementation BaseMappingProvider
 
-+ (void)getObjectsWithQueryPath:(NSString *)path WithBlock:(void (^)(id jsonData))block {
+- (void)getObjectsWithQueryPath:(NSString *)path WithBlock:(void (^)(id jsonData))block {
 
     [[LMAPIClient sharedClient] getPath:path
                              parameters:nil

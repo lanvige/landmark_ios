@@ -13,7 +13,11 @@
 #import "ContactMappingProvider.h"
 
 @interface ContactsViewController ()
+
+@property (nonatomic, strong) ContactMappingProvider *contactMappingProvider;
+
 - (void)reload:(id)sender;
+
 @end
 
 @implementation ContactsViewController {
@@ -23,6 +27,8 @@
     __strong UIActivityIndicatorView *_activityIndicatorView;
 }
 
+@synthesize contactMappingProvider;
+
 - (id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
     
@@ -30,6 +36,8 @@
     {
         self.title = @"Contacts";
     }
+    
+    contactMappingProvider = [[ContactMappingProvider alloc] init];
     return self;
 }
 
@@ -37,7 +45,7 @@
     [_activityIndicatorView startAnimating];
     self.navigationItem.rightBarButtonItem.enabled = NO;
     
-    [ContactMappingProvider getContactsWithBlock:^(NSArray *contacts) {
+    [contactMappingProvider getContactsWithBlock:^(NSArray *contacts) {
         if (contacts) {
             _contacts = contacts;
             [self.tableView reloadData];

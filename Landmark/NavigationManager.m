@@ -65,7 +65,7 @@
 - (void)displayRootView
 {    
     self.homeViewController = [[HomeViewController alloc] initWithNibName:@"HomeView_iPhone" bundle:nil];
-    self.sharingsController = [[SharingsViewController alloc] initWithStyle:UITableViewStylePlain];
+    self.sharingsViewController = [[SharingsViewController alloc] initWithStyle:UITableViewStylePlain];
     self.contactsViewController = [[ContactsViewController alloc] initWithStyle:UITableViewStylePlain];
     self.settingsViewController = [[SettingsViewController alloc] initWithNibName:@"SettingsView_iPhone" bundle:nil];
     

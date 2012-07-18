@@ -32,7 +32,7 @@
 @property (strong, nonatomic) UINavigationController *settingsNavigationController;
 
 @property (strong, nonatomic) HomeViewController *homeViewController;
-@property (strong, nonatomic) SharingsViewController *sharingsController;
+@property (strong, nonatomic) SharingsViewController *sharingsViewController;
 @property (strong, nonatomic) ContactsViewController *contactsViewController;
 @property (strong, nonatomic) SettingsViewController *settingsViewController;
 

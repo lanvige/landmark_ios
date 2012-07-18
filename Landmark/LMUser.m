@@ -21,8 +21,8 @@
         return nil;
     }
     
-    _userID = [attributes valueForKeyPath:@"id"];
-    _username = [attributes valueForKeyPath:@"username"];
+    _userID = [attributes valueForKeyPath:@"_id"];
+    _username = [attributes valueForKeyPath:@"name"];
     _email = [attributes valueForKeyPath:@"email"];
     
     return self;

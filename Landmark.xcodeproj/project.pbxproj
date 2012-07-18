@@ -24,6 +24,8 @@
 		382FBC9415AF1CB6003298B6 /* LMContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 382FBC9315AF1CB6003298B6 /* LMContact.m */; };
 		382FBC9715AF1D26003298B6 /* LMSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 382FBC9615AF1D26003298B6 /* LMSetting.m */; };
 		3837E37A15B5723E00DF1255 /* UserMappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837E37915B5723E00DF1255 /* UserMappingProvider.m */; };
+		3837E38D15B6901900DF1255 /* SharingMappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837E38C15B6901900DF1255 /* SharingMappingProvider.m */; };
+		3837E39315B6989F00DF1255 /* SharingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837E39215B6989F00DF1255 /* SharingTableViewCell.m */; };
 		384E236715A4762900D55EF5 /* LMAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 384E236615A4762900D55EF5 /* LMAnnotation.m */; };
 		385E61F0154A850E00964706 /* LMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E61EF154A850E00964706 /* LMUser.m */; };
 		385E61F7154A8ABE00964706 /* CreateSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E61F6154A8ABE00964706 /* CreateSpaceViewController.m */; };
@@ -89,6 +91,10 @@
 		382FBC9615AF1D26003298B6 /* LMSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSetting.m; sourceTree = "<group>"; };
 		3837E37815B5723E00DF1255 /* UserMappingProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMappingProvider.h; sourceTree = "<group>"; };
 		3837E37915B5723E00DF1255 /* UserMappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserMappingProvider.m; sourceTree = "<group>"; };
+		3837E38B15B6901900DF1255 /* SharingMappingProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharingMappingProvider.h; sourceTree = "<group>"; };
+		3837E38C15B6901900DF1255 /* SharingMappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharingMappingProvider.m; sourceTree = "<group>"; };
+		3837E39115B6989F00DF1255 /* SharingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharingTableViewCell.h; sourceTree = "<group>"; };
+		3837E39215B6989F00DF1255 /* SharingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharingTableViewCell.m; sourceTree = "<group>"; };
 		384E236515A4762900D55EF5 /* LMAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAnnotation.h; sourceTree = "<group>"; };
 		384E236615A4762900D55EF5 /* LMAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAnnotation.m; sourceTree = "<group>"; };
 		385E61EE154A850E00964706 /* LMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMUser.h; sourceTree = "<group>"; };
@@ -192,16 +198,15 @@
 		380F06441545678B00C9CF7C /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
-				387C6A03154C3FC0005768B9 /* SplashView_iPhone.xib */,
+				3837E39015B6986C00DF1255 /* Sharings */,
 				387C6A00154C3BEC005768B9 /* Contacts */,
 				385E6205154BDA7900964706 /* Space */,
+				387C6A03154C3FC0005768B9 /* SplashView_iPhone.xib */,
 				38DB056B154854F80092CDCD /* AboutView_iPhone.xib */,
 				3894D0F81548002F00707389 /* HomeView_iPhone.xib */,
 				380F066D1545840D00C9CF7C /* LoginView_iPhone.xib */,
 				3894D0F31547FBE900707389 /* SettingsView_iPhone.xib */,
 				385E6208154BDAC200964706 /* HistoryView_iPhone.xib */,
-				38D28E7915B5A35F00060FB1 /* UserTableViewCell.h */,
-				38D28E7A15B5A35F00060FB1 /* UserTableViewCell.m */,
 			);
 			name = iPhone;
 			sourceTree = "<group>";
@@ -229,10 +234,32 @@
 		3837E37515B5722200DF1255 /* MappingProvider */ = {
 			isa = PBXGroup;
 			children = (
+				388B156C15B560FE00348CBD /* LMAPIClient.h */,
+				388B156D15B560FF00348CBD /* LMAPIClient.m */,
 				3837E37815B5723E00DF1255 /* UserMappingProvider.h */,
 				3837E37915B5723E00DF1255 /* UserMappingProvider.m */,
+				3837E38B15B6901900DF1255 /* SharingMappingProvider.h */,
+				3837E38C15B6901900DF1255 /* SharingMappingProvider.m */,
 			);
 			name = MappingProvider;
+			sourceTree = "<group>";
+		};
+		3837E38F15B6950D00DF1255 /* Sharings */ = {
+			isa = PBXGroup;
+			children = (
+				385E620A154BDADC00964706 /* HistoryViewController.h */,
+				385E620B154BDADC00964706 /* HistoryViewController.m */,
+			);
+			name = Sharings;
+			sourceTree = "<group>";
+		};
+		3837E39015B6986C00DF1255 /* Sharings */ = {
+			isa = PBXGroup;
+			children = (
+				3837E39115B6989F00DF1255 /* SharingTableViewCell.h */,
+				3837E39215B6989F00DF1255 /* SharingTableViewCell.m */,
+			);
+			name = Sharings;
 			sourceTree = "<group>";
 		};
 		385E61F4154A8A9500964706 /* Space Set */ = {
@@ -311,16 +338,14 @@
 		386C596B15454C1A000B592A /* Landmark */ = {
 			isa = PBXGroup;
 			children = (
-				388B156C15B560FE00348CBD /* LMAPIClient.h */,
-				388B156D15B560FF00348CBD /* LMAPIClient.m */,
 				386C597415454C1A000B592A /* AppDelegate.h */,
 				386C597515454C1A000B592A /* AppDelegate.m */,
 				380F063F154566CC00C9CF7C /* ViewManager */,
 				3894D11A154901BC00707389 /* Protocals */,
 				386C598815455369000B592A /* Models */,
 				3837E37515B5722200DF1255 /* MappingProvider */,
-				386C598715455362000B592A /* Views */,
 				386C598615455320000B592A /* ViewControllers */,
+				386C598715455362000B592A /* Views */,
 				386C596C15454C1A000B592A /* Supporting Files */,
 			);
 			path = Landmark;
@@ -339,17 +364,16 @@
 		386C598615455320000B592A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				385E61F4154A8A9500964706 /* Space Set */,
+				3837E38F15B6950D00DF1255 /* Sharings */,
 				387C69FC154C3B9C005768B9 /* Contracts */,
 				385E620D154BDFC500964706 /* Settings */,
-				385E61F4154A8A9500964706 /* Space Set */,
 				380F06591545799D00C9CF7C /* BaseViewController.h */,
 				380F065A1545799D00C9CF7C /* BaseViewController.m */,
 				386935201545B0EC00EDF001 /* HomeViewController.h */,
 				386935211545B0EC00EDF001 /* HomeViewController.m */,
 				386C597715454C1A000B592A /* SplashViewController.h */,
 				386C597815454C1A000B592A /* SplashViewController.m */,
-				385E620A154BDADC00964706 /* HistoryViewController.h */,
-				385E620B154BDADC00964706 /* HistoryViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -394,6 +418,8 @@
 		387C6A00154C3BEC005768B9 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				38D28E7915B5A35F00060FB1 /* UserTableViewCell.h */,
+				38D28E7A15B5A35F00060FB1 /* UserTableViewCell.m */,
 				387C6A01154C3BFE005768B9 /* ContactsView_iPhone.xib */,
 				38D9BEBC15ABFFD500F1CEA7 /* LMUserCell.xib */,
 			);
@@ -557,6 +583,8 @@
 				388B156E15B560FF00348CBD /* LMAPIClient.m in Sources */,
 				3837E37A15B5723E00DF1255 /* UserMappingProvider.m in Sources */,
 				38D28E7B15B5A35F00060FB1 /* UserTableViewCell.m in Sources */,
+				3837E38D15B6901900DF1255 /* SharingMappingProvider.m in Sources */,
+				3837E39315B6989F00DF1255 /* SharingTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

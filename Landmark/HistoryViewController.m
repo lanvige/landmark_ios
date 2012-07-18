@@ -8,9 +8,9 @@
 
 #import "HistoryViewController.h"
 
-#import "LMUser.h"
-#import "UserTableViewCell.h"
-#import "UserMappingProvider.h"
+#import "LMSharing.h"
+#import "SharingTableViewCell.h"
+#import "SharingMappingProvider.h"
 
 
 @interface HistoryViewController ()
@@ -20,17 +20,27 @@
 @implementation HistoryViewController {
 
 @private
-    NSArray *_users;
+    NSArray *_sharings;
     __strong UIActivityIndicatorView *_activityIndicatorView;
+}
+
+- (id)initWithStyle:(UITableViewStyle)style {
+    self = [super initWithStyle:style];
+    
+    if (self) 
+    {
+        self.title = @"Sharings";
+    }
+    return self;
 }
 
 - (void)reload:(id)sender {
     [_activityIndicatorView startAnimating];
     self.navigationItem.rightBarButtonItem.enabled = NO;
     
-    [UserMappingProvider usersWithBlock:^(NSArray *users) {
-        if (users) {
-            _users = users;
+    [SharingMappingProvider getShaingsWithBlock:^(NSArray *sharings) {
+        if (sharings) {
+            _sharings = sharings;
             [self.tableView reloadData];
         }
         
@@ -51,7 +61,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = NSLocalizedString(@"AFNetworking", nil);
+    self.navigationItem.title = NSLocalizedString(@"Sharings", @"");
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    // self.title = NSLocalizedString(@"AFNetworking", nil);
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_activityIndicatorView];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reload:)];
@@ -84,18 +96,18 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_users count];
+    return [_sharings count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
     
-    UserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    SharingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
-        cell = [[UserTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[SharingTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    cell.user = [_users objectAtIndex:indexPath.row];
+    cell.sharing = [_sharings objectAtIndex:indexPath.row];
     
     return cell;
 }

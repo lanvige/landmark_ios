@@ -67,7 +67,7 @@
     self.homeViewController = [[HomeViewController alloc] initWithNibName:@"HomeView_iPhone" bundle:nil];
     //self.historyViewController = [[HistoryViewController alloc] initWithNibName:@"HistoryView_iPhone" bundle:nil];
     self.historyViewController = [[HistoryViewController alloc] initWithStyle:UITableViewStylePlain];
-    self.contactsViewController = [[ContactsViewController alloc] initWithNibName:@"ContactsView_iPhone" bundle:nil];
+    self.contactsViewController = [[ContactsViewController alloc] initWithStyle:UITableViewStylePlain];
     self.settingsViewController = [[SettingsViewController alloc] initWithNibName:@"SettingsView_iPhone" bundle:nil];
     
     // Init a new nav controller as container to include setting view.

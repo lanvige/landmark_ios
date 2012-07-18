@@ -12,6 +12,6 @@
 
 @interface UserMappingProvider : NSObject
 
-+ (void)usersWithBlock:(void (^)(NSArray *users))block;
++ (void)getUsersWithBlock:(void (^)(NSArray *users))block;
 
 @end

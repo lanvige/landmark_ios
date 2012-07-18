@@ -11,15 +11,17 @@
 
 @class LMUser;
 
-@interface LMSharing : NSManagedObject
+@interface LMSharing : NSObject
 
-@property (nonatomic, retain) NSString *id;
-@property (nonatomic, retain) NSString *title;
-@property (nonatomic, retain) NSString *description;
-
-//@property (nonatomic, strong) NSDate *createdAt;
+@property (nonatomic, strong) NSString *sharingID;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *description;
+@property (nonatomic, strong) NSDate *createdAt;
+@property (nonatomic, strong) NSData * updateAt;
 
 // Relationships
 @property (nonatomic, strong) LMUser *user;
+
+- (id)initWithAttributes:(NSDictionary *)attributes;
 
 @end

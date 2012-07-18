@@ -1,22 +1,22 @@
 //
-//  UserTableViewCell.m
+//  SharingTableViewCell.m
 //  Landmark
 //
-//  Created by Lanvige Jiang on 7/17/12.
+//  Created by Lanvige Jiang on 7/18/12.
 //  Copyright (c) 2012 LANVIGE. All rights reserved.
 //
 
-#import "UserTableViewCell.h"
+#import "SharingTableViewCell.h"
 
-#import "LMUser.h"
+#import "LMSharing.h"
 
-@implementation UserTableViewCell {
+@implementation SharingTableViewCell {
     
 @private
-    __strong LMUser *_user;    
+    __strong LMSharing *_sharing;    
 }
 
-@synthesize user = _user;
+@synthesize sharing = _sharing;
 
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
@@ -34,14 +34,21 @@
     return self;
 }
 
-- (void)setUser:(LMUser *)user {
-    _user = user;
+- (void)setSharing:(LMSharing *)sharing {
+    _sharing = sharing;
     
-    self.textLabel.text = _user.username;
-    self.detailTextLabel.text = _user.email;
+    self.textLabel.text = _sharing.title;
+    self.detailTextLabel.text = _sharing.description;
     
     [self setNeedsLayout];
 }
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
+    [super setSelected:selected animated:animated];
+    // Configure the view for the selected state
+}
+
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -55,5 +62,7 @@
     self.textLabel.frame = CGRectMake(70.0f, 10.0f, 240.0f, 20.0f);
     self.detailTextLabel.frame = CGRectMake(70.0f, 30.0f, 240.0f, 20.0f);
 }
+
+
 
 @end

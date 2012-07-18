@@ -13,7 +13,7 @@
 
 @implementation UserMappingProvider
 
-+ (void)usersWithBlock:(void (^)(NSArray *tweets))block {
++ (void)getUsersWithBlock:(void (^)(NSArray *tweets))block {
     [[LMAPIClient sharedClient] getPath:@"users" 
                              parameters:[NSDictionary dictionaryWithObject:@"false" 
                                                                     forKey:@"include_entities"] 

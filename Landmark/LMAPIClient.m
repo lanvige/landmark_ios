@@ -10,7 +10,7 @@
 
 #import "AFJSONRequestOperation.h"
 
-static NSString * const kLMAPIBaseURLString = @"http://landmark.dev/api/v1/";
+static NSString * const kLMAPIBaseURLString = @"http://api.landmark.dev/v1/";
 
 @implementation LMAPIClient
 

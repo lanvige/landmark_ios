@@ -10,11 +10,27 @@
 
 @implementation LMSharing
 
-@dynamic id;
+@synthesize sharingID = _sharingID;
+@synthesize title = _title;
+@synthesize description = _description;
+@synthesize createdAt = _createdAt;
+@synthesize updateAt = _updateAt;
 
-@dynamic title;
-@dynamic description;
+@synthesize user;
 
-@dynamic user;
+- (id)initWithAttributes:(NSDictionary *)attributes {
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    
+    _sharingID = [attributes valueForKeyPath:@"_id"];
+    _title = [attributes valueForKeyPath:@"title"];
+    _description = [attributes valueForKeyPath:@"description"];
+    _createdAt = [attributes valueForKey:@"createAt"];
+    _updateAt = [attributes valueForKey:@"updateAt"];
+    
+    return self;
+}
 
 @end

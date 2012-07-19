@@ -148,15 +148,19 @@
     [_activityIndicatorView startAnimating];
     
     DLog(@"%@", cell.sharing.mID);
-    [sharingMappingProvider getSharingWithID:[NSString stringWithFormat:@"%@", cell.sharing.mID] 
-                                   block:^(LMSharing *sharing) {
-        if (sharing) {
-            DLog(@"Sharing Content - %@", sharing.title);
-        }
-        
-        [_activityIndicatorView stopAnimating];
-        self.navigationItem.rightBarButtonItem.enabled = YES;
-    }];
+//    [sharingMappingProvider getSharingWithID:[NSString stringWithFormat:@"%@", cell.sharing.mID] 
+//                                   block:^(LMSharing *sharing) {
+//        if (sharing) {
+//            DLog(@"Sharing Content - %@", sharing.title);
+//        }
+//        
+//        [_activityIndicatorView stopAnimating];
+//        self.navigationItem.rightBarButtonItem.enabled = YES;
+//    }];
+    
+    [sharingMappingProvider deleteObjectWithPath:[NSString stringWithFormat:@"%@", cell.sharing.mID] 
+                                           block:^(BOOL result) {
+                                           }];
     
 }
 

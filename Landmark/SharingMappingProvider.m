@@ -55,4 +55,13 @@ NSString * const kSharingsPath = @"sharings";
     }];
 }
 
+- (void)deleteObjectWithPath:(NSString *)sharingID block:(void (^)(BOOL))block {
+    NSString *path = [NSString stringWithFormat:@"%@/%@", kSharingsPath, sharingID];
+    
+    [super deleteObjectWithPath:path block:^(BOOL result) {
+        if(result) {
+        }
+    }];
+}
+
 @end

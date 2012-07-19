@@ -30,7 +30,7 @@ NSString * const kContactsPath = @"users";
 }
 
 // Get a sharing with id
-- (void)getContactWithId:(NSString *)contactID withBlock:(void (^)(LMUser *))block {
+- (void)getContactWithId:(NSString *)contactID block:(void (^)(LMUser *))block {
     NSString *path = [NSString stringWithFormat:@"%@/%@", kContactsPath, contactID];
     
     [super getObjectsWithPath:path block:^(id jsonData) {

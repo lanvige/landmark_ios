@@ -10,7 +10,7 @@
 
 @interface BaseMappingProvider : NSObject
 
-// Get the all objects json data from API.
+// Get the all objects / Object json data from API.
 - (void)getObjectsWithPath:(NSString *)path 
                      block:(void (^)(id jsonData))block;
 
@@ -18,4 +18,10 @@
             parameters:(NSDictionary *) params 
                  block:(void (^)(BOOL))block;
 
+- (void)updateObjectWithPath:(NSString *)path 
+                  parameters:(NSDictionary *) params 
+                       block:(void (^)(BOOL))block;
+
+- (void)deleteObjectWithPath:(NSString *)path
+                       block:(void (^)(BOOL))block;
 @end

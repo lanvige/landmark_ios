@@ -16,6 +16,6 @@
 
 - (void)getContactsWithBlock:(void (^)(NSArray *contacts))block;
 
-- (void)getContactWithId:(NSString *)contactID withBlock:(void (^)(LMUser *contact))block;
+- (void)getContactWithId:(NSString *)contactID block:(void (^)(LMUser *contact))block;
 
 @end

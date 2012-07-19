@@ -34,7 +34,7 @@ NSString * const kSharingsPath = @"sharings";
 }
 
 // Get a sharing with id
-- (void)getSharingWithId:(NSString *)sharingID withBlock:(void (^)(LMSharing *))block {
+- (void)getSharingWithID:(NSString *)sharingID block:(void (^)(LMSharing *))block {
     NSString *path = [NSString stringWithFormat:@"%@/%@", kSharingsPath, sharingID];
     
     [super getObjectsWithPath:path block:^(id jsonData) {
@@ -48,7 +48,7 @@ NSString * const kSharingsPath = @"sharings";
     }];
 }
 
-- (void)saveSharingWith:(LMSharing *)sharing withBlock:(void (^)(BOOL *))block {
+- (void)saveSharingWithObject:(LMSharing *)sharing block:(void (^)(BOOL *))block {
     [super saveObjectWithPath:kSharingsPath parameters:sharing.getParameters block:^(BOOL result) {
         if(result) {
         }

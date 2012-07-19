@@ -48,6 +48,7 @@
 		387C6A04154C3FC0005768B9 /* SplashView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387C6A03154C3FC0005768B9 /* SplashView_iPhone.xib */; };
 		387C6A06154C3FD0005768B9 /* SplashView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387C6A05154C3FD0005768B9 /* SplashView_iPad.xib */; };
 		388B156E15B560FF00348CBD /* LMAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B156D15B560FF00348CBD /* LMAPIClient.m */; };
+		3893B9C415B7AA0800D77475 /* CreateSharingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3893B9C315B7AA0800D77475 /* CreateSharingView.xib */; };
 		3894D0AD1547E17500707389 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3894D0AB1547E17500707389 /* icon-72.png */; };
 		3894D0AE1547E17500707389 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3894D0AC1547E17500707389 /* icon.png */; };
 		3894D0F41547FBE900707389 /* SettingsView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D0F31547FBE900707389 /* SettingsView_iPhone.xib */; };
@@ -138,6 +139,7 @@
 		387C6A05154C3FD0005768B9 /* SplashView_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashView_iPad.xib; sourceTree = "<group>"; };
 		388B156C15B560FE00348CBD /* LMAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAPIClient.h; sourceTree = "<group>"; };
 		388B156D15B560FF00348CBD /* LMAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAPIClient.m; sourceTree = "<group>"; };
+		3893B9C315B7AA0800D77475 /* CreateSharingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateSharingView.xib; sourceTree = "<group>"; };
 		3894D0AB1547E17500707389 /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72.png"; path = "Icons/icon-72.png"; sourceTree = "<group>"; };
 		3894D0AC1547E17500707389 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Icons/icon.png; sourceTree = "<group>"; };
 		3894D0F31547FBE900707389 /* SettingsView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsView_iPhone.xib; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 			children = (
 				3837E39115B6989F00DF1255 /* SharingTableViewCell.h */,
 				3837E39215B6989F00DF1255 /* SharingTableViewCell.m */,
+				3893B9C315B7AA0800D77475 /* CreateSharingView.xib */,
 			);
 			name = Sharings;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				38C6C32E15B70F6800E30386 /* home.png in Resources */,
 				38C6C32F15B70F6800E30386 /* settings.png in Resources */,
 				38C6C33015B70F6800E30386 /* sharings.png in Resources */,
+				3893B9C415B7AA0800D77475 /* CreateSharingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

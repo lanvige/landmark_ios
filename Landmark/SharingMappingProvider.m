@@ -48,7 +48,7 @@ NSString * const kSharingsPath = @"sharings";
     }];
 }
 
-- (void)saveSharingWithObject:(LMSharing *)sharing block:(void (^)(BOOL *))block {
+- (void)saveSharingWithObject:(LMSharing *)sharing block:(void (^)(BOOL))block {
     [super saveObjectWithPath:kSharingsPath parameters:sharing.getParameters block:^(BOOL result) {
         if(result) {
         }

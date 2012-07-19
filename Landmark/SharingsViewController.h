@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CreateSharingViewController.h"
+
 @interface SharingsViewController : UITableViewController
+
+@property (nonatomic, strong) CreateSharingViewController *csViewController;
 
 @end

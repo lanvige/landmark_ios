@@ -18,7 +18,7 @@
 
 - (void)getSharingWithID:(NSString *)sharingID block:(void (^)(LMSharing *sharing))block;
 
-- (void)saveSharingWithObject:(LMSharing *)sharing block:(void (^)(BOOL *))block;
+- (void)saveSharingWithObject:(LMSharing *)sharing block:(void (^)(BOOL))block;
 //
 //+ (void)updateSharingWith:(LMSharing *)sharing withBlock:(BOOL *)block;
 //

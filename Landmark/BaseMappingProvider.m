@@ -37,6 +37,7 @@
                               parameters:params 
                                  success:^(AFHTTPRequestOperation *operation, id response) {
                                      DLog(@"SAVE SUCCESS - %s ", __PRETTY_FUNCTION__);
+                                     DLog(@"========%@", params);
                                      if (block) {
                                          block(TRUE);
                                      }

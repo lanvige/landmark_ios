@@ -13,6 +13,8 @@
 #import "SharingTableViewCell.h"
 #import "SharingMappingProvider.h"
 
+#import "CreateSpaceViewController.h"
+
 
 @interface SharingsViewController ()
 
@@ -29,6 +31,7 @@
 }
 
 @synthesize sharingMappingProvider;
+@synthesize csViewController;
 
 - (id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
@@ -50,6 +53,9 @@
 
 - (void)addSharing:(id)sender {
     // TODO:: Open another to add the sharing info.
+    
+    self.csViewController = [[CreateSharingViewController alloc] initWithNibName:@"CreateSharingView" bundle:nil];
+    [self.navigationController pushViewController:csViewController animated:TRUE];
 }
 
 - (void)loadSharings {
@@ -87,7 +93,7 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addSharing:)];
     
-    self.tableView.rowHeight = 70.0f;
+    self.tableView.rowHeight = 55.0f;
 }
 
 - (void)viewDidUnload {

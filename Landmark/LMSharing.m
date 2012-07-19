@@ -34,12 +34,27 @@
 }
 
 - (NSDictionary *)getParameters {
-    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
-                            @"title", _title,
-                            @"description", _description,
-                            nil];
     
-    return params;
+    NSDictionary *params;
+    
+    if (_sharingID != nil) {
+        params = [NSDictionary dictionaryWithObjectsAndKeys:
+                  _sharingID, @"_id",
+                  _title, @"title",
+                  _description, @"description",
+                  nil];
+    } else {
+        params = [NSDictionary dictionaryWithObjectsAndKeys:
+                  _title, @"title",
+                  _description, @"description",
+                  nil];
+    }
+
+    
+    NSDictionary *sharingParams = [NSDictionary 
+                            dictionaryWithObject:params forKey:@"sharing"];
+    
+    return sharingParams;
 }
 
 @end

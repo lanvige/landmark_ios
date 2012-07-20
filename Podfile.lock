@@ -1,7 +1,9 @@
 PODS:
   - AFNetworking (1.0RC1)
   - JSONKit (1.5pre)
+  - SVPullToRefresh (0.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 1.0RC1)
   - JSONKit (~> 1.5pre)
+  - SVPullToRefresh (~> 0.2)

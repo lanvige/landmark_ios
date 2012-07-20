@@ -13,6 +13,8 @@
 #import "SharingTableViewCell.h"
 #import "SharingMappingProvider.h"
 
+#import "SVPullToRefresh.h"
+
 #import "CreateSpaceViewController.h"
 
 
@@ -94,6 +96,18 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addSharing:)];
     
     self.tableView.rowHeight = 55.0f;
+    
+    // add pull to refreash
+    [self.tableView addPullToRefreshWithActionHandler:^{
+        DLog(@"REFRESH THD TABLE");
+        [self.tableView.pullToRefreshView performSelector:@selector(stopAnimating) withObject:nil afterDelay:2];
+    }];
+    
+    [self.tableView addInfiniteScrollingWithActionHandler:^{
+        DLog(@"LOAD MORE DATA");
+    }];
+    
+    [self.tableView.pullToRefreshView triggerRefresh];
 }
 
 - (void)viewDidUnload {
@@ -121,6 +135,11 @@
 }
 
 #pragma mark - UITableViewDataSource
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 10;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [_sharings count];

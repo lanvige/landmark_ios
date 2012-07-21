@@ -15,16 +15,16 @@
 
 @synthesize window = _window;
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Initial the AFNetworking manager.
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     
     // Init the window as global.
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     _navigationManager = [[NavigationManager alloc] initWithWindow:_window];
-    [_navigationManager displayRootView];
+    [_navigationManager displayHomeView];
 
     [self.window makeKeyAndVisible];
     

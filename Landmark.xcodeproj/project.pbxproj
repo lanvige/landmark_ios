@@ -384,6 +384,7 @@
 		386C596B15454C1A000B592A /* Landmark */ = {
 			isa = PBXGroup;
 			children = (
+				3825E4A515CC027A00FBC9ED /* Categories */,
 				386C597415454C1A000B592A /* AppDelegate.h */,
 				386C597515454C1A000B592A /* AppDelegate.m */,
 				3894D11A154901BC00707389 /* Protocals */,

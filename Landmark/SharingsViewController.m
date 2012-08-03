@@ -13,7 +13,6 @@
 #import "SharingMappingProvider.h"
 
 #import "SVPullToRefresh.h"
-
 #import "CreateSpaceViewController.h"
 
 
@@ -98,12 +97,12 @@
     
     // add pull to refreash
     [self.tableView addPullToRefreshWithActionHandler:^{
-        DLog(@"REFRESH THD TABLE");
+        DDLogInfo(@"REFRESH THD TABLE");
         [self.tableView.pullToRefreshView performSelector:@selector(stopAnimating) withObject:nil afterDelay:2];
     }];
     
     [self.tableView addInfiniteScrollingWithActionHandler:^{
-        DLog(@"LOAD MORE DATA");
+        DDLogInfo(@"LOAD MORE DATA");
     }];
     
     [self.tableView.pullToRefreshView triggerRefresh];
@@ -165,11 +164,11 @@
     
     [_activityIndicatorView startAnimating];
     
-    DLog(@"%@", cell.sharing.mID);
+    DDLogInfo(@"%@", cell.sharing.mID);
 //    [sharingMappingProvider getSharingWithID:[NSString stringWithFormat:@"%@", cell.sharing.mID] 
 //                                   block:^(LMSharing *sharing) {
 //        if (sharing) {
-//            DLog(@"Sharing Content - %@", sharing.title);
+//            DDLogInfo(@"Sharing Content - %@", sharing.title);
 //        }
 //        
 //        [_activityIndicatorView stopAnimating];

@@ -19,14 +19,14 @@
                              parameters:nil
                                 success:^(AFHTTPRequestOperation *operation, id response) {
                                     // Mapping JSON data to Data Module Objects
-                                    DLog(@"GET SUCCESS - %s ", __PRETTY_FUNCTION__);
+                                    DDLogInfo(@"GET SUCCESS - %s ", __PRETTY_FUNCTION__);
                                     
                                     if (block) {
                                         block(response);
                                     }
                                     
                                 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                    DLog(@"GET ERROR - %@", error);
+                                    DDLogInfo(@"GET ERROR - %@", error);
                                 }];    
 }
 
@@ -36,13 +36,13 @@
     [[LMAPIClient sharedClient] postPath:path 
                               parameters:params 
                                  success:^(AFHTTPRequestOperation *operation, id response) {
-                                     DLog(@"SAVE SUCCESS - %s ", __PRETTY_FUNCTION__);
-                                     DLog(@"========%@", params);
+                                     DDLogInfo(@"SAVE SUCCESS - %s ", __PRETTY_FUNCTION__);
+                                     DDLogInfo(@"========%@", params);
                                      if (block) {
                                          block(TRUE);
                                      }
                                  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                     DLog(@"SAVE ERROR - %@", error);
+                                     DDLogInfo(@"SAVE ERROR - %@", error);
                                      if (block) {
                                          block(FALSE);
                                      }
@@ -55,12 +55,12 @@
     [[LMAPIClient sharedClient] putPath:path
                              parameters:params 
                                 success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                                    DLog(@"UPDATE SUCCESS - %s", __PRETTY_FUNCTION__);
+                                    DDLogInfo(@"UPDATE SUCCESS - %s", __PRETTY_FUNCTION__);
                                     if (block) {
                                         block(TRUE);
                                     }
                                 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                    DLog(@"UPDATE ERROR -%@", error);
+                                    DDLogInfo(@"UPDATE ERROR -%@", error);
                                     if (block) {
                                         block(FALSE);
                                     }
@@ -72,9 +72,9 @@
     [[LMAPIClient sharedClient] deletePath:path 
                                 parameters:nil 
                                    success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                                       DLog(@"DELETE SUCCESS - %s", __PRETTY_FUNCTION__);
+                                       DDLogInfo(@"DELETE SUCCESS - %s", __PRETTY_FUNCTION__);
                                    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                       DLog(@"DELETE ERROR - %@", error);
+                                       DDLogInfo(@"DELETE ERROR - %@", error);
                                    }];
 }
 @end

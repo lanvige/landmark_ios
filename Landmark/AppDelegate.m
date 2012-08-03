@@ -10,6 +10,8 @@
 
 #import "NavigationManager.h"
 #import "AFNetworkActivityIndicatorManager.h"
+#import "DDTTYLogger.h"
+#import "DDLog.h"
 
 @implementation AppDelegate
 
@@ -20,8 +22,13 @@
     // Initial the AFNetworking manager.
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     
+    //Adds the logger to the console (similar to nslog)
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    // And we also enable colors
+    //[[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    
     // Init the window as global.
-    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    _window = [[UIWindow alloc]     initWithFrame:[[UIScreen mainScreen] bounds]];
     
     _navigationManager = [[NavigationManager alloc] initWithWindow:_window];
     [_navigationManager displayHomeView];

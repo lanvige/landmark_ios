@@ -10,6 +10,7 @@
 
 #import "LMSharing.h"
 #import "SharingMappingProvider.h"
+#import "DDTTYLogger.h"
 
 @interface CreateSharingViewController ()
 
@@ -27,12 +28,12 @@
     self.sharing = [[LMSharing alloc] init];
     self.sharing.title = self.titleTextFiled.text;
     self.sharing.description = self.descriptonTextFiled.text;
-    DLog(@"NEW SHARING -- Title:%@, -- Descrption:%@", sharing.title, sharing.description);
+    DDLogError(@"NEW SHARING -- Title:%@, -- Descrption:%@", sharing.title, sharing.description);
     
     sharingMappingProvier = [[SharingMappingProvider alloc] init];
     [sharingMappingProvier saveSharingWithObject:sharing block:^(BOOL result) {
         if (result) {
-            DLog(@"==========");
+            DDLogInfo(@"==========");
         }
     }];
 }

@@ -7,7 +7,7 @@
 //
 
 #import "BaseMappingProvider.h"
-#import "LMCommon.h"
+
 #import "LMAPIClient.h"
 
 @implementation BaseMappingProvider

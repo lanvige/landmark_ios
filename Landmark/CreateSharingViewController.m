@@ -8,8 +8,6 @@
 
 #import "CreateSharingViewController.h"
 
-#import "LMCommon.h"
-
 #import "LMSharing.h"
 #import "SharingMappingProvider.h"
 

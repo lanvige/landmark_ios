@@ -8,7 +8,6 @@
 
 #import "SharingMappingProvider.h"
 
-#import "LMCommon.h"
 #import "LMModelBase.h"
 #import "LMSharing.h"
 

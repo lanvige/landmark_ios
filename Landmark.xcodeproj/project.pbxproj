@@ -384,13 +384,13 @@
 		386C596B15454C1A000B592A /* Landmark */ = {
 			isa = PBXGroup;
 			children = (
-				3825E4A515CC027A00FBC9ED /* Categories */,
 				386C597415454C1A000B592A /* AppDelegate.h */,
 				386C597515454C1A000B592A /* AppDelegate.m */,
-				380F063F154566CC00C9CF7C /* ViewManager */,
 				3894D11A154901BC00707389 /* Protocals */,
+				3825E4A515CC027A00FBC9ED /* Categories */,
 				386C598815455369000B592A /* Models */,
 				3837E37515B5722200DF1255 /* MappingProvider */,
+				380F063F154566CC00C9CF7C /* ViewManager */,
 				386C598615455320000B592A /* ViewControllers */,
 				386C598715455362000B592A /* Views */,
 				386C596C15454C1A000B592A /* Supporting Files */,

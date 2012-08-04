@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class NavigationManager;
+@class SlideViewController;
 
 @interface AppDelegate : NSObject <UIApplicationDelegate>
 {
@@ -17,5 +18,6 @@
 }
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) SlideViewController * slideViewController;
 
 @end

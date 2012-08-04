@@ -48,7 +48,7 @@
     self.mainViewController = [[MainViewController alloc] initWithNibName:@"MainView_iPhone" bundle:nil];
     self.slideViewController = [[SlideViewController alloc] initWithRootViewController:mainViewController];
     
-    self.leftViewController = [[LeftViewController alloc] initWithNibName:@"LoginView_iPhone" bundle:nil];
+    self.leftViewController = [[LeftViewController alloc] init];
     self.leftViewController.mainViewController = mainViewController;  // assign weak reference to main view
     
     self.homeViewController = [[HomeViewController alloc] initWithNibName:@"HomeView_iPhone" bundle:nil];

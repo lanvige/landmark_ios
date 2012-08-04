@@ -13,4 +13,6 @@
 
 @property (nonatomic, assign) UIViewController * mainViewController;
 
+- (IBAction)navigateToMainViewController:(id)sender;
+
 @end

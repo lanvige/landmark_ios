@@ -72,6 +72,7 @@
 		38A06E1915CCFDC900B9F3A2 /* NSString+IDNum.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A06E1615CCFDC900B9F3A2 /* NSString+IDNum.m */; };
 		38A06E1F15CCFE1B00B9F3A2 /* UIColor+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A06E1C15CCFE1B00B9F3A2 /* UIColor+Extra.m */; };
 		38A06E2015CCFE1B00B9F3A2 /* UILabel+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A06E1E15CCFE1B00B9F3A2 /* UILabel+Resize.m */; };
+		38A06E2915CD0D3100B9F3A2 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A06E2815CD0D3100B9F3A2 /* UIColor+Hex.m */; };
 		38C6C32D15B70F6800E30386 /* contacts.png in Resources */ = {isa = PBXBuildFile; fileRef = 38C6C32915B70F6800E30386 /* contacts.png */; };
 		38C6C32E15B70F6800E30386 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 38C6C32A15B70F6800E30386 /* home.png */; };
 		38C6C32F15B70F6800E30386 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 38C6C32B15B70F6800E30386 /* settings.png */; };
@@ -185,6 +186,8 @@
 		38A06E1C15CCFE1B00B9F3A2 /* UIColor+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extra.m"; sourceTree = "<group>"; };
 		38A06E1D15CCFE1B00B9F3A2 /* UILabel+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Resize.h"; sourceTree = "<group>"; };
 		38A06E1E15CCFE1B00B9F3A2 /* UILabel+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Resize.m"; sourceTree = "<group>"; };
+		38A06E2715CD0D3100B9F3A2 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		38A06E2815CD0D3100B9F3A2 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		38C6C32915B70F6800E30386 /* contacts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = contacts.png; path = Icons/contacts.png; sourceTree = "<group>"; };
 		38C6C32A15B70F6800E30386 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = Icons/home.png; sourceTree = "<group>"; };
 		38C6C32B15B70F6800E30386 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings.png; path = Icons/settings.png; sourceTree = "<group>"; };
@@ -525,16 +528,18 @@
 		38A06E0615CCFA0000B9F3A2 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				38A06E1B15CCFE1B00B9F3A2 /* UIColor+Extra.h */,
-				38A06E1C15CCFE1B00B9F3A2 /* UIColor+Extra.m */,
-				38A06E1D15CCFE1B00B9F3A2 /* UILabel+Resize.h */,
-				38A06E1E15CCFE1B00B9F3A2 /* UILabel+Resize.m */,
 				38A06E1115CCFDC900B9F3A2 /* NSData+Base64.h */,
 				38A06E1215CCFDC900B9F3A2 /* NSData+Base64.m */,
 				38A06E1315CCFDC900B9F3A2 /* NSString+Base64.h */,
 				38A06E1415CCFDC900B9F3A2 /* NSString+Base64.m */,
 				38A06E1515CCFDC900B9F3A2 /* NSString+IDNum.h */,
 				38A06E1615CCFDC900B9F3A2 /* NSString+IDNum.m */,
+				38A06E1B15CCFE1B00B9F3A2 /* UIColor+Extra.h */,
+				38A06E1C15CCFE1B00B9F3A2 /* UIColor+Extra.m */,
+				38A06E2715CD0D3100B9F3A2 /* UIColor+Hex.h */,
+				38A06E2815CD0D3100B9F3A2 /* UIColor+Hex.m */,
+				38A06E1D15CCFE1B00B9F3A2 /* UILabel+Resize.h */,
+				38A06E1E15CCFE1B00B9F3A2 /* UILabel+Resize.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -679,6 +684,7 @@
 				38A06E1915CCFDC900B9F3A2 /* NSString+IDNum.m in Sources */,
 				38A06E1F15CCFE1B00B9F3A2 /* UIColor+Extra.m in Sources */,
 				38A06E2015CCFE1B00B9F3A2 /* UILabel+Resize.m in Sources */,
+				38A06E2915CD0D3100B9F3A2 /* UIColor+Hex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

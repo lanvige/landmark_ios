@@ -12,9 +12,15 @@
 #import "AFNetworkActivityIndicatorManager.h"
 #import "DDTTYLogger.h"
 
+#import "MainViewController.h"
+#import "SlideViewController.h"
+#import "LeftViewController.h"
+#import "HomeViewController.h"
+
 @implementation AppDelegate
 
 @synthesize window = _window;
+@synthesize slideViewController = _viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -27,12 +33,23 @@
     [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
 
     // Init the window as global.
-    _window = [[UIWindow alloc]     initWithFrame:[[UIScreen mainScreen] bounds]];
+    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     _navigationManager = [[NavigationManager alloc] initWithWindow:_window];
     [_navigationManager displayHomeView];
 
-    [self.window makeKeyAndVisible];
+    
+    MainViewController *mainViewController = [[MainViewController alloc] initWithNibName:@"MainView_iPhone" bundle:nil];
+    SlideViewController *slideViewController = [[SlideViewController alloc] initWithRootViewController:mainViewController];
+    
+    LeftViewController *leftViewController = [[LeftViewController alloc] init];
+    leftViewController.mainViewController = mainViewController;  // assign weak reference to main view
+    
+//    HomeViewController *homeViewController = [[HomeViewController alloc] initWithNibName:@"HomeView_iPhone" bundle:nil];
+    [slideViewController setLeftViewController:leftViewController rightViewController:nil];
+    
+    _window.rootViewController = slideViewController;
+    [_window makeKeyAndVisible];
     
     return YES;
 }

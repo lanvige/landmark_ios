@@ -67,6 +67,11 @@
 		3894D14C1549219100707389 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3894D1491549219100707389 /* Localizable.strings */; };
 		3894D17315495B5400707389 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3894D17215495B5300707389 /* LocationViewController.m */; };
 		3894D17515495B7100707389 /* CreateSpaceView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D17415495B7100707389 /* CreateSpaceView_iPhone.xib */; };
+		38A06E1715CCFDC900B9F3A2 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A06E1215CCFDC900B9F3A2 /* NSData+Base64.m */; };
+		38A06E1815CCFDC900B9F3A2 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A06E1415CCFDC900B9F3A2 /* NSString+Base64.m */; };
+		38A06E1915CCFDC900B9F3A2 /* NSString+IDNum.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A06E1615CCFDC900B9F3A2 /* NSString+IDNum.m */; };
+		38A06E1F15CCFE1B00B9F3A2 /* UIColor+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A06E1C15CCFE1B00B9F3A2 /* UIColor+Extra.m */; };
+		38A06E2015CCFE1B00B9F3A2 /* UILabel+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A06E1E15CCFE1B00B9F3A2 /* UILabel+Resize.m */; };
 		38C6C32D15B70F6800E30386 /* contacts.png in Resources */ = {isa = PBXBuildFile; fileRef = 38C6C32915B70F6800E30386 /* contacts.png */; };
 		38C6C32E15B70F6800E30386 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 38C6C32A15B70F6800E30386 /* home.png */; };
 		38C6C32F15B70F6800E30386 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 38C6C32B15B70F6800E30386 /* settings.png */; };
@@ -170,6 +175,16 @@
 		3894D17115495B5300707389 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		3894D17215495B5300707389 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		3894D17415495B7100707389 /* CreateSpaceView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateSpaceView_iPhone.xib; sourceTree = "<group>"; };
+		38A06E1115CCFDC900B9F3A2 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		38A06E1215CCFDC900B9F3A2 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		38A06E1315CCFDC900B9F3A2 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		38A06E1415CCFDC900B9F3A2 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		38A06E1515CCFDC900B9F3A2 /* NSString+IDNum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+IDNum.h"; sourceTree = "<group>"; };
+		38A06E1615CCFDC900B9F3A2 /* NSString+IDNum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+IDNum.m"; sourceTree = "<group>"; };
+		38A06E1B15CCFE1B00B9F3A2 /* UIColor+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extra.h"; sourceTree = "<group>"; };
+		38A06E1C15CCFE1B00B9F3A2 /* UIColor+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extra.m"; sourceTree = "<group>"; };
+		38A06E1D15CCFE1B00B9F3A2 /* UILabel+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Resize.h"; sourceTree = "<group>"; };
+		38A06E1E15CCFE1B00B9F3A2 /* UILabel+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Resize.m"; sourceTree = "<group>"; };
 		38C6C32915B70F6800E30386 /* contacts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = contacts.png; path = Icons/contacts.png; sourceTree = "<group>"; };
 		38C6C32A15B70F6800E30386 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = Icons/home.png; sourceTree = "<group>"; };
 		38C6C32B15B70F6800E30386 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings.png; path = Icons/settings.png; sourceTree = "<group>"; };
@@ -510,6 +525,16 @@
 		38A06E0615CCFA0000B9F3A2 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				38A06E1B15CCFE1B00B9F3A2 /* UIColor+Extra.h */,
+				38A06E1C15CCFE1B00B9F3A2 /* UIColor+Extra.m */,
+				38A06E1D15CCFE1B00B9F3A2 /* UILabel+Resize.h */,
+				38A06E1E15CCFE1B00B9F3A2 /* UILabel+Resize.m */,
+				38A06E1115CCFDC900B9F3A2 /* NSData+Base64.h */,
+				38A06E1215CCFDC900B9F3A2 /* NSData+Base64.m */,
+				38A06E1315CCFDC900B9F3A2 /* NSString+Base64.h */,
+				38A06E1415CCFDC900B9F3A2 /* NSString+Base64.m */,
+				38A06E1515CCFDC900B9F3A2 /* NSString+IDNum.h */,
+				38A06E1615CCFDC900B9F3A2 /* NSString+IDNum.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -649,6 +674,11 @@
 				3849C80515BA75C800105C22 /* SlideViewController.m in Sources */,
 				3849C80D15BA7B6600105C22 /* LeftViewController.m in Sources */,
 				3849C81015BA7C8300105C22 /* MainViewController.m in Sources */,
+				38A06E1715CCFDC900B9F3A2 /* NSData+Base64.m in Sources */,
+				38A06E1815CCFDC900B9F3A2 /* NSString+Base64.m in Sources */,
+				38A06E1915CCFDC900B9F3A2 /* NSString+IDNum.m in Sources */,
+				38A06E1F15CCFE1B00B9F3A2 /* UIColor+Extra.m in Sources */,
+				38A06E2015CCFE1B00B9F3A2 /* UILabel+Resize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

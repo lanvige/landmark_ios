@@ -263,13 +263,6 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		3825E4A515CC027A00FBC9ED /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Categories;
-			sourceTree = "<group>";
-		};
 		3837E37515B5722200DF1255 /* MappingProvider */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,11 +377,10 @@
 		386C596B15454C1A000B592A /* Landmark */ = {
 			isa = PBXGroup;
 			children = (
-				3825E4A515CC027A00FBC9ED /* Categories */,
 				386C597415454C1A000B592A /* AppDelegate.h */,
 				386C597515454C1A000B592A /* AppDelegate.m */,
 				3894D11A154901BC00707389 /* Protocals */,
-				3825E4A515CC027A00FBC9ED /* Categories */,
+				38A06E0615CCFA0000B9F3A2 /* Categories */,
 				386C598815455369000B592A /* Models */,
 				3837E37515B5722200DF1255 /* MappingProvider */,
 				380F063F154566CC00C9CF7C /* ViewManager */,
@@ -513,6 +505,13 @@
 				3894D1491549219100707389 /* Localizable.strings */,
 			);
 			path = "zh-Hans.lproj";
+			sourceTree = "<group>";
+		};
+		38A06E0615CCFA0000B9F3A2 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -69,7 +69,6 @@
 		3894D17515495B7100707389 /* CreateSpaceView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3894D17415495B7100707389 /* CreateSpaceView_iPhone.xib */; };
 		38A06E1715CCFDC900B9F3A2 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A06E1215CCFDC900B9F3A2 /* NSData+Base64.m */; };
 		38A06E1815CCFDC900B9F3A2 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A06E1415CCFDC900B9F3A2 /* NSString+Base64.m */; };
-		38A06E1915CCFDC900B9F3A2 /* NSString+IDNum.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A06E1615CCFDC900B9F3A2 /* NSString+IDNum.m */; };
 		38A06E1F15CCFE1B00B9F3A2 /* UIColor+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A06E1C15CCFE1B00B9F3A2 /* UIColor+Extra.m */; };
 		38A06E2015CCFE1B00B9F3A2 /* UILabel+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A06E1E15CCFE1B00B9F3A2 /* UILabel+Resize.m */; };
 		38A06E2915CD0D3100B9F3A2 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A06E2815CD0D3100B9F3A2 /* UIColor+Hex.m */; };
@@ -180,8 +179,6 @@
 		38A06E1215CCFDC900B9F3A2 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		38A06E1315CCFDC900B9F3A2 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
 		38A06E1415CCFDC900B9F3A2 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
-		38A06E1515CCFDC900B9F3A2 /* NSString+IDNum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+IDNum.h"; sourceTree = "<group>"; };
-		38A06E1615CCFDC900B9F3A2 /* NSString+IDNum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+IDNum.m"; sourceTree = "<group>"; };
 		38A06E1B15CCFE1B00B9F3A2 /* UIColor+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extra.h"; sourceTree = "<group>"; };
 		38A06E1C15CCFE1B00B9F3A2 /* UIColor+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extra.m"; sourceTree = "<group>"; };
 		38A06E1D15CCFE1B00B9F3A2 /* UILabel+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Resize.h"; sourceTree = "<group>"; };
@@ -532,8 +529,6 @@
 				38A06E1215CCFDC900B9F3A2 /* NSData+Base64.m */,
 				38A06E1315CCFDC900B9F3A2 /* NSString+Base64.h */,
 				38A06E1415CCFDC900B9F3A2 /* NSString+Base64.m */,
-				38A06E1515CCFDC900B9F3A2 /* NSString+IDNum.h */,
-				38A06E1615CCFDC900B9F3A2 /* NSString+IDNum.m */,
 				38A06E1B15CCFE1B00B9F3A2 /* UIColor+Extra.h */,
 				38A06E1C15CCFE1B00B9F3A2 /* UIColor+Extra.m */,
 				38A06E2715CD0D3100B9F3A2 /* UIColor+Hex.h */,
@@ -681,7 +676,6 @@
 				3849C81015BA7C8300105C22 /* MainViewController.m in Sources */,
 				38A06E1715CCFDC900B9F3A2 /* NSData+Base64.m in Sources */,
 				38A06E1815CCFDC900B9F3A2 /* NSString+Base64.m in Sources */,
-				38A06E1915CCFDC900B9F3A2 /* NSString+IDNum.m in Sources */,
 				38A06E1F15CCFE1B00B9F3A2 /* UIColor+Extra.m in Sources */,
 				38A06E2015CCFE1B00B9F3A2 /* UILabel+Resize.m in Sources */,
 				38A06E2915CD0D3100B9F3A2 /* UIColor+Hex.m in Sources */,

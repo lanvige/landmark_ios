@@ -18,5 +18,5 @@ profile
 *.moved-aside
 DerivedData
 
-.xcodeproj/ !*.xcodeproj/project.pbxproj
+.xcodeproj/ !*.xcodeproj/project.pbxprojs
 pods

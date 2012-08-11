@@ -9,9 +9,7 @@
 #import "NavigationManager.h"
 
 #import "SplashViewController.h"
-#import "SlideViewController.h"
 #import "MainViewController.h"
-#import "LeftViewController.h"
 #import "HomeViewController.h"
 
 @implementation NavigationManager
@@ -45,17 +43,17 @@
 
 - (void)displayHomeView
 {
-    self.mainViewController = [[MainViewController alloc] initWithNibName:@"MainView_iPhone" bundle:nil];
-    self.slideViewController = [[SlideViewController alloc] initWithRootViewController:mainViewController];
-    
-    self.leftViewController = [[LeftViewController alloc] init];
-    self.leftViewController.mainViewController = mainViewController;  // assign weak reference to main view
-    
-    self.homeViewController = [[HomeViewController alloc] initWithNibName:@"HomeView_iPhone" bundle:nil];
-    [self.slideViewController setLeftViewController:leftViewController rightViewController:nil];
-    
-    _window.rootViewController = self.slideViewController;
-    [_window makeKeyAndVisible];
+//    self.mainViewController = [[MainViewController alloc] initWithNibName:@"MainView_iPhone" bundle:nil];
+//    self.slideViewController = [[SlideViewController alloc] initWithRootViewController:mainViewController];
+//    
+//    self.leftViewController = [[LeftViewController alloc] init];
+//    self.leftViewController.mainViewController = mainViewController;  // assign weak reference to main view
+//    
+//    self.homeViewController = [[HomeViewController alloc] initWithNibName:@"HomeView_iPhone" bundle:nil];
+//    [self.slideViewController setLeftViewController:leftViewController rightViewController:nil];
+//    
+//    _window.rootViewController = self.slideViewController;
+//    [_window makeKeyAndVisible];
 }
 
 @end

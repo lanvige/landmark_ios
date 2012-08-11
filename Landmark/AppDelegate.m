@@ -13,9 +13,10 @@
 #import "DDTTYLogger.h"
 
 #import "MainViewController.h"
-#import "SlideViewController.h"
-#import "LeftViewController.h"
 #import "HomeViewController.h"
+
+#import "SlideMenuViewController.h"
+#import "SlideView.h"
 
 @implementation AppDelegate
 
@@ -35,21 +36,18 @@
     // Init the window as global.
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    _navigationManager = [[NavigationManager alloc] initWithWindow:_window];
-    [_navigationManager displayHomeView];
-
-    
     MainViewController *mainViewController = [[MainViewController alloc] initWithNibName:@"MainView_iPhone" bundle:nil];
-    SlideViewController *slideViewController = [[SlideViewController alloc] initWithRootViewController:mainViewController];
+    SlideMenuViewController *slideMenuViewController = [[SlideMenuViewController alloc] init];
     
-    LeftViewController *leftViewController = [[LeftViewController alloc] init];
-    leftViewController.mainViewController = mainViewController;  // assign weak reference to main view
+    mainViewController.title = @"Landmark";
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
     
-//    HomeViewController *homeViewController = [[HomeViewController alloc] initWithNibName:@"HomeView_iPhone" bundle:nil];
-    [slideViewController setLeftViewController:leftViewController rightViewController:nil];
-    
-    _window.rootViewController = slideViewController;
+    _window.rootViewController = navigationController;
     [_window makeKeyAndVisible];
+    
+    // make sure to display the navigation controller before calling this
+    [SlideViewManager configureWithNavigationController:navigationController
+                                      slideViewController:slideMenuViewController];
     
     return YES;
 }

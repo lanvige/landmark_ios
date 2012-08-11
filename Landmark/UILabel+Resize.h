@@ -1,9 +1,9 @@
 //
 //  UIView+Resize.h
-//  Efekta12NavigationTest
+//  Landmark
 //
 //  Created by Lanvige Jiang on 7/24/12.
-//  Copyright (c) 2012 EF Englishtown. All rights reserved.
+//  Copyright (c) 2012 LANVIGE. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

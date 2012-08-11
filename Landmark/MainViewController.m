@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 
+#import "SlideView.h"
 #import "CreateSharingViewController.h"
 
 @implementation MainViewController
@@ -50,6 +51,8 @@
     
     // What's the different between navigationBar.topItem with navigationItem.
     self.navigationItem.rightBarButtonItem = shareButton;
+    
+    [self setupSlideViewBarButtonItem];
 }
 
 - (void)viewDidUnload

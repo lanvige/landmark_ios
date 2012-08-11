@@ -3,6 +3,7 @@ PODS:
   - Calabash (0.9.35)
   - CocoaLumberjack (1.6)
   - JSONKit (1.5pre)
+  - Reachability (3.0.0)
   - SVPullToRefresh (0.2)
 
 DEPENDENCIES:
@@ -10,4 +11,5 @@ DEPENDENCIES:
   - Calabash (~> 0.9.35)
   - CocoaLumberjack
   - JSONKit (~> 1.5pre)
+  - Reachability
   - SVPullToRefresh (~> 0.2)

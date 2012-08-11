@@ -8,16 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class NavigationManager;
 @class SlideViewController;
 
-@interface AppDelegate : NSObject <UIApplicationDelegate>
-{
-    @private
-    NavigationManager *_navigationManager;
+@interface AppDelegate : NSObject <UIApplicationDelegate> {
 }
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) SlideViewController * slideViewController;
 
 @end

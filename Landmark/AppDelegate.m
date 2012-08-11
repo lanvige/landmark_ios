@@ -8,20 +8,16 @@
 
 #import "AppDelegate.h"
 
-#import "NavigationManager.h"
 #import "AFNetworkActivityIndicatorManager.h"
 #import "DDTTYLogger.h"
 
-#import "MainViewController.h"
-#import "HomeViewController.h"
-
-#import "SlideMenuViewController.h"
 #import "SlideView.h"
+#import "SlideMenuViewController.h"
+#import "MainViewController.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
-@synthesize slideViewController = _viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

@@ -135,6 +135,7 @@
 		3852721E15D6446E000E0C64 /* Configurations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configurations.m; sourceTree = "<group>"; };
 		3852722015D64712000E0C64 /* Prefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefs.h; sourceTree = "<group>"; };
 		3852722115D64712000E0C64 /* Prefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Prefs.m; sourceTree = "<group>"; };
+		3852722815D64BE5000E0C64 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		385E61EE154A850E00964706 /* LMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMUser.h; sourceTree = "<group>"; };
 		385E61EF154A850E00964706 /* LMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMUser.m; sourceTree = "<group>"; };
 		385E61F5154A8ABE00964706 /* CreateSpaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateSpaceViewController.h; sourceTree = "<group>"; };
@@ -329,6 +330,16 @@
 			name = Sharings;
 			sourceTree = "<group>";
 		};
+		3852722715D64BC8000E0C64 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3852721D15D6446E000E0C64 /* Configurations.h */,
+				3852721E15D6446E000E0C64 /* Configurations.m */,
+				3852722815D64BE5000E0C64 /* SynthesizeSingleton.h */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		385E61F4154A8A9500964706 /* Space Set */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,8 +418,6 @@
 			children = (
 				386C597415454C1A000B592A /* AppDelegate.h */,
 				386C597515454C1A000B592A /* AppDelegate.m */,
-				3852721D15D6446E000E0C64 /* Configurations.h */,
-				3852721E15D6446E000E0C64 /* Configurations.m */,
 				3852722015D64712000E0C64 /* Prefs.h */,
 				3852722115D64712000E0C64 /* Prefs.m */,
 				3894D11A154901BC00707389 /* Protocals */,
@@ -418,6 +427,7 @@
 				380F063F154566CC00C9CF7C /* ViewManager */,
 				386C598615455320000B592A /* ViewControllers */,
 				386C598715455362000B592A /* Views */,
+				3852722715D64BC8000E0C64 /* Utils */,
 				386C596C15454C1A000B592A /* Supporting Files */,
 			);
 			path = Landmark;

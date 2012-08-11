@@ -7,11 +7,9 @@
 //
 
 #import "LMAPIClient.h"
+#import "Configurations.h"
 
 #import "AFJSONRequestOperation.h"
-
-//static NSString * const kLMAPIBaseURLString = @"http://api.landmark.10.128.42.86.xip.io/v1/";
-static NSString * const kLMAPIBaseURLString = @"http://api.landmark.dev/v1/";
 
 @implementation LMAPIClient
 
@@ -20,7 +18,7 @@ static NSString * const kLMAPIBaseURLString = @"http://api.landmark.dev/v1/";
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^{
-        _sharedClient = [[LMAPIClient alloc] initWithBaseURL:[NSURL URLWithString:kLMAPIBaseURLString]];
+        _sharedClient = [[LMAPIClient alloc] initWithBaseURL:[NSURL URLWithString:[Configurations current].defaultAPIURL]];
     });
     
     return _sharedClient;

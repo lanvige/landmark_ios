@@ -35,6 +35,8 @@
 		3849C81015BA7C8300105C22 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3849C80F15BA7C8300105C22 /* MainViewController.m */; };
 		3849C81215BA81C200105C22 /* MainView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3849C81115BA81C200105C22 /* MainView_iPhone.xib */; };
 		384E236715A4762900D55EF5 /* LMAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 384E236615A4762900D55EF5 /* LMAnnotation.m */; };
+		3852721B15D64409000E0C64 /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3852721A15D64409000E0C64 /* Configurations.plist */; };
+		3852721F15D6446E000E0C64 /* Configurations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3852721E15D6446E000E0C64 /* Configurations.m */; };
 		385E61F0154A850E00964706 /* LMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E61EF154A850E00964706 /* LMUser.m */; };
 		385E61F7154A8ABE00964706 /* CreateSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E61F6154A8ABE00964706 /* CreateSpaceViewController.m */; };
 		385E6207154BDA9700964706 /* LocationView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385E6206154BDA9700964706 /* LocationView_iPhone.xib */; };
@@ -127,6 +129,9 @@
 		3849C81115BA81C200105C22 /* MainView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView_iPhone.xib; sourceTree = "<group>"; };
 		384E236515A4762900D55EF5 /* LMAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAnnotation.h; sourceTree = "<group>"; };
 		384E236615A4762900D55EF5 /* LMAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAnnotation.m; sourceTree = "<group>"; };
+		3852721A15D64409000E0C64 /* Configurations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
+		3852721D15D6446E000E0C64 /* Configurations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configurations.h; sourceTree = "<group>"; };
+		3852721E15D6446E000E0C64 /* Configurations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configurations.m; sourceTree = "<group>"; };
 		385E61EE154A850E00964706 /* LMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMUser.h; sourceTree = "<group>"; };
 		385E61EF154A850E00964706 /* LMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMUser.m; sourceTree = "<group>"; };
 		385E61F5154A8ABE00964706 /* CreateSpaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateSpaceViewController.h; sourceTree = "<group>"; };
@@ -399,6 +404,8 @@
 			children = (
 				386C597415454C1A000B592A /* AppDelegate.h */,
 				386C597515454C1A000B592A /* AppDelegate.m */,
+				3852721D15D6446E000E0C64 /* Configurations.h */,
+				3852721E15D6446E000E0C64 /* Configurations.m */,
 				3894D11A154901BC00707389 /* Protocals */,
 				38A06E0615CCFA0000B9F3A2 /* Categories */,
 				386C598815455369000B592A /* Models */,
@@ -417,6 +424,7 @@
 				386C596D15454C1A000B592A /* Landmark-Info.plist */,
 				386C597115454C1A000B592A /* main.m */,
 				386C597315454C1A000B592A /* Landmark-Prefix.pch */,
+				3852721A15D64409000E0C64 /* Configurations.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -624,6 +632,7 @@
 				3849C80915BA771C00105C22 /* ButtonMenu.png in Resources */,
 				3849C80A15BA771C00105C22 /* ButtonMenu@2x.png in Resources */,
 				3849C81215BA81C200105C22 /* MainView_iPhone.xib in Resources */,
+				3852721B15D64409000E0C64 /* Configurations.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,6 +696,7 @@
 				38833FC015D628BC009CF97B /* UIViewController+SlideView.m in Sources */,
 				38833FC415D628F4009CF97B /* SlideViewManager.m in Sources */,
 				38833FC715D62907009CF97B /* SlideMenuViewController.m in Sources */,
+				3852721F15D6446E000E0C64 /* Configurations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

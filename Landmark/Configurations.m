@@ -8,6 +8,8 @@
 
 #import "Configurations.h"
 
+#import "Prefs.h"
+
 @interface Configurations ()
 
 - (void)readDefaultConfigurations;
@@ -66,7 +68,7 @@ static Configurations *_current = nil;
 	NSString *path = [[NSBundle mainBundle] pathForResource:@"Configurations" ofType:@"plist"];
 	NSDictionary *configuration = [[NSDictionary alloc] initWithContentsOfFile:path];
 	
-    self.defaultAPIURL = [configuration objectForKey:@"api.url.default"];
+    self.defaultAPIURL = [configuration objectForKey:gCONFIG_API_URL];
 }
 
 @end

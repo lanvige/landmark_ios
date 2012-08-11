@@ -2,7 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>api.url.default</key>
+	<key>api.url.debug</key>
 	<string>http://api.landmark.dev/v1/</string>
+	<key>api.url.live</key>
+	<string>http://api.landmark.com/v1/</string>
 </dict>
 </plist>

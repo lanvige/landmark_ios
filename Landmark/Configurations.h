@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+# Generated from script by Git tag.
+#import "LMVersion-generated.h"
+
 @interface Configurations : NSObject
 
 + (Configurations *)current;

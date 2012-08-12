@@ -19,4 +19,7 @@ profile
 DerivedData
 
 .xcodeproj/ !*.xcodeproj/project.pbxprojs
+
+# cocoapods
 pods
+Pods.xcconfig

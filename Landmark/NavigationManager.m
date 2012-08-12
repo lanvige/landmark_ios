@@ -9,7 +9,6 @@
 #import "NavigationManager.h"
 
 #import "SplashViewController.h"
-#import "MainViewController.h"
 #import "HomeViewController.h"
 
 @implementation NavigationManager

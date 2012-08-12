@@ -10,6 +10,8 @@
 
 #import "CreateSpaceViewController.h"
 #import "LocationViewController.h"
+#import "CreateSharingViewController.h"
+#import "SlideView.h"
 
 @implementation HomeViewController
 
@@ -20,6 +22,17 @@
 @synthesize tableContents;
 @synthesize sortedKeys;
 
+@synthesize shareButton;
+@synthesize csViewController;
+
+#pragma mark - Custom event
+
+- (void)addShare:(id)sender {
+    // Open share view.
+    csViewController = [[CreateSharingViewController alloc] initWithNibName:@"CreateSharingView" bundle:nil];
+    [self.navigationController pushViewController:csViewController animated:TRUE];
+}
+
 #pragma mark -
 #pragma mark Implementation
 
@@ -28,7 +41,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
-        self.title = NSLocalizedString(@"home", @"home");
+        self.title = NSLocalizedString(@"Landmark", @"Landmark");
         self.tabBarItem.image = [UIImage imageNamed:@"home"];
         
         self.wantsFullScreenLayout = YES;
@@ -46,8 +59,16 @@
     self.tableContents = dictItems;
     self.sortedKeys =[[self.tableContents allKeys] sortedArrayUsingSelector:@selector(compare:)];
     
-
+    // Add a about button on the right of bar.
+    shareButton = [[UIBarButtonItem alloc]initWithTitle:NSLocalizedString(@"Share", @"")
+                                                  style:UIBarButtonItemStyleBordered
+                                                 target:self
+                                                 action:@selector(addShare:)];
     
+    // What's the different between navigationBar.topItem with navigationItem.
+    self.navigationItem.rightBarButtonItem = shareButton;
+    
+    [self setupSlideViewBarButtonItem];
 }
 
 - (void)viewDidUnload
@@ -68,13 +89,13 @@
 
 - (void) viewWillAppear:(BOOL)animated
 {
-    [self.navigationController setNavigationBarHidden:YES animated:animated];
+//    [self.navigationController setNavigationBarHidden:YES animated:animated];
     [super viewWillAppear:animated];
 }
 
 - (void) viewWillDisappear:(BOOL)animated
 {
-    [self.navigationController setNavigationBarHidden:NO animated:animated];
+//    [self.navigationController setNavigationBarHidden:NO animated:animated];
     [super viewWillDisappear:animated];
 }
 

@@ -11,7 +11,7 @@
 @class LandViewController;
 @class CreateSpaceViewController;
 @class LocationViewController;
-
+@class CreateSharingViewController;
 
 @interface HomeViewController : UIViewController<UITextFieldDelegate>
 { 
@@ -23,5 +23,8 @@
 @property (nonatomic, strong) UITextField *codeTextFiled;
 @property (nonatomic, strong) NSDictionary *tableContents;
 @property (nonatomic, strong) NSArray *sortedKeys;
+
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *shareButton;
+@property (nonatomic, strong) CreateSharingViewController *csViewController;
 
 @end

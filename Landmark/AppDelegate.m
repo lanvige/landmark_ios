@@ -13,7 +13,7 @@
 
 #import "SlideView.h"
 #import "SlideMenuViewController.h"
-#import "MainViewController.h"
+#import "HomeViewController.h"
 
 @implementation AppDelegate
 
@@ -32,11 +32,10 @@
     // Init the window as global.
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    MainViewController *mainViewController = [[MainViewController alloc] initWithNibName:@"MainView_iPhone" bundle:nil];
+    HomeViewController *homeViewController = [[HomeViewController alloc] initWithNibName:@"HomeView_iPhone" bundle:nil];
     SlideMenuViewController *slideMenuViewController = [[SlideMenuViewController alloc] init];
     
-    mainViewController.title = @"Landmark";
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:homeViewController];
     
     _window.rootViewController = navigationController;
     [_window makeKeyAndVisible];

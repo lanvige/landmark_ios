@@ -32,8 +32,6 @@
 		3846562815B6F00900C4CF63 /* CreateSharingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3846562715B6F00900C4CF63 /* CreateSharingViewController.m */; };
 		3849C80915BA771C00105C22 /* ButtonMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 3849C80715BA771C00105C22 /* ButtonMenu.png */; };
 		3849C80A15BA771C00105C22 /* ButtonMenu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3849C80815BA771C00105C22 /* ButtonMenu@2x.png */; };
-		3849C81015BA7C8300105C22 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3849C80F15BA7C8300105C22 /* MainViewController.m */; };
-		3849C81215BA81C200105C22 /* MainView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3849C81115BA81C200105C22 /* MainView_iPhone.xib */; };
 		384E236715A4762900D55EF5 /* LMAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 384E236615A4762900D55EF5 /* LMAnnotation.m */; };
 		3852721B15D64409000E0C64 /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3852721A15D64409000E0C64 /* Configurations.plist */; };
 		385E61F0154A850E00964706 /* LMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E61EF154A850E00964706 /* LMUser.m */; };
@@ -125,9 +123,6 @@
 		3846562715B6F00900C4CF63 /* CreateSharingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateSharingViewController.m; sourceTree = "<group>"; };
 		3849C80715BA771C00105C22 /* ButtonMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonMenu.png; sourceTree = "<group>"; };
 		3849C80815BA771C00105C22 /* ButtonMenu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonMenu@2x.png"; sourceTree = "<group>"; };
-		3849C80E15BA7C8300105C22 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		3849C80F15BA7C8300105C22 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		3849C81115BA81C200105C22 /* MainView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView_iPhone.xib; sourceTree = "<group>"; };
 		384E236515A4762900D55EF5 /* LMAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAnnotation.h; sourceTree = "<group>"; };
 		384E236615A4762900D55EF5 /* LMAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAnnotation.m; sourceTree = "<group>"; };
 		3852721A15D64409000E0C64 /* Configurations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
@@ -260,7 +255,6 @@
 				3837E39015B6986C00DF1255 /* Sharings */,
 				387C6A00154C3BEC005768B9 /* Contacts */,
 				385E6205154BDA7900964706 /* Space */,
-				3849C81115BA81C200105C22 /* MainView_iPhone.xib */,
 				387C6A03154C3FC0005768B9 /* SplashView_iPhone.xib */,
 				38DB056B154854F80092CDCD /* AboutView_iPhone.xib */,
 				3894D0F81548002F00707389 /* HomeView_iPhone.xib */,
@@ -456,8 +450,6 @@
 				380F065A1545799D00C9CF7C /* BaseViewController.m */,
 				386935201545B0EC00EDF001 /* HomeViewController.h */,
 				386935211545B0EC00EDF001 /* HomeViewController.m */,
-				3849C80E15BA7C8300105C22 /* MainViewController.h */,
-				3849C80F15BA7C8300105C22 /* MainViewController.m */,
 				38833FC515D62907009CF97B /* SlideMenuViewController.h */,
 				38833FC615D62907009CF97B /* SlideMenuViewController.m */,
 				386C597715454C1A000B592A /* SplashViewController.h */,
@@ -654,7 +646,6 @@
 				3893B9C415B7AA0800D77475 /* CreateSharingView.xib in Resources */,
 				3849C80915BA771C00105C22 /* ButtonMenu.png in Resources */,
 				3849C80A15BA771C00105C22 /* ButtonMenu@2x.png in Resources */,
-				3849C81215BA81C200105C22 /* MainView_iPhone.xib in Resources */,
 				3852721B15D64409000E0C64 /* Configurations.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -710,7 +701,6 @@
 				3837E39C15B6C58800DF1255 /* ContactMappingProvider.m in Sources */,
 				3837E39F15B6C5A400DF1255 /* BaseMappingProvider.m in Sources */,
 				3846562815B6F00900C4CF63 /* CreateSharingViewController.m in Sources */,
-				3849C81015BA7C8300105C22 /* MainViewController.m in Sources */,
 				38A06E1715CCFDC900B9F3A2 /* NSData+Base64.m in Sources */,
 				38A06E1815CCFDC900B9F3A2 /* NSString+Base64.m in Sources */,
 				38A06E1F15CCFE1B00B9F3A2 /* UIColor+Extra.m in Sources */,

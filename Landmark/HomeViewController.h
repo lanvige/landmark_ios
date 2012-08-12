@@ -6,8 +6,25 @@
 //  Copyright (c) 2012 LANVIGE. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface HomeViewController : BaseViewController
+@class LandViewController;
+@class CreateSpaceViewController;
+@class LocationViewController;
+@class CreateSharingViewController;
+
+@interface HomeViewController : UIViewController<UITextFieldDelegate>
+{ 
+    IBOutlet UITextField *codeTextFiled;
+    NSDictionary *tableContents;
+    NSArray *sortedKeys;
+}
+
+@property (nonatomic, strong) UITextField *codeTextFiled;
+@property (nonatomic, strong) NSDictionary *tableContents;
+@property (nonatomic, strong) NSArray *sortedKeys;
+
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *shareButton;
+@property (nonatomic, strong) CreateSharingViewController *csViewController;
 
 @end

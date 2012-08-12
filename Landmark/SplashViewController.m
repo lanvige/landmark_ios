@@ -26,12 +26,6 @@
     return self;
 }
 
-- (id)init
-{
-	self = [self initWithNibName:@"SplashView_iPhone" bundle:nil];	
-	return self;
-}
-
 
 - (void)viewDidLoad
 {

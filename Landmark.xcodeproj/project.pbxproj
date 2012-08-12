@@ -36,8 +36,6 @@
 		3849C81215BA81C200105C22 /* MainView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3849C81115BA81C200105C22 /* MainView_iPhone.xib */; };
 		384E236715A4762900D55EF5 /* LMAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 384E236615A4762900D55EF5 /* LMAnnotation.m */; };
 		3852721B15D64409000E0C64 /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3852721A15D64409000E0C64 /* Configurations.plist */; };
-		3852721F15D6446E000E0C64 /* Configurations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3852721E15D6446E000E0C64 /* Configurations.m */; };
-		3852722215D64712000E0C64 /* Prefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 3852722115D64712000E0C64 /* Prefs.m */; };
 		385E61F0154A850E00964706 /* LMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E61EF154A850E00964706 /* LMUser.m */; };
 		385E61F7154A8ABE00964706 /* CreateSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385E61F6154A8ABE00964706 /* CreateSpaceViewController.m */; };
 		385E6207154BDA9700964706 /* LocationView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385E6206154BDA9700964706 /* LocationView_iPhone.xib */; };
@@ -83,12 +81,13 @@
 		38D28E7B15B5A35F00060FB1 /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D28E7A15B5A35F00060FB1 /* ContactTableViewCell.m */; };
 		38DB056C154854F80092CDCD /* AboutView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DB056B154854F80092CDCD /* AboutView_iPhone.xib */; };
 		38DB056F154855140092CDCD /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DB056E154855140092CDCD /* AboutViewController.m */; };
+		38E4BFEB15D78CCD003F6F7B /* LMError.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E4BFEA15D78CCD003F6F7B /* LMError.m */; };
+		38E4BFEF15D78DE9003F6F7B /* Landmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E4BFEE15D78DE9003F6F7B /* Landmark.m */; };
 		75D76D9637544FD5BB1EDDA1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 118341ABCA8344ECA3D12B55 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		118341ABCA8344ECA3D12B55 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5AC0F14BA9546A8B926043D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		380F06401545673A00C9CF7C /* NavigationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationManager.h; sourceTree = "<group>"; };
 		380F06411545673A00C9CF7C /* NavigationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationManager.m; sourceTree = "<group>"; };
 		380F06591545799D00C9CF7C /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -132,10 +131,6 @@
 		384E236515A4762900D55EF5 /* LMAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAnnotation.h; sourceTree = "<group>"; };
 		384E236615A4762900D55EF5 /* LMAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAnnotation.m; sourceTree = "<group>"; };
 		3852721A15D64409000E0C64 /* Configurations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
-		3852721D15D6446E000E0C64 /* Configurations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configurations.h; sourceTree = "<group>"; };
-		3852721E15D6446E000E0C64 /* Configurations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configurations.m; sourceTree = "<group>"; };
-		3852722015D64712000E0C64 /* Prefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefs.h; sourceTree = "<group>"; };
-		3852722115D64712000E0C64 /* Prefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Prefs.m; sourceTree = "<group>"; };
 		3852722815D64BE5000E0C64 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		385E61EE154A850E00964706 /* LMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMUser.h; sourceTree = "<group>"; };
 		385E61EF154A850E00964706 /* LMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMUser.m; sourceTree = "<group>"; };
@@ -208,6 +203,11 @@
 		38DB056B154854F80092CDCD /* AboutView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView_iPhone.xib; sourceTree = "<group>"; };
 		38DB056D154855140092CDCD /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		38DB056E154855140092CDCD /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		38E4BFE915D78CCD003F6F7B /* LMError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMError.h; sourceTree = "<group>"; };
+		38E4BFEA15D78CCD003F6F7B /* LMError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMError.m; sourceTree = "<group>"; };
+		38E4BFED15D78DE8003F6F7B /* Landmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Landmark.h; sourceTree = "<group>"; };
+		38E4BFEE15D78DE9003F6F7B /* Landmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Landmark.m; sourceTree = "<group>"; };
+		A5AC0F14BA9546A8B926043D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,8 +333,10 @@
 		3852722715D64BC8000E0C64 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				3852721D15D6446E000E0C64 /* Configurations.h */,
-				3852721E15D6446E000E0C64 /* Configurations.m */,
+				38E4BFED15D78DE8003F6F7B /* Landmark.h */,
+				38E4BFEE15D78DE9003F6F7B /* Landmark.m */,
+				38E4BFE915D78CCD003F6F7B /* LMError.h */,
+				38E4BFEA15D78CCD003F6F7B /* LMError.m */,
 				3852722815D64BE5000E0C64 /* SynthesizeSingleton.h */,
 			);
 			name = Utils;
@@ -419,8 +421,6 @@
 			children = (
 				386C597415454C1A000B592A /* AppDelegate.h */,
 				386C597515454C1A000B592A /* AppDelegate.m */,
-				3852722015D64712000E0C64 /* Prefs.h */,
-				3852722115D64712000E0C64 /* Prefs.m */,
 				3894D11A154901BC00707389 /* Protocals */,
 				38A06E0615CCFA0000B9F3A2 /* Categories */,
 				386C598815455369000B592A /* Models */,
@@ -719,8 +719,8 @@
 				38833FC015D628BC009CF97B /* UIViewController+SlideView.m in Sources */,
 				38833FC415D628F4009CF97B /* SlideViewManager.m in Sources */,
 				38833FC715D62907009CF97B /* SlideMenuViewController.m in Sources */,
-				3852721F15D6446E000E0C64 /* Configurations.m in Sources */,
-				3852722215D64712000E0C64 /* Prefs.m in Sources */,
+				38E4BFEB15D78CCD003F6F7B /* LMError.m in Sources */,
+				38E4BFEF15D78DE9003F6F7B /* Landmark.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

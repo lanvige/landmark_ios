@@ -1,24 +1,28 @@
 //
-//  Configurations.m
+//  Landmark.m
 //  Landmark
 //
-//  Created by Lanvige Jiang on 8/11/12.
+//  Created by Lanvige Jiang on 8/12/12.
 //  Copyright (c) 2012 LANVIGE. All rights reserved.
 //
 
-#import "Configurations.h"
+#import "Landmark.h"
 
-#import "Prefs.h"
+#ifdef DEBUG
+NSString *const gCONFIG_API_URL = @"api.url.debug";
+#else
+NSString *const gCONFIG_API_URL = @"api.url.live";
+#endif
 
-@interface Configurations ()
+@interface Landmark ()
 
 - (void)readDefaultConfigurations;
 
 @end
 
-static Configurations *_current = nil;
+static Landmark *_context = nil;
 
-@implementation Configurations
+@implementation Landmark
 
 
 #pragma mark -
@@ -30,16 +34,16 @@ static Configurations *_current = nil;
 #pragma mark -
 #pragma mark Implementation
 
-+ (Configurations *)current
++ (Landmark *)context
 {
-	@synchronized (_current)
+	@synchronized (_context)
 	{
-		if (_current == nil)
+		if (_context == nil)
 		{
-			_current = [[Configurations alloc] init];
+			_context = [[Landmark alloc] init];
 		}
 		
-		return _current;
+		return _context;
 	}
 }
 
@@ -71,5 +75,5 @@ static Configurations *_current = nil;
     self.defaultAPIURL = [configuration objectForKey:gCONFIG_API_URL];
 }
 
-@end
 
+@end

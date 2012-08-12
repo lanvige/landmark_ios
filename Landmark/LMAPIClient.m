@@ -7,8 +7,8 @@
 //
 
 #import "LMAPIClient.h"
-#import "Configurations.h"
 
+#import "Landmark.h"
 #import "AFJSONRequestOperation.h"
 
 @implementation LMAPIClient
@@ -18,7 +18,7 @@
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^{
-        _sharedClient = [[LMAPIClient alloc] initWithBaseURL:[NSURL URLWithString:[Configurations current].defaultAPIURL]];
+        _sharedClient = [[LMAPIClient alloc] initWithBaseURL:[NSURL URLWithString:[Landmark context].defaultAPIURL]];
     });
     
     return _sharedClient;

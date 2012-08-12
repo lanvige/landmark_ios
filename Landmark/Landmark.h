@@ -1,19 +1,21 @@
 //
-//  Configurations.h
+//  Landmark.h
 //  Landmark
 //
-//  Created by Lanvige Jiang on 8/11/12.
+//  Created by Lanvige Jiang on 8/12/12.
 //  Copyright (c) 2012 LANVIGE. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
+extern NSString *const gCONFIG_API_URL;
+
 // Generated from script by Git tag.
 #import "LMVersion-generated.h"
 
-@interface Configurations : NSObject
+@interface Landmark : NSObject
 
-+ (Configurations *)current;
++ (Landmark *)context;
 
 @property (nonatomic, copy) NSString *defaultAPIURL;
 

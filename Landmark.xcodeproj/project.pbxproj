@@ -88,6 +88,7 @@
 
 /* Begin PBXFileReference section */
 		118341ABCA8344ECA3D12B55 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5AC0F14BA9546A8B926043D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		380F06401545673A00C9CF7C /* NavigationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationManager.h; sourceTree = "<group>"; };
 		380F06411545673A00C9CF7C /* NavigationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationManager.m; sourceTree = "<group>"; };
 		380F06591545799D00C9CF7C /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -381,6 +382,7 @@
 				38E4BEE015D7590F003F6F7B /* Tests */,
 				3822BF3115467D3400FB996A /* Resources */,
 				3822BF5D1546854900FB996A /* README.md */,
+				A5AC0F14BA9546A8B926043D /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -809,6 +811,7 @@
 		};
 		386C598315454C1A000B592A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5AC0F14BA9546A8B926043D /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Landmark/Landmark-Prefix.pch";
@@ -821,6 +824,7 @@
 		};
 		386C598415454C1A000B592A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5AC0F14BA9546A8B926043D /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Landmark/Landmark-Prefix.pch";

@@ -207,7 +207,6 @@
 		38DB056B154854F80092CDCD /* AboutView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView_iPhone.xib; sourceTree = "<group>"; };
 		38DB056D154855140092CDCD /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		38DB056E154855140092CDCD /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
-		7663F0B3D8B04C7983751CB4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,9 +378,9 @@
 				386C596415454C1A000B592A /* Frameworks */,
 				386C596B15454C1A000B592A /* Landmark */,
 				386C596215454C1A000B592A /* Products */,
+				38E4BEE015D7590F003F6F7B /* Tests */,
 				3822BF5D1546854900FB996A /* README.md */,
 				3822BF3115467D3400FB996A /* Resources */,
-				7663F0B3D8B04C7983751CB4 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -567,6 +566,13 @@
 				38833FBF15D628BC009CF97B /* UIViewController+SlideView.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		38E4BEE015D7590F003F6F7B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -803,7 +809,6 @@
 		};
 		386C598315454C1A000B592A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7663F0B3D8B04C7983751CB4 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Landmark/Landmark-Prefix.pch";
@@ -816,7 +821,6 @@
 		};
 		386C598415454C1A000B592A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7663F0B3D8B04C7983751CB4 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Landmark/Landmark-Prefix.pch";

@@ -38,7 +38,7 @@
     [super viewDidLoad];
     
     // Change the bar's style.
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+//    self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
     self.navigationItem.title = NSLocalizedString(@"settings", @"");
     
     // Add a about button on the right of bar.

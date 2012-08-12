@@ -86,8 +86,8 @@
     [super viewDidLoad];
     
     self.navigationItem.title = NSLocalizedString(@"Sharings", @"");
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
-    // self.title = NSLocalizedString(@"AFNetworking", nil);
+//    self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+//    self.title = NSLocalizedString(@"AFNetworking", nil);
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_activityIndicatorView];
     

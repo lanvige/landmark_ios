@@ -165,20 +165,42 @@
     [_activityIndicatorView startAnimating];
     
     DDLogInfo(@"%@", cell.sharing.mID);
-//    [sharingMappingProvider getSharingWithID:[NSString stringWithFormat:@"%@", cell.sharing.mID] 
-//                                   block:^(LMSharing *sharing) {
-//        if (sharing) {
-//            DDLogInfo(@"Sharing Content - %@", sharing.title);
-//        }
-//        
-//        [_activityIndicatorView stopAnimating];
-//        self.navigationItem.rightBarButtonItem.enabled = YES;
-//    }];
     
-    [sharingMappingProvider deleteObjectWithPath:[NSString stringWithFormat:@"%@", cell.sharing.mID] 
-                                           block:^(BOOL result) {
-                                           }];
+    [sharingMappingProvider getSharingWithID:[NSString stringWithFormat:@"%@", cell.sharing.mID] 
+                                   block:^(LMSharing *sharing) {
+        if (sharing) {
+            DDLogInfo(@"Sharing Content - %@", sharing.title);
+        }
+        
+        [_activityIndicatorView stopAnimating];
+        self.navigationItem.rightBarButtonItem.enabled = YES;
+    }];
     
+
+    
+}
+
+// TABLE VIEW
+// delete data
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    SharingTableViewCell *cell = (SharingTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source.
+        
+        [sharingMappingProvider deleteObjectWithPath:[NSString stringWithFormat:@"%@", cell.sharing.mID]
+                                               block:^(BOOL result) {
+                                                   [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+                                               }];
+        
+    }
+    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+    }
 }
 
 

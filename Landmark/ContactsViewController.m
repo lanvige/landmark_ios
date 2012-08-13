@@ -79,7 +79,7 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_activityIndicatorView];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(reload:)];
     
-    self.tableView.rowHeight = 70.0f;
+    self.tableView.rowHeight = 50.0f;
 }
 
 - (void)viewDidUnload {

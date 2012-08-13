@@ -46,11 +46,9 @@
 }
 
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self)
-    {
+    if (self) {
         self.title = NSLocalizedString(@"NEW", @"");
         self.navigationItem.rightBarButtonItem.enabled = YES;
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Save", @"")
@@ -63,20 +61,19 @@
 }
 
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    [self initLocationAndMapInfo];
 }
 
-- (void)viewDidUnload
-{
+- (void)viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
@@ -107,20 +104,29 @@
     // Show user's current location.
     self.mapView.showsUserLocation = YES;
     [self.mapView setMapType:MKMapTypeStandard];
-    [self.mapView setZoomEnabled:YES];
-    [self.mapView setScrollEnabled:YES];
+    [self.mapView setZoomEnabled:NO];
+    [self.mapView setScrollEnabled:NO];
     
     [self.mapView setRegion:coordinateRegion animated:YES];
+    
+    // Incept the touch event to open a new map view.
+    UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(MapTouched:)];
+    [self.mapView addGestureRecognizer:tgr];
+}
+
+- (void)MapTouched {
+    DDLogInfo(@"%@", @"-===================================");
 }
 
 // If the system get the user's location, this method will be invoked.
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation {
     //[locationManager stopUpdatingLocation];
     self.currentLocation = newLocation;
     
     NSString *strLat = [NSString stringWithFormat:@"%.4f", newLocation.coordinate.latitude];
     NSString *strLng = [NSString stringWithFormat:@"%.4f", newLocation.coordinate.longitude];
-    NSLog(@"Lat: %@  Lng: %@", strLat, strLng);
+    DDLogInfo(@"Lat: %@  Lng: %@", strLat, strLng);
     
     [self moveMapToLocation:currentLocation];
 }
@@ -135,6 +141,7 @@
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
     NSLog(@"locError:%@", error);
 }
+
 
 
 #pragma mark -

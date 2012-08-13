@@ -8,28 +8,41 @@
 
 #import "AppDelegate.h"
 
-#import "NavigationManager.h"
+#import "AFNetworkActivityIndicatorManager.h"
+#import "DDTTYLogger.h"
+
+#import "SlideView.h"
+#import "SlideMenuViewController.h"
+#import "HomeViewController.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 
-// Shared navigation manager(Singleton)
-+ (NavigationManager *)sharedNavigationManager
-{
-    AppDelegate *appDelegate = (AppDelegate *)([UIApplication sharedApplication].delegate);
-    return appDelegate -> _navigationManager;
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Initial the AFNetworking manager.
+    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+    
+    //Adds the logger to the console (similar to nslog)
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    // And we also enable colors
+    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+
     // Init the window as global.
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    _navigationManager = [[NavigationManager alloc] initWithWindow:_window];
-    [_navigationManager displayHome];
-
-    [self.window makeKeyAndVisible];
+    HomeViewController *homeViewController = [[HomeViewController alloc] initWithNibName:@"HomeView_iPhone" bundle:nil];
+    SlideMenuViewController *slideMenuViewController = [[SlideMenuViewController alloc] init];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:homeViewController];
+    
+    _window.rootViewController = navigationController;
+    [_window makeKeyAndVisible];
+    
+    // make sure to display the navigation controller before calling this
+    [SlideViewManager configureWithNavigationController:navigationController
+                                      slideViewController:slideMenuViewController];
     
     return YES;
 }

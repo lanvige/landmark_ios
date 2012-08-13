@@ -15,12 +15,6 @@
 @implementation LoginViewController
 
 
-- (id)init
-{
-	self = [super initWithNibName:@"LoginView_iPhone" bundle:nil];	
-	return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];

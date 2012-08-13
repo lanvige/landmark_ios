@@ -9,31 +9,27 @@
 #import <Foundation/Foundation.h>
 
 @class SplashViewController;
-@class LoginViewController;
+@class SlideViewController;
+@class MainViewController;
+@class LeftViewController;
 @class HomeViewController;
-@class SettingsViewController;
-@class AboutViewController;
 
 @interface NavigationManager : NSObject
 {
     @private
     UIWindow *_window;
-    
-    UIViewController *_currentViewController;
-    
-    SplashViewController *_splashViewController;
-    LoginViewController *_loginViewContgroller;
-    HomeViewController *_homeViewController;
-    SettingsViewController *_settingsViewController;
-    UINavigationController *_navigationController;
-    AboutViewController *_aboutViewController;
 }
 
-@property (strong, nonatomic) UITabBarController *tabBarController;
+@property (nonatomic, strong) SplashViewController *splashViewController;
+
+@property (nonatomic, strong) SlideViewController *slideViewController;
+@property (nonatomic, strong) MainViewController *mainViewController;
+@property (nonatomic, strong) LeftViewController *leftViewController;
+@property (nonatomic, strong) HomeViewController *homeViewController;
 
 - (id)initWithWindow:(UIWindow *)window;
 
-- (void)displaySplash;
-- (void)displayHome;
+- (void)displaySplashView;
+- (void)displayHomeView;
 
 @end

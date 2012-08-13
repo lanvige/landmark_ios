@@ -1,0 +1,21 @@
+PODS:
+  - AFNetworking (1.0RC1)
+  - Calabash (0.9.35)
+  - CocoaLumberjack (1.6)
+  - JSONKit (1.5pre)
+  - MBProgressHUD (0.5)
+  - MTStatusBarOverlay (0.9)
+  - Reachability (3.0.0)
+  - SSKeychain (0.1.4)
+  - SVPullToRefresh (0.2)
+
+DEPENDENCIES:
+  - AFNetworking
+  - Calabash (~> 0.9.35)
+  - CocoaLumberjack
+  - JSONKit
+  - MBProgressHUD
+  - MTStatusBarOverlay
+  - Reachability
+  - SSKeychain
+  - SVPullToRefresh (~> 0.2)
